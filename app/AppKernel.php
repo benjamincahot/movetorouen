@@ -19,6 +19,9 @@ class AppKernel extends Kernel
 
             new HomeBundle\HomeBundle(),
             new Theme\ParcBundle\ParcBundle(),
+            new Theme\RestaurantBundle\RestaurantBundle(),
+            new Theme\SportBundle\SportBundle(),
+            new Theme\MonumentBundle\MonumentBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

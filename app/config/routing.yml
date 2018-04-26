@@ -1,6 +1,18 @@
+monument:
+    resource: "@MonumentBundle/Resources/config/routing.yml"
+    prefix:   /themes/monuments
+
+sport:
+    resource: "@SportBundle/Resources/config/routing.yml"
+    prefix:   /themes/sports
+
+restaurant:
+    resource: "@RestaurantBundle/Resources/config/routing.yml"
+    prefix:   /themes/restaurants
+
 parc:
     resource: "@ParcBundle/Resources/config/routing.yml"
-    prefix:   /themes/parc
+    prefix:   /themes/parcs
 
 home:
     resource: "@HomeBundle/Resources/config/routing.yml"

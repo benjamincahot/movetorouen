@@ -1,0 +1,3 @@
+monument_homepage:
+    path:     /
+    defaults: { _controller: MonumentBundle:Default:index }
