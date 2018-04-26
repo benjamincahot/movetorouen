@@ -1,6 +1,6 @@
 <?php
 
-namespace Theme\CategoryBundle\Controller;
+namespace Theme\ParcBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('CategoryBundle:Default:index.html.twig');
+        return $this->render('@Parc/Default/index.html.twig');
     }
 }

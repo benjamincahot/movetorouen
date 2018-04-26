@@ -1,6 +1,6 @@
 <?php
 
-namespace Theme\CategoryBundle\Tests\Controller;
+namespace Theme\ParcBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

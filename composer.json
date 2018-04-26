@@ -5,7 +5,7 @@
     "autoload": {
         "psr-4": {
             "HomeBundle\\": "src/HomeBundle",
-            "Theme\\CategoryBundle\\": "src/Theme/CategoryBundle"
+            "Theme\\ParcBundle\\": "src/Theme/ParcBundle"
         },
         "classmap": [
             "app/AppKernel.php",

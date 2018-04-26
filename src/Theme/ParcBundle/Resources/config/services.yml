@@ -1,4 +1,4 @@
 services:
-#    category.example:
-#        class: Theme\CategoryBundle\Example
+#    parc.example:
+#        class: Theme\ParcBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]

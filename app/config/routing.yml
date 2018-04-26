@@ -1,8 +1,8 @@
-category:
-    resource: "@CategoryBundle/Resources/config/routing.yml"
-    prefix:   /
+parc:
+    resource: "@ParcBundle/Resources/config/routing.yml"
+    prefix:   /themes/parc
 
 home:
     resource: "@HomeBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /themes
 
