@@ -1,3 +1,7 @@
+category:
+    resource: "@CategoryBundle/Resources/config/routing.yml"
+    prefix:   /
+
 home:
     resource: "@HomeBundle/Resources/config/routing.yml"
     prefix:   /
