@@ -16,5 +16,5 @@ parc:
 
 home:
     resource: "@HomeBundle/Resources/config/routing.yml"
-    prefix:   /themes
+    prefix:   /
 
