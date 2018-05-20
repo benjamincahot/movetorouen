@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@Monument/Default/index.html.twig');
+        return $this->render('MonumentBundle:Default:index.html.twig');
     }
 }

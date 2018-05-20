@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@Parc/Default/index.html.twig');
+        return $this->render('ParcBundle:Default:index.html.twig');
     }
 }

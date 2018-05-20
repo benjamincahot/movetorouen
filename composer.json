@@ -1,14 +1,16 @@
 {
-    "name": "admin/deway",
+    "name": "tiflo/proj",
     "license": "proprietary",
     "type": "project",
     "autoload": {
         "psr-4": {
             "HomeBundle\\": "src/HomeBundle",
+            "Theme\\MonumentBundle\\": "src/Theme/MonumentBundle",
             "Theme\\ParcBundle\\": "src/Theme/ParcBundle",
             "Theme\\RestaurantBundle\\": "src/Theme/RestaurantBundle",
-            "Theme\\MonumentBundle\\": "src/Theme/MonumentBundle",
-            "Theme\\SportBundle\\": "src/Theme/SportBundle"
+            "Theme\\SportBundle\\": "src/Theme/SportBundle",
+            "User\\UserBundle\\": "src/User/UserBundle"
+
         },
         "classmap": [
             "app/AppKernel.php",
