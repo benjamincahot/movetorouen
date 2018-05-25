@@ -1,6 +1,6 @@
-# user:
-#     resource: "@UserBundle/Resources/config/routing.yml"
-#     prefix:   /
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /profile
 
 sport:
     resource: "@SportBundle/Resources/config/routing.yml"
