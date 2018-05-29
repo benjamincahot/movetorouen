@@ -1,6 +1,6 @@
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
-    prefix:   /profile
+    prefix:   /_profiler_home
 
 sport:
     resource: "@SportBundle/Resources/config/routing.yml"
