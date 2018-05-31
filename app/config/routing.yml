@@ -1,3 +1,7 @@
+evenement:
+    resource: "@EvenementBundle/Resources/config/routing.yml"
+    prefix:   /Theme/Evenement
+
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /_profiler_home
@@ -6,9 +10,6 @@ sport:
     resource: "@SportBundle/Resources/config/routing.yml"
     prefix:   /Theme/Sport
 
-restaurant:
-    resource: "@RestaurantBundle/Resources/config/routing.yml"
-    prefix:   /Theme/Restaurant
 
 parc:
     resource: "@ParcBundle/Resources/config/routing.yml"
