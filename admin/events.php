@@ -64,11 +64,10 @@ include("inc/header.php");
           <h4 class="card-title">Liste des evènements</h4>
           <!-- Nav tabs -->
           <ul class="nav nav-tabs customtab" role="tablist">
-            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#japonais" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Japonais</span></a></li>
-            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#indien" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Indien</span></a></li>
-            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#italien" role="tab"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Italien</span></a></li>
-            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#texmex" role="tab"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Texmex</span></a></li>
-            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vegan" role="tab"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Végan</span></a></li>
+            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#sport" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Sport</span></a></li>
+            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#etudiant" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Etudiant</span></a></li>
+            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#association" role="tab"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Association</span></a></li>
+
 
           </ul>
           <!-- Tab panes -->

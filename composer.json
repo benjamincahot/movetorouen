@@ -5,12 +5,12 @@
     "autoload": {
         "psr-4": {
             "HomeBundle\\": "src/HomeBundle",
+            "AdminBundle\\": "src/AdminBundle",
             "Theme\\MonumentBundle\\": "src/Theme/MonumentBundle",
             "Theme\\ParcBundle\\": "src/Theme/ParcBundle",
             "Theme\\RestaurantBundle\\": "src/Theme/RestaurantBundle",
             "Theme\\SportBundle\\": "src/Theme/SportBundle",
             "User\\UserBundle\\": "src/User/UserBundle"
-
         },
         "classmap": [
             "app/AppKernel.php",

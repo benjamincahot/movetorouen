@@ -67,8 +67,8 @@ include("inc/header.php");
           <h4 class="card-title">Liste des parcs</h4>
           <!-- Nav tabs -->
           <ul class="nav nav-tabs customtab" role="tablist">
-            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#rivedroite" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Rive droite</span></a></li>
-            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#rivegauche" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Rive gauche</span></a></li>
+            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#rivedroite" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Rouen Rive droite</span></a></li>
+            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#rivegauche" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Rouen Rive gauche</span></a></li>
 
 
           </ul>
