@@ -1,12 +1,17 @@
+{% block stylesheets %}
+    {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
 {% extends 'base.html.twig' %}
 {% block content %}
-
-  <section id="" class="">
+<div class="fullpage">
+  <div id="" class="section">
     <div class="">                     
           <p class="">Une ville unique à redécouvrir !</p>
           <h1 class="">Bouger à Rouen</h1>
     </div>
-    <section id="" class="">
+    <div id="" class="">
       <h2>Envie de prendre l'aire ?</h2>
       <h3>Trouvez rapidement votre prochain lieu de détente avec Bouger à Rouen </h3>
       <hr class="">
@@ -16,8 +21,8 @@
         <a href="{{ path('monument_homepage') }}" class=""><div><span>Monuments</span></div></a>
         <a href="{{ path('sport_homepage') }}" class=""><div><span>Sports</span></div></a>
       </div>
-    </section>
-    <section>   
+    </div>
+    <div class="section">   
       <h2>Pourquoi s'inscrire ?</h2>
       <div class="">
         <p>Lorem ipson</p>
@@ -27,8 +32,8 @@
         <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-outline-success"></a>
         <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-outline-success"></a>
       </div>
-    </section> 
-    <section>
+    </div> 
+    <div class ="section">
       <h2>Bouger à Rouen ? oui mais où?</h2>
       <div class="">
         <p>c'est de la que tout est parti bla bla bli bla bla blou lorem ipson quoi</p>
@@ -38,8 +43,9 @@
         <a href="" ><input type="button" value="Contact" class="btn btn-outline-success"></a>
         <a href=""><input type="button" value="" class=""></a>
       </div>
-    </section> 
-  </section>
+    </div> 
+  </div>
+</div>
 {% endblock %}
 
 {# Commentaire: visuellement les h3 seront sur la parti droite des h2. #}
