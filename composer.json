@@ -5,6 +5,7 @@
     "autoload": {
         "psr-4": {
             "HomeBundle\\": "src/HomeBundle",
+            "AdminBundle\\": "src/AdminBundle",
             "Theme\\MonumentBundle\\": "src/Theme/MonumentBundle",
             "Theme\\ParcBundle\\": "src/Theme/ParcBundle",
             "Theme\\RestaurantBundle\\": "src/Theme/RestaurantBundle",

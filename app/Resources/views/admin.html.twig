@@ -1,16 +1,5 @@
-<?php
-
-include('pdo.php');
-
-$sql = "SELECT * FROM user";
-$query = $pdo->prepare($sql);
-$query->execute();
-$users = $query->fetch();
- ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +9,7 @@ $users = $query->fetch();
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="">
-    <title>Dashboard - de-way</title>
+    <title>{% block title %}Dashboard - de-way{% endblock %}</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -38,7 +27,7 @@ $users = $query->fetch();
     <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-
+{% block header %}
 <body class="fix-header fix-sidebar">
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
@@ -386,7 +375,9 @@ $users = $query->fetch();
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Bienvenue <?php echo $users['username'] ?> <i class="fas fa-user-astronaut"></i></h3></div>
+                  {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <h3 class="text-primary">{{ app.user.username }}<i class="fas fa-user-astronaut"></i></h3></div>
             </div>
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
+{% endblock %}
