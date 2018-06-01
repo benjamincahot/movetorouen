@@ -2,9 +2,10 @@ evenement:
     resource: "@EvenementBundle/Resources/config/routing.yml"
     prefix:   /Theme/Evenement
     
+
 admin:
     resource: "@AdminBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admin
 
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
@@ -22,6 +23,10 @@ parc:
 monument:
     resource: "@MonumentBundle/Resources/config/routing.yml"
     prefix:   /Theme/Monument
+
+Evenement:
+    resource: "@EvenementBundle/Resources/config/routing.yml"
+    prefix:   /Theme/Evenement
 
 home:
     resource: "@HomeBundle/Resources/config/routing.yml"
