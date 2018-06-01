@@ -1,6 +1,18 @@
-{% extends 'base.html.twig' %}
+{% extends 'layoutbase.html.twig' %}
 {% block content %}
-<div class="fullpage">
+
+<div id="fullpage">
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
+</div>
+
+If you want to define a different starting point rather than 
+
+
+
+{# <div class="fullpage">
   <div id="" class="section">
     <div class="chevre">                     
           <p class="">Une ville unique à redécouvrir !</p>
@@ -40,7 +52,7 @@
       </div>
     </div> 
   </div>
-</div>
+</div> #}
 {% endblock %}
 
 {# Commentaire: visuellement les h3 seront sur la parti droite des h2. #}
@@ -87,3 +99,19 @@
       </div> <!-- /container --> #}
 
  
+
+  {% block javascripts %}
+            
+            <script type="text/javascript" src="{{ asset('bundles/fullpage/js/jquery.fullPage.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/fullpage/vendors/scrolloverflow.min.js') }}"></script>
+
+            <script>
+                $(document).ready(function() {
+	                $('#fullpage').fullpage({
+		                anchors:['page1', 'page2', 'page3','page4'],
+                        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#ccddff']
+	                });
+                });   
+            </script>
+
+        {% endblock %}

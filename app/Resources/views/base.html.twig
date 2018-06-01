@@ -4,11 +4,10 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Rouen Move{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         {% block stylesheets %}
         {% stylesheets 'bundles/user/css/*' filter='cssrewrite' %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/user/css/style.css') }}" />
         {% endstylesheets %}
         {% endblock %}
     </head>
