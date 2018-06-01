@@ -1,3 +1,20 @@
 parc_homepage:
     path:     /
     defaults: { _controller: ParcBundle:Default:index }
+
+parc_add:
+    path:     /add
+    defaults: { _controller: ParcBundle:Default:add }
+
+parc_retrieve:
+    path:     /retrieve
+    defaults: { _controller: ParcBundle:Default:retrieve }
+
+parc_update:
+    path:     /update
+    defaults: { _controller: ParcBundle:Default:update }
+    
+parc_delete:
+    path:     /delete
+    defaults: { _controller: ParcBundle:Default:delete }
+

@@ -1,3 +1,20 @@
 sport_homepage:
     path:     /
     defaults: { _controller: SportBundle:Default:index }
+
+sport_add:
+    path:     /add
+    defaults: { _controller: SportBundle:Default:add }
+
+sport_retrieve:
+    path:     /retrieve
+    defaults: { _controller: SportBundle:Default:retrieve }
+
+sport_update:
+    path:     /update
+    defaults: { _controller: SportBundle:Default:update }
+
+sport_delete:
+    path:     /delete
+    defaults: { _controller: SportBundle:Default:delete }
+

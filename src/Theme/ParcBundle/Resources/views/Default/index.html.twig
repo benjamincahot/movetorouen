@@ -1,12 +1,17 @@
 {% extends 'base.html.twig' %}
- {% block content %}
-       <!-- Main jumbotron for a primary marketing message or call to action -->
+{% block content %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-          
+
             <h2>Liste des parcs</h2>
 
-        </div><!-- /container -->
+            <a href="{{ path('parc_add') }}">Add parc</a>
+            <a href="{{ path('parc_retrieve') }}">Retrieve parc</a>
+            <a href="{{ path('parc_update') }}">Update parc</a>
+            <a href="{{ path('parc_delete') }}">Delete parc</a>
+        </div>
+        <!-- /container -->
 
-     </div> 
- {% endblock %}
+    </div>
+{% endblock %}
