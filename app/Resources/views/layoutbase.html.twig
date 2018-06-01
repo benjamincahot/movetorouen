@@ -15,8 +15,8 @@
     </head>
     <body>
         {% block header %}
-            <nav class="navbar navbar-expand-md  fixed-top">
-                <a class="navbar-brand" href="{{ path('home_homepage') }}">RouenMove</a>
+            <nav class="navbar navbar-light fixed-top navbar-expand-lg default-color scrolling-navbar border border-right-0 border-left-0 border-top-0 border-grey">
+                <a class="navbar-brand " href="{{ path('home_homepage') }}">RouenMove</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,18 +25,18 @@
                     <ul class="navbar-nav mr-auto">
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    {# <li class="nav-item"> #}
-                        <a class="btn btn-outline-success" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
-                    {# </li> #}
-                    {# <li class="nav-item"> #}
-                        <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Log out</a>
-                    {# </li> #}
-                    {% else %}
-                    <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-outline-success"> </a>
-                    <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-outline-success"> </a>
-                    {% endif %}
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        {# <li class="nav-item"> #}
+                            <a class="btn btn-outline-success" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
+                        {# </li> #}
+                        {# <li class="nav-item"> #}
+                            <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Log out</a>
+                        {# </li> #}
+                        {% else %}
+                        <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-success btn-rounded"> </a>
+                        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-primary btn-rounded"> </a>
+                        {% endif %}
                     </form>
                 </div>
             </nav>
