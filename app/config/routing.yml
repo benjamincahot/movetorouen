@@ -13,20 +13,20 @@ user:
 
 sport:
     resource: "@SportBundle/Resources/config/routing.yml"
-    prefix:   /Theme/Sport
+    prefix:   /theme/sport
 
 
 parc:
     resource: "@ParcBundle/Resources/config/routing.yml"
-    prefix:   /Theme/Parc
+    prefix:   /theme/parc
 
 monument:
     resource: "@MonumentBundle/Resources/config/routing.yml"
-    prefix:   /Theme/Monument
+    prefix:   /theme/monument
 
 Evenement:
     resource: "@EvenementBundle/Resources/config/routing.yml"
-    prefix:   /Theme/Evenement
+    prefix:   /theme/evenement
 
 home:
     resource: "@HomeBundle/Resources/config/routing.yml"
