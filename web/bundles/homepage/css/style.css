@@ -1,18 +1,20 @@
-.view {
-    background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;
-    background-size: cover;
+#fullpage{
+    width: 70%;
+    left: 15%;
 }
+
+.navbar{
+    width: 100%;
     
-.navbar {
-    background-color: transparent;
 }
 
-.top-nav-collapse {
-    background-color: #4285F4;
+.card{
+    background: transparent;
+    width: 80%;
 }
 
-@media only screen and (max-width: 768px) {
-    .navbar {
-        background-color: #4285F4;
-    }
+.title{
+    margin-left: 36%;
+    
+    margin-bottom: 10%;
 }

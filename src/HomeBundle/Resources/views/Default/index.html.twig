@@ -2,48 +2,44 @@
 {% block content %}
 
 <div id="fullpage">
-	<div class="section slide1 ">
-    <div class="">                     
-          <h1 class="">RouenMove</h1>
-    </div>
-    <div id="" class="">
-      <h2 class="">Envie de prendre l'air ?</h2>
-      <h3>Trouvez rapidement votre prochain lieu de détente avec MoveRouen </h3>
-      <hr class="">
-      <div class="">
-        <button type="button" class="btn btn-primary"><a href="{{ path('parc_homepage') }}" class=""><div><span style="color:white;">Parcs</span></div></a></button>
-        <button type="button" class="btn btn-success"><a href="{{ path('evenement_homepage') }}" class=""><div><span style="color:white;">Evènements</span></div></a>
-        <button type="button" class="btn btn-info"><a href="{{ path('monument_homepage') }}" class=""><div><span style="color:white;">Monuments</span></div></a>
-        <button type="button" class="btn btn-danger"><a href="{{ path('sport_homepage') }}" class=""><div><span style="color:white;">Sports</span></div></a>
+	<div class="section slide1 ">             
+    <h1 class="title">RouenMove</h1>
+    <div class="card-center text-center mw-80"> 
+      <div class="card-body">
+        <h2 class="card-title">Envie de prendre l'air ?</h2>
+        <h3 class="card-text">Trouvez rapidement votre prochain lieu de détente avec MoveRouen </h3>
+        <hr class="">
+        <div class="">
+          <button type="button" class="btn btn-primary btn-lg"><a href="{{ path('parc_homepage') }}" class=""><div><span style="color:white;">Parcs</span></div></a></button>
+          <button type="button" class="btn btn-success btn-lg"><a href="{{ path('evenement_homepage') }}" class=""><div><span style="color:white;">Evènements</span></div></a></button>
+          <button type="button" class="btn btn-info btn-lg"><a href="{{ path('monument_homepage') }}" class=""><div><span style="color:white;">Monuments</span></div></a></button>
+          <button type="button" class="btn btn-danger btn-lg"><a href="{{ path('sport_homepage') }}" class=""><div><span style="color:white;">Sports</span></div></a></button>
+        </div>
       </div>
     </div>
   </div> {# fin slide 1 #}
 	<div class="section slide2 ">
-    <div class="border border-dark float-md-left rounded">
-      <h2>Pourquoi s'inscrire ?</h2>
-      <div class="chevre">
-        <p>Lorem ipson</p>
+    <div class="card-center text-center mw-80">
+      <div class="card-body">
+        <h2 class="card-title" >Pourquoi s'inscrire ?</h2>
+        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <br>
+        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-lg"></a>
       </div>
-    </div> {# end block left slide2 #}
-      <div class="border border-dark float-md-right rounded">
-        <h3>Inscription/Connection</h3>
-        <div class="">
-          <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-outline-success"></a>
-          <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-outline-success"></a>
-        </div>
-      </div>{# end block right slide2 #}
+    </div>
   </div> {# fin slide2  #}
 	<div class="section slide3">
-      <div class="border border-dark float-md-left rounded">
-      <h2>Bouger à Rouen ? oui mais où?</h2>
-        <p>c'est de la que tout est parti bla bla bli bla bla blou lorem ipson quoi</p>
+    <div class="card-center text-center mw-80">
+      <div class="card-body">
+        <h2 class="card-title" >Bouger à Rouen ? oui mais où?</h2>
+        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <br>
+        <a href="#" class="btn btn-primary btn-lg  ">Contact</a>           
       </div>
-      <div class="border border-dark float-md-right rounded">
-        <h3>Lien vers le formulaire de contact</h3>
-        <button type="button" class="btn btn-success"><a href="" class=""><div><span style="color:white;">Contact</span></div></a>
-      </div>
+    </div>
   </div> {# fin slide 3 #}
 </div>
+
 
 {% endblock %}
 
