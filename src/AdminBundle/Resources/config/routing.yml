@@ -22,9 +22,9 @@ listing_homepage:
     path:     /events
     defaults: { _controller: AdminBundle:Admin:listing }
 
-parameters_homepage:
+settings_homepage:
     path:     /events
-    defaults: { _controller: AdminBundle:Admin:parameters }
+    defaults: { _controller: AdminBundle:Admin:settings }
 
 profile_homepage:
     path:     /events

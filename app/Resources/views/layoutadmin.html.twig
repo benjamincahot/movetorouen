@@ -39,7 +39,7 @@
                 <div class="navbar-header">
                     <a class="navbar-brand">
                         <!-- Logo icon -->
-                        <b><img src="images/deway.png" alt="de-way" class="dark-logo" /></b>
+                        <b><img src="{{ asset('asset/images/deway.png') }}" alt="logo" class="dark-logo" /></b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
 
@@ -218,14 +218,12 @@
                         <!-- End Messages -->
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/users/floda.png" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('asset/images/users/1.jpg') }}" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="#"><i class="ti-user"></i> Profile</a></li>
-                                    <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
-                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
-                                    <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
-                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="{{ path('profile_homepage') }}"><i class="ti-user"></i> Profil</a></li>
+                                    <li><a href="{{ path('settings_homepage') }}"><i class="ti-settings"></i> Paramètres</a></li>
+                                    <li><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-power-off"></i> Déconnexion</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -257,11 +255,6 @@
 
                         <li class="nav-label">Gestion des utilisateurs</li>
                           <li> <a href="update.php" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Liste des utilisateurs</span></a></li>
-
-                        <li class="nav-label">Gestion de profil</li>
-                          <li> <a href="profile.php" aria-expanded="false"><i class="fas fa-wrench"></i><span class="hide-menu">Profil</span></a></li>
-                          <li> <a href="profile.php" aria-expanded="false"><i class="fas fa-cogs"></i><span class="hide-menu">Paramètres</span></a>
-                        </li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
