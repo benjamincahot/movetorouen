@@ -16,11 +16,11 @@
         <button type="button" class="btn btn-info"><a href="{{ path('monument_homepage') }}" class=""><div><span style="color:white;">Monuments</span></div></a>
         <button type="button" class="btn btn-danger"><a href="{{ path('sport_homepage') }}" class=""><div><span style="color:white;">Sports</span></div></a>
       </div>
-      </div>
     </div>
+  </div> {# fin slide 1 #}
 	<div class="section slide2">
       <h2>Pourquoi s'inscrire ?</h2>
-      <div class="">
+      <div class="chevre">
         <p>Lorem ipson</p>
       </div>
       <div class="">
@@ -28,25 +28,21 @@
         <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-outline-success"></a>
         <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-outline-success"></a>
       </div>
-    </div> 
+  </div> {# fin slide  #}
 	<div class="section slide3">
-    <h2>Bouger à Rouen ? oui mais où?</h2>
-    <div class="">
-      <p>c'est de la que tout est parti bla bla bli bla bla blou lorem ipson quoi</p>
-    </div>
-    <div class="">
-      <h3>Lien vers le formulaire de contact</h3>
-      <button type="button" class="btn btn-success"><a href="" class=""><div><span style="color:white;">Contact</span></div></a>
-    </div>
-  </div> 
+      <h2>Bouger à Rouen ? oui mais où?</h2>
+      <div class="">
+        <p>c'est de la que tout est parti bla bla bli bla bla blou lorem ipson quoi</p>
+      </div>
+      <div class="">
+        <h3>Lien vers le formulaire de contact</h3>
+        <button type="button" class="btn btn-success"><a href="" class=""><div><span style="color:white;">Contact</span></div></a>
+      </div>
+  </div> {# fin slide 3 #}
 </div>
 
-<footer class="container">
-  <p>&copy; RouenMove 2018</p>
-</footer> 
-
-
 {% endblock %}
+
 
   {% block javascripts %}
             <script type="text/javascript" src="{{ asset('bundles/fullpage/js/jquery.fullPage.js') }}"></script>
@@ -55,8 +51,8 @@
             <script>
                 $(document).ready(function() {
 	                $('#fullpage').fullpage({
-		                anchors:['page1', 'page2', 'page3','page4'],
-                        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#ccddff']
+		                anchors:['page1', 'page2', 'page3'],
+                        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE',]
 	                });
                 });   
             </script>
