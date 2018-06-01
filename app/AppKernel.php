@@ -23,9 +23,9 @@ class AppKernel extends Kernel
             new HomeBundle\HomeBundle(),
             new Theme\MonumentBundle\MonumentBundle(),
             new Theme\ParcBundle\ParcBundle(),
-            new Theme\RestaurantBundle\RestaurantBundle(),
             new Theme\SportBundle\SportBundle(),
             new User\UserBundle\UserBundle(),
+            new Theme\EvenementBundle\EvenementBundle(),
             new AdminBundle\AdminBundle(),
         ];
 

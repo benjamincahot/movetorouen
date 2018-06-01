@@ -1,6 +1,6 @@
 admin:
     resource: "@AdminBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admin
 
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
@@ -10,9 +10,6 @@ sport:
     resource: "@SportBundle/Resources/config/routing.yml"
     prefix:   /Theme/Sport
 
-restaurant:
-    resource: "@RestaurantBundle/Resources/config/routing.yml"
-    prefix:   /Theme/Restaurant
 
 parc:
     resource: "@ParcBundle/Resources/config/routing.yml"
@@ -21,6 +18,10 @@ parc:
 monument:
     resource: "@MonumentBundle/Resources/config/routing.yml"
     prefix:   /Theme/Monument
+
+Evenement:
+    resource: "@EvenementBundle/Resources/config/routing.yml"
+    prefix:   /Theme/Evenement
 
 home:
     resource: "@HomeBundle/Resources/config/routing.yml"

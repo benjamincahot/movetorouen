@@ -1,6 +1,6 @@
 <?php
 
-namespace Theme\RestaurantBundle\Tests\Controller;
+namespace Theme\EvenementBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

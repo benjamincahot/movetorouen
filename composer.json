@@ -8,8 +8,8 @@
             "AdminBundle\\": "src/AdminBundle",
             "Theme\\MonumentBundle\\": "src/Theme/MonumentBundle",
             "Theme\\ParcBundle\\": "src/Theme/ParcBundle",
-            "Theme\\RestaurantBundle\\": "src/Theme/RestaurantBundle",
             "Theme\\SportBundle\\": "src/Theme/SportBundle",
+            "Theme\\EvenementBundle\\": "src/Theme/EvenementBundle",
             "User\\UserBundle\\": "src/User/UserBundle"
         },
         "classmap": [

@@ -1,15 +1,10 @@
-{% block stylesheets %}
-    {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
-{% endblock %}
 {% extends 'base.html.twig' %}
 {% block content %}
 <div class="fullpage">
   <div id="" class="section">
     <div class="chevre">                     
           <p class="">Une ville unique à redécouvrir !</p>
-          <h1 class="">Bouger à Rouen</h1>
+          <h1 class="">RouenMove</h1>
     </div>
     <div id="" class="">
       <h2>Envie de prendre l'aire ?</h2>
@@ -17,7 +12,7 @@
       <hr class="">
       <div class="">
         <a href="{{ path('parc_homepage') }}" class=""><div><span>Parcs</span></div></a>
-        <a href="{{ path('restaurant_homepage') }}" class=""><div><span>Restaurants</span></div></a>
+        <a href="{{ path('evenement_homepage') }}" class=""><div><span>Evènements</span></div></a>
         <a href="{{ path('monument_homepage') }}" class=""><div><span>Monuments</span></div></a>
         <a href="{{ path('sport_homepage') }}" class=""><div><span>Sports</span></div></a>
       </div>
