@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             
+            new Cocur\Slugify\Bridge\Symfony\CocurSlugifyBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             
             new HomeBundle\HomeBundle(),
