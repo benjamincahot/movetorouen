@@ -11,7 +11,9 @@
     <!-- Favicon icon -->
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('asset/css/lib/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/css/fontawesome5/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/helper.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -242,15 +244,15 @@
                         <li class="nav-devider"></li>
 
                         <li class="nav-label">Accueil</li>
-                          <li> <a href="/PROJECT/projetsecret/admin" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
+                          <li> <a href="{{ path('admin_homepage') }}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
                           <li> <a href="#" aria-expanded="false"><i class="fas fa-life-ring"></i><span class="hide-menu">Support</span></a>
                         </li>
 
                         <li class="nav-label">Gestion du contenu</li>
                           <li> <a href="{{ path('parks_homepage') }}" aria-expanded="false"><i class="fas fa-tree"></i><span class="hide-menu">Parcs</span></a>
-                          <li> <a href="monuments.php" aria-expanded="false"><i class="fas fa-building"></i><span class="hide-menu">Monuments</span></a>
-                          <li> <a href="events.php" aria-expanded="false"><i class="fas fa-calendar-alt"></i><span class="hide-menu">Evènements</span></a>
-                          <li> <a href="restaurants.php" aria-expanded="false"><i class="fas fa-utensils"></i><span class="hide-menu">Restaurants</span></a>
+                          <li> <a href="{{ path('monuments_homepage') }}" aria-expanded="false"><i class="fas fa-building"></i><span class="hide-menu">Monuments</span></a>
+                          <li> <a href="{{ path('events_homepage') }}" aria-expanded="false"><i class="fas fa-calendar-alt"></i><span class="hide-menu">Evènements</span></a>
+                          <li> <a href="{{ path('restaurants_homepage') }}" aria-expanded="false"><i class="fas fa-utensils"></i><span class="hide-menu">Restaurants</span></a>
                         </li>
 
                         <li class="nav-label">Gestion des utilisateurs</li>
