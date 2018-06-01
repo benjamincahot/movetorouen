@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 evenement:
     resource: "@EvenementBundle/Resources/config/routing.yml"
     prefix:   /Theme/Evenement
-=======
+    
 admin:
     resource: "@AdminBundle/Resources/config/routing.yml"
     prefix:   /
->>>>>>> a325e22ccea06947983682cb439c156fa17656d7
 
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
