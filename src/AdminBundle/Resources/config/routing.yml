@@ -1,3 +1,31 @@
 admin_homepage:
-    path:     /admin
+    path:     /
     defaults: { _controller: AdminBundle:Admin:dashboard }
+
+parks_homepage:
+    path:     /parks
+    defaults: { _controller: AdminBundle:Admin:parks }
+
+restaurants_homepage:
+    path:     /restaurants
+    defaults: { _controller: AdminBundle:Admin:restaurants }
+
+monuments_homepage:
+    path:     /monuments
+    defaults: { _controller: AdminBundle:Admin:monuments }
+
+events_homepage:
+    path:     /events
+    defaults: { _controller: AdminBundle:Admin:events }
+
+listing_homepage:
+    path:     /events
+    defaults: { _controller: AdminBundle:Admin:listing }
+
+parameters_homepage:
+    path:     /events
+    defaults: { _controller: AdminBundle:Admin:parameters }
+
+profile_homepage:
+    path:     /events
+    defaults: { _controller: AdminBundle:Admin:profile }
