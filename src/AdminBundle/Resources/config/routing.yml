@@ -19,13 +19,13 @@ events_homepage:
     defaults: { _controller: AdminBundle:Admin:events }
 
 listing_homepage:
-    path:     /events
+    path:     /listing
     defaults: { _controller: AdminBundle:Admin:listing }
 
 settings_homepage:
-    path:     /events
+    path:     /settings
     defaults: { _controller: AdminBundle:Admin:settings }
 
 profile_homepage:
-    path:     /events
+    path:     /profile
     defaults: { _controller: AdminBundle:Admin:profile }
