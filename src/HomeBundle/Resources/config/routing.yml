@@ -1,3 +1,7 @@
 home_homepage:
     path:     /
     defaults: { _controller: HomeBundle:Default:index }
+
+home_contact:
+    path:     /contact
+    defaults: { _controller: HomeBundle:Default:contact }

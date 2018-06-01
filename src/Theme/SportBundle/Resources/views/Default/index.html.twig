@@ -1,12 +1,17 @@
 {% extends 'base.html.twig' %}
- {% block content %}
-       <!-- Main jumbotron for a primary marketing message or call to action -->
+{% block content %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-          
+
             <h2>Liste des structures sportives</h2>
 
-        </div><!-- /container -->
+            <a href="{{ path('sport_add') }}">Add sport</a>
+            <a href="{{ path('sport_retrieve') }}">Retrieve sport</a>
+            <a href="{{ path('sport_update') }}">Update sport</a>
+            <a href="{{ path('sport_delete') }}">Delete sport</a>
+        </div>
+        <!-- /container -->
 
-     </div> 
- {% endblock %}
+    </div>
+{% endblock %}
