@@ -31,4 +31,18 @@ class AdminController extends Controller
         return $this->render('AdminBundle:Default:restaurants.html.twig');
     }
 
+    public function listingAction()
+    {
+        return $this->render('AdminBundle:Default:listing.html.twig');
+    }
+
+    public function profileAction()
+    {
+        return $this->render('AdminBundle:Default:profile.html.twig');
+    }
+
+    public function settingsAction()
+    {
+        return $this->render('AdminBundle:Default:settings.html.twig');
+    }
 }

@@ -245,7 +245,6 @@
 
                         <li class="nav-label">Accueil</li>
                           <li> <a href="{{ path('admin_homepage') }}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
-                          <li> <a href="#" aria-expanded="false"><i class="fas fa-life-ring"></i><span class="hide-menu">Support</span></a>
                         </li>
 
                         <li class="nav-label">Gestion du contenu</li>
@@ -256,7 +255,8 @@
                         </li>
 
                         <li class="nav-label">Gestion des utilisateurs</li>
-                          <li> <a href="update.php" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Liste des utilisateurs</span></a></li>
+                          <li> <a href="{{ path('listing_homepage') }}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Liste des utilisateurs</span></a></li>
+                          <li> <a href="#" aria-expanded="false"><i class="fas fa-life-ring"></i><span class="hide-menu">Support</span></a>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
