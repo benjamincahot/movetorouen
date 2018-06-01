@@ -13,7 +13,7 @@ class DefaultController extends Controller
         return $this->render('@Evenement/Default/index.html.twig');
     }
 
-    public function addAction(Request $request)
+    public function addAction()
     {
         return $this->render('@Evenement/Default/create.html.twig');
     }

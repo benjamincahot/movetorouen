@@ -1,3 +1,20 @@
 monument_homepage:
     path:     /
     defaults: { _controller: MonumentBundle:Default:index }
+
+monument_add:
+    path:     /add
+    defaults: { _controller: MonumentBundle:Default:add }
+
+monument_retrieve:
+    path:     /retrieve
+    defaults: { _controller: MonumentBundle:Default:retrieve }
+
+monument_update:
+    path:     /update
+    defaults: { _controller: MonumentBundle:Default:update }
+
+monument_delete:
+    path:     /delete
+    defaults: { _controller: MonumentBundle:Default:delete }
+
