@@ -26,9 +26,7 @@ category_add_new:
 category_add_new_action:
     path:     /category/newone
     defaults: { _controller: AdminBundle:Category:newform }
-    methods:    [POST]
-
-
+    methods:  [POST]
 
 listing_homepage:
     path:     /listing
