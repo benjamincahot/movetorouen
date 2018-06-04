@@ -32,8 +32,8 @@
                         <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Log out</a>
                     {# </li> #}
                     {% else %}
-                    <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-outline-success"> </a>
-                    <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-outline-success"> </a>
+                    <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm"> </a>
+                    <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm"> </a>
                     {% endif %}
                     </form>
                 </div>
