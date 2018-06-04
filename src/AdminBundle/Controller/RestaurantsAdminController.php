@@ -4,25 +4,25 @@ namespace AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class ParksAdminController extends Controller
+class RestaurantsAdminController extends Controller
 {
-    // Parks
-    public function parkscreateAction()
+    // Restaurants
+    public function restaurantscreateAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
 
-    public function parksretrieveAction()
+    public function restaurantsretrieveAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
 
-    public function parksupdateAction()
+    public function restaurantsupdateAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
 
-    public function parksdeleteAction()
+    public function restaurantsdeleteAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
