@@ -3,14 +3,23 @@
 namespace Theme\EvenementBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 use Theme\EvenementBundle\Entity\Evenements;
+use Theme\EvenementBundle\Form\Type\EventsType;
 
 class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@Evenement/Default/index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $events = $em
+            ->getRepositpry('EvenementBundle:Evenements')
+            ->findAll();
+
+        return $this->render('@Evenement/Default/index.html.twig', [
+            "events" => $events
+        ]);
     }
 
     public function addAction()

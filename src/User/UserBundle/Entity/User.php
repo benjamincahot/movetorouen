@@ -6,13 +6,13 @@ namespace User\UserBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
+/*
  * @ORM\Entity
- * @ORM\Table(name="`user`")
+ * @ORM\Table(name="user")
  */
 class User extends BaseUser
 {
-    /**
+    /*
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -21,11 +21,11 @@ class User extends BaseUser
 
     // protected $firstname;
     // protected $lastname;
-    
 
-    public function __construct()
+
+    public function construct()
     {
-        parent::__construct();
+        parent::construct();
         // your own logic
     }
 }
