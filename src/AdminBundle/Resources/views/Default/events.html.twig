@@ -1,3 +1,13 @@
 {% extends "layoutadmin.html.twig" %}
-{% form_theme eventsForm 'bootstrap_3_horizontal_layout.html.twig' %}
-{% block dashboard %}{{ include ('@Admin/Default/eventsform.html.twig') }}{% endblock %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block dashboard %}
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+{{ include ('@Admin/Default/eventsform.html.twig') }}
+
+
+{% endblock %}
