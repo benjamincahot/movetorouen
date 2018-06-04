@@ -4,25 +4,25 @@ namespace AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class ParksAdminController extends Controller
+class CRUDMonumentController extends Controller
 {
-    // Parks
-    public function parkscreateAction()
+    // Monuments
+    public function monumentscreateAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
 
-    public function parksretrieveAction()
+    public function monumentsretrieveAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
 
-    public function parksupdateAction()
+    public function monumentsupdateAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
 
-    public function parksdeleteAction()
+    public function monumentsdeleteAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
     }

@@ -1,0 +1,29 @@
+#fullpage{
+    width: 70%;
+    left: 15%;
+}
+
+.navbar{
+    width: 100%;
+    background-color: #171c2f;
+    
+}
+
+.card{
+    background: transparent;
+    width: 80%;
+}
+
+.title{
+    margin-left: 36%;
+    
+    margin-bottom: 10%;
+}
+
+.logo{
+    width: 35%;
+}
+
+h5{
+    color: #c01819;
+}

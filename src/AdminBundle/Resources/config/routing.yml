@@ -4,19 +4,19 @@ admin_homepage:
 
 parks_homepage:
     path:     /parks
-    defaults: { _controller: AdminBundle:Admin:parks }
+    defaults: { _controller: AdminBundle:Category:parks }
 
 restaurants_homepage:
     path:     /restaurants
-    defaults: { _controller: AdminBundle:Admin:restaurants }
+    defaults: { _controller: AdminBundle:Category:restaurants }
 
 monuments_homepage:
     path:     /monuments
-    defaults: { _controller: AdminBundle:Admin:monuments }
+    defaults: { _controller: AdminBundle:Category:monuments }
 
 events_homepage:
     path:     /events
-    defaults: { _controller: AdminBundle:Admin:events }
+    defaults: { _controller: AdminBundle:Category:events }
 
 listing_homepage:
     path:     /listing
@@ -29,3 +29,7 @@ settings_homepage:
 profile_homepage:
     path:     /profile
     defaults: { _controller: AdminBundle:Admin:profile }
+
+support_homepage:
+    path:     /support
+    defaults: { _controller: AdminBundle:Admin:support }
