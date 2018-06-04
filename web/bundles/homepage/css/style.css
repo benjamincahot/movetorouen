@@ -1,6 +1,7 @@
 #fullpage{
     width: 70%;
     left: 15%;
+    background-image:  url(web/img/background.png);
 }
 
 .navbar{
