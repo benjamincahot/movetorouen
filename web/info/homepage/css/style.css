@@ -1,12 +1,19 @@
+h4,h3{
+    color: #bf1819;
+}
+
+.navbar{
+    width: 100%;
+    background-color: #171c2f;
+    
+}
+.logo{
+    width: 35%;
+}
 .slide1{
     background-image: url('../../img/background.png');
     background-position: top;
     background-repeat: no-repeat;
-    
-}
-.navbar{
-    width: 100%;
-    background-color: #171c2f;
     
 }
 
@@ -18,9 +25,7 @@
     margin-bottom: 10%;
 }
 
-.logo{
-    width: 35%;
-}
+
 
 h5{
     color: #171c2f;
@@ -43,8 +48,9 @@ h5{
 
 body{
     width: 100%;
-    line-height: 1.6;   
-    
+    line-height: 1.2;   
+    font-family: 'Indie Flower', cursive;
+    font-size: x-large;
 }
 .side2{
    width: 88%;
@@ -67,7 +73,7 @@ body{
 }
 
 .bot{
-    line-height: 1.1;
+    line-height: 1.2;
     
 }
 
