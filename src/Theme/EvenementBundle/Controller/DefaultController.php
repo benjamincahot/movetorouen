@@ -12,14 +12,11 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
-        $events = $em
-            ->getRepositpry('EvenementBundle:Evenements')
-            ->findAll();
-
-        return $this->render('@Evenement/Default/index.html.twig', [
-            "events" => $events
-        ]);
+<<<<<<< HEAD
+      
+=======
+>>>>>>> fee900afb4c99164f4103f7e6c1a0a52d2590a3d
+        return $this->render('@Evenement/Default/index.html.twig');
     }
 
     public function addAction()

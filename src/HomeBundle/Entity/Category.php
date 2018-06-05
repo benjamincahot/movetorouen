@@ -3,6 +3,7 @@
 namespace HomeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Category
@@ -25,6 +26,13 @@ class Category
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
+     * )
      */
     private $name;
 
@@ -38,11 +46,26 @@ class Category
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="modified_at", type="datetime")
+     * @ORM\Column(name="modified_at", type="datetime", nullable=true)
      */
     private $modifiedAt;
 
 
+    /**
+     * @ORM\OneToMany(targetEntity="Events", mappedBy="Category")
+     */
+    private $events;
+
+    public function __construct()
+    {
+        $this->events = new ArrayCollection();
+    }
+
+    // -----------------------------------
+    // GETTER/ SETTER
+    // -----------------------------------
+
+    
     /**
      * Get id.
      *
