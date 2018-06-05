@@ -7,6 +7,7 @@ use HomeBundle\Entity\Category;
 use Symfony\Component\HttpFoundation\Request;
 use AdminBundle\Form\CategoryType;
 use \DateTime;
+
 class CategoryController extends Controller
 {
     // Categories
@@ -34,6 +35,7 @@ class CategoryController extends Controller
     public function newAction()
     {
         $category = new Category();
+
         $form = $this->createForm(CategoryType::class, $category);
         // $form = $this->createFormBuilder($category)
         //     ->add('name', TextType::class)
@@ -49,6 +51,7 @@ class CategoryController extends Controller
     public function newformAction(Request $request)
     {
       $category = new Category();
+
       $form = $this->createForm(CategoryType::class, $category);
 
       $form->handleRequest($request);

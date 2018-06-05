@@ -58,14 +58,14 @@ class Category
 
     public function __construct()
     {
-        $this->events = new ArrayCollection();
+        $this->events = new Events();
     }
 
     // -----------------------------------
     // GETTER/ SETTER
     // -----------------------------------
 
-    
+
     /**
      * Get id.
      *

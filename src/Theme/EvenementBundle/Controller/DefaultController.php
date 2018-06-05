@@ -12,10 +12,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-<<<<<<< HEAD
-      
-=======
->>>>>>> fee900afb4c99164f4103f7e6c1a0a52d2590a3d
+
         return $this->render('@Evenement/Default/index.html.twig');
     }
 
