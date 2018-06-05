@@ -44,6 +44,21 @@ class Category
 
 
     /**
+     * @ORM\OneToMany(targetEntity="Events", mappedBy="Category")
+     */
+    private $events;
+
+    public function __construct()
+    {
+        $this->events = new ArrayCollection();
+    }
+
+    // -----------------------------------
+    // GETTER/ SETTER
+    // -----------------------------------
+
+    
+    /**
      * Get id.
      *
      * @return int

@@ -65,6 +65,17 @@ class Events
 
 
     /**
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="events")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     */
+    private $category;
+
+
+    // ----------------------------------------
+    // GETTER/ SETTER
+    // ----------------------------------------
+
+    /**
      * Get id.
      *
      * @return int
