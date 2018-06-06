@@ -1,36 +1,57 @@
 {% extends "layoutadmin.html.twig" %}
 {% block dashboard %}
-<div class="col-lg-12">
+  <div class="col-lg-12">
     <div class="card">
-        <div class="card-title">
-            <h4>Liste des utilisateurs </h4>
+      <div class="card-title">
+        <h4>Liste des utilisateurs
+        </h4>
+      </div>
+      <div class="card-body">
+        <div id="myTable_wrapper" class="dataTables_wrapper no-footer">
+          <div class="dataTables_length" id="myTable_length">
+            <label>Afficher
+              <select name="myTable_length" aria-controls="myTable" class="">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              utilisateurs par page</label>
+          </div>
+          <div id="myTable_filter" class="dataTables_filter">
+            <label>Rechercher :<input type="search" class="" placeholder="" aria-controls="myTable" data-com.agilebits.onepassword.user-edited="yes"></label>
+          </div>
+          <table id="myTable" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="myTable_info">
+            <thead>
+              <tr role="row">
+                <th class="sorting_asc" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 148.4px;">ID</th>
+                <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 239.4px;">Pseudo</th>
+                <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 113.4px;">Email</th>
+                <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 54.4px;">Password</th>
+                <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 107.4px;">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row" class="odd">
+                <td class="sorting_1">1</td>
+                <td>uerhguihzer</td>
+                <td>ertert</td>
+                <td>ertertert</td>
+                <td>ertertertertertehfrgt</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="dataTables_paginate paging_simple_numbers" id="myTable_paginate">
+            <a class="paginate_button previous disabled" aria-controls="myTable" data-dt-idx="0" tabindex="0" id="myTable_previous">Precedent</a>
+            <span>
+              <a class="paginate_button current" aria-controls="myTable" data-dt-idx="1" tabindex="0">1</a>
+            </span>
+            <a class="paginate_button next" aria-controls="myTable" data-dt-idx="7" tabindex="0" id="myTable_next">Suivant</a>
+          </div>
         </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Pseudo</th>
-                            <th>Email</th>
-                            <th>Mot de passe</th>
-                            <th>Role</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="row"> {{ app.name.username }} </th>
-                        <td> {{ app.name.username }} </td>
-                        <td> {{ app.name.username }} </span></td>
-                        <td> {{ app.name.username }} </td>
-                        <td><span class="badge badge-danger"></td>
-                        <td><a class="btn btn-warning btn-sm"href="upgrade.php"><i class="fas fa-plus"></i> <a class="btn btn-success btn-sm" href="approved.php"><i class="fas fa-check"></i> <a class="btn btn-danger btn-sm" href="banned.php" alt="Bannir"><i class="fas fa-trash"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+</div>
 </div>
 {% endblock %}

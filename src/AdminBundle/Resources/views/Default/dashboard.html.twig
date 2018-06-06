@@ -1,55 +1,62 @@
 {% extends "layoutadmin.html.twig" %}
-{% block welcome %}Bienvenue {{ app.user.username }}{% endblock %}
+{% block welcome %}Bienvenue
+  {{ app.user.username }}
+{% endblock %}
 {% block dashboard %}
-<div class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4">
-            <div class="card p-30">
-                <div class="media">
-                    <div class="media-left meida media-middle">
-                        <span><i class="far fa-address-card f-s-40 color-secondary"></i></span>
-                    </div>
-                    <div class="media-body media-text-right">
-                        <h2>0</h2>
-                        <p class="m-b-0">Nouveau(x) membre(s)</p>
-                    </div>
-                </div>
+      <div class="col-md-4">
+        <div class="card p-30 bg-warning">
+          <div class="media">
+            <div class="media-left meida media-middle">
+              <span>
+                <i class="far fa-address-card f-s-40 color-secondary"></i>
+              </span>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card p-30">
-                <div class="media">
-                    <div class="media-left meida media-middle">
-                        <span><i class="far fa-file-alt f-s-40 color-success"></i></span>
-                    </div>
-                    <div class="media-body media-text-right">
-                        <h2>0</h2>
-                        <p class="m-b-0">Nouveau(x) ajout(s)</p>
-                    </div>
-                </div>
+            <div class="media-body media-text-right">
+              <h2 class="text-white">0</h2>
+              <p class="m-b-0 text-white">Nouveau(x) membre(s)</p>
             </div>
+          </div>
         </div>
-        <div class="col-md-4">
-            <div class="card p-30">
-                <div class="media">
-                    <div class="media-left meida media-middle">
-                        <span><i class="far fa-life-ring f-s-40 color-danger"></i></span>
-                    </div>
-                    <div class="media-body media-text-right">
-                        <h2>0</h2>
-                        <p class="m-b-0">Demande(s) de support</p>
-                    </div>
-                </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-30 bg-info">
+          <div class="media">
+            <div class="media-left meida media-middle">
+              <span>
+                <i class="far fa-file-alt f-s-40"></i>
+              </span>
             </div>
+            <div class="media-body media-text-right">
+              <h2 class="text-white">0</h2>
+              <p class="m-b-0 text-white">Nouveau(x) ajout(s)</p>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-30 bg-danger">
+          <div class="media">
+            <div class="media-left meida media-middle">
+              <span>
+                <i class="far fa-life-ring f-s-40"></i>
+              </span>
+            </div>
+            <div class="media-body media-text-right">
+              <h2 class="text-white">0</h2>
+              <p class="m-b-0 text-white">Demande(s) de support</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="row bg-white m-l-0 m-r-0 box-shadow ">
-        <!-- column -->
+      <!-- column -->
     </div>
 
-
-    <!-- End PAge Content -->
-</div>
-<!-- End Container fluid  -->
+    <!-- End Page Content -->
+  </div>
+  <!-- End Container fluid -->
 {% endblock %}
