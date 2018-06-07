@@ -4,17 +4,16 @@
         <meta charset="UTF-8" />
         <title>{% block title %}MoveToRouen{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        {% block stylesheets %}
-        {% stylesheets 'bundles/user/css/*' filter='cssrewrite' %}
-        <link rel="stylesheet" href="{{ asset('bundles/user/css/style.css') }}" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">        {% block stylesheets %}
+        {% stylesheets 'info/homepage/css/*' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset('info/homepage/css/style2.css') }}" />
         {% endstylesheets %}
         {% endblock %}
     </head>
-    <body>
+    <body style="background-color: #171c2f;">
         {% block header %}
-       <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-                <a class="navbar-brand" href="{{ path('home_homepage') }}">MoveToRouen</a>
+       <nav class="navbar navbar-light fixed-top navbar-expand-lg default-color scrolling-navbar border border-right-0 border-left-0 border-top-0 border-grey">
+                <a class="navbar-brand " href="{{ path('home_homepage') }}"><img class="logo" src="{{ asset('info/img/logo.png') }}" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -23,21 +22,18 @@
                     <ul class="navbar-nav mr-auto">
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    {# <li class="nav-item"> #}
-                        <a class="btn btn-outline-success" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
-                    {# </li> #}
-                    {# <li class="nav-item"> #}
-                        <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Log out</a>
-                    {# </li> #}
-                    {% else %}
-                    <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm"> </a>
-                    <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm"> </a>
-                    {% endif %}
+                        {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <a class="btn btn-outline-success" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
+                            <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Log out</a>
+                        </li>
+                        {% else %}
+                        <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm"> </a>
+                        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm"> </a>
+                        {% endif %}
                     </form>
                 </div>
-        </nav>
+            </nav>
         {% endblock %}
 
         {% block content %}
@@ -45,9 +41,13 @@
         {% endblock %}
 
         {% block footer %}
-          <footer class="container">
-             <p>&copy; RouenMove 2018</p>
-          </footer>
+          <footer class="page-footer font-small stylish-color text-light pt-3 mt-3 fixed-bottom homefooter foot">
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MoveToRouen</a>
+  </div>
+</footer>        
+          
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         {% endblock %}
 
         {% block javascripts %}{% endblock %}

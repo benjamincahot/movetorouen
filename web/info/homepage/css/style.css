@@ -1,6 +1,12 @@
-h4,h3{
-    color: #bf1819;
+h1{
+    font-size: 200%;
+    font-weight: bold;
 }
+h2{
+    font-size: 150%;
+}
+
+ 
 
 .navbar{
     width: 100%;
@@ -14,6 +20,7 @@ h4,h3{
     background-image: url('../../img/background.png');
     background-position: top;
     background-repeat: no-repeat;
+    text-shadow: 2px 2px #ff0000;
     
 }
 

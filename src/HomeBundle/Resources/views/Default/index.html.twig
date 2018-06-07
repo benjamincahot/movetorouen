@@ -1,7 +1,7 @@
 {% extends 'layoutbase.html.twig' %}
 {% block content %}
 
-<div id="fullpage">
+<div id="">
 	<div class="section slide1 ">
     <div class="container ">
       <h1 class="title text-light">MoveToRouen</h1>
@@ -11,10 +11,10 @@
           <h3 class="card-text text-light">Trouvez rapidement votre prochain lieu de détente avec MoveToRouen </h3>
           <hr class="">
           <div class="">
-            <button type="button" class="btn btn-primary btn-lg"><a href="{{ path('parc_homepage') }}" class=""><div><span style="color:white;">Parcs</span></div></a></button>
-            <button type="button" class="btn btn-success btn-lg"><a href="{{ path('events_index') }}" class=""><div><span style="color:white;">Evènements</span></div></a></button>
-            <button type="button" class="btn btn-info btn-lg"><a href="{{ path('monument_homepage') }}" class=""><div><span style="color:white;">Monuments</span></div></a></button>
-            <button type="button" class="btn btn-danger btn-lg"><a href="{{ path('sport_homepage') }}" class=""><div><span style="color:white;">Sports</span></div></a></button>
+            <a href="#" class=""><button type="button" class="btn btn-primary btn-lg"><span style="color:white;">Parcs</span></button></a>
+            <a href="{{ path('events_index') }}" class=""><button type="button" class="btn btn-success btn-lg"><div><span style="color:white;">Evènements</span></div></button></a>
+            <a href="{{ path('monument_homepage') }}" class=""><button type="button" class="btn btn-info btn-lg"><div><span style="color:white;">Monuments</span></div></button></a>
+            <a href="{{ path('sport_homepage') }}" class=""><button type="button" class="btn btn-danger btn-lg"><div><span style="color:white;">Sports</span></div></button></a>
           </div>
         </div>
       </div>

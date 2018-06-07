@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>Event creation</h1>
+<div class="container text-light" style="width:30%;margin-top: 7%;line-height: 0;">
+    <h1 style="margin-left:-25%;margin-bottom:5%;">Créer un événement</h1>
+
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
- 
     {{ form_end(form) }}
-
+    <button type="submit" class="btn btn-success">Submit</button>
+</div>
     <ul>
         <li>
             <a href="{{ path('events_index') }}">Back to the list</a>
