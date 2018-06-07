@@ -1,7 +1,13 @@
+# Route d'accès
 admin_homepage:
     path:     /
     defaults: { _controller: AdminBundle:Admin:dashboard }
+# Fin de la route d'accès
 
+
+
+
+# Routes des pages consultables
 parks_homepage:
     path:     /parks
     defaults: { _controller: AdminBundle:Category:parks }
@@ -18,28 +24,38 @@ events_homepage:
     path:     /events
     defaults: { _controller: AdminBundle:Category:events }
 
-category_add_new:
-    path:     /category/newone
-    defaults: { _controller: AdminBundle:Category:new }
-    methods:    [GET]
-
-category_add_new_action:
-    path:     /category/newone
-    defaults: { _controller: AdminBundle:Category:newform }
-    methods:  [POST]
-
 listing_homepage:
     path:     /listing
     defaults: { _controller: AdminBundle:Admin:listing }
 
+support_homepage:
+    path:     /support
+    defaults: { _controller: AdminBundle:Admin:support }
+# Fin des routes consultable
+
+
+
+
+# Routes des formulaires
+parks_add_new:
+    path:     /parks/new
+    defaults: { _controller: AdminBundle:Category:new }
+    methods:  [GET]
+
+parks_add_new_action:
+    path:     /parks/newone
+    defaults: { _controller: AdminBundle:Category:newform }
+    methods:  [POST]
+# Fin des routes des formulaires
+
+
+
+# Routes des paramètres
 settings_homepage:
     path:     /settings
     defaults: { _controller: AdminBundle:Admin:settings }
 
-profile_homepage:
-    path:     /profile
-    defaults: { _controller: AdminBundle:Admin:profile }
-
-support_homepage:
-    path:     /support
-    defaults: { _controller: AdminBundle:Admin:support }
+update_homepage:
+    path:     /settings/update
+    defaults: { _controller: AdminBundle:Admin:update }
+    methods:  [GET]

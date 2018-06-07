@@ -1,2 +1,4 @@
 {% extends "layoutadmin.html.twig" %}
-{% block dashboard %}{{ include ('@Admin/Default/parksform.html.twig') }}{% endblock %}
+{% block dashboard %}
+{{form(form)}}
+{% endblock %}

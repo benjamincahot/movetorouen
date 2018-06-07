@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
@@ -9,144 +9,184 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}MoveToRouen - Dashboard{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('asset/css/lib/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/fontawesome5/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/helper.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
-
+    {% block favicon %}<link rel="icon" type="image/png" href="{{ asset('asset/images/favicon.png') }}" />{% endblock %}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
-    <!--[if lt IE 9]>
-    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--[if lt IE 9]> <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
-  {% block css %}{% endblock %}
-</head>
+    {% block css %}{% endblock %}
+  </head>
 
-<body class="fix-header fix-sidebar">
+  <body class="fix-header fix-sidebar">
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+      <svg class="circular" viewbox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>
     </div>
-    <!-- Main wrapper  -->
+    <!-- Main wrapper -->
     <div id="main-wrapper">
-        <!-- header header  -->
-        <div class="header">
-            <nav class="navbar top-navbar navbar-expand-md navbars">
-                <!-- Logo -->
-                <div class="navbar-header">
-                    <a class="navbar-brand">
-                        <!-- Logo icon -->
-                        <b><img src="{{ asset('asset/images/deway.png') }}" alt="logo" class="dark-logo" /></b>
-                        <!--End Logo icon -->
-                        <!-- Logo text -->
+      <!-- header header -->
+      <div class="header">
+        <nav class="navbar top-navbar navbar-expand-md navbars">
+          <!-- Logo -->
+          <div class="navbar-header">
+            <a class="navbar-brand">
+              <!-- Logo icon -->
+              <b><img src="{{ asset('asset/images/deway.png') }}" alt="logo" class="dark-logo"/></b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
 
-                    </a>
-                </div>
-                <!-- End Logo -->
-                <div class="navbar-collapse">
-                    <!-- toggle and nav items -->
-                    <ul class="navbar-nav mr-auto mt-md-0">
-                        <!-- vide -->
-                    </ul>
-                    <!-- User profile and search -->
-                    <ul class="navbar-nav my-lg-0">
+            </a>
+          </div>
+          <!-- End Logo -->
+          <div class="navbar-collapse">
+            <!-- toggle and nav items -->
+            <ul class="navbar-nav mr-auto mt-md-0">
+              <!-- vide -->
+            </ul>
+            <!-- User profile and search -->
+            <ul class="navbar-nav my-lg-0">
 
-                        <!-- Search -->
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
-                        </li>
-                        <!-- Profile -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('asset/images/users/1.jpg') }}" alt="user" class="profile-pic" /></a>
-                            <div class="dropdown-menu dropdown-menu-right animated zoomIn">
-                                <ul class="dropdown-user">
-                                    <li> {{ app.user.username }} </li>
-                                    <li><a href="{{ path('profile_homepage') }}"><i class="ti-user"></i> Profil</a></li>
-                                    <li><a href="{{ path('settings_homepage') }}"><i class="ti-settings"></i> Paramètres</a></li>
-                                    <li><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-power-off"></i> Déconnexion</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+              <!-- Search -->
+              <li class="nav-item hidden-sm-down search-box">
+                <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)">
+                  <i class="ti-search"></i>
+                </a>
+                <form class="app-search">
+                  <input type="text" class="form-control" placeholder="Search here">
+                  <a class="srh-btn">
+                    <i class="ti-close"></i>
+                  </a>
+                </form>
+              </li>
+              <!-- Profile -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('asset/images/users/1.jpg') }}" alt="user" class="profile-pic"/></a>
+                <div class="dropdown-menu dropdown-menu-right animated zoomIn">
+                  <ul class="dropdown-user">
+                    <!-- Redirection vers la page "settings" avec des paramètres de compte -->
+                    <li>
+                      <a href="{{ path('settings_homepage') }}">
+                        <i class="ti-settings"></i>
+                        Paramètres</a>
+                    </li>
+                    <!-- Déconnexion et redirection vers la page d'index -->
+                    <li>
+                      <a href="{{ path('fos_user_security_logout') }}">
+                        <i class="fa fa-power-off"></i>
+                        Déconnexion</a>
+                    </li>
+                  </ul>
                 </div>
-            </nav>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- End header header -->
+      <!-- Left Sidebar -->
+      <div class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+              <li class="nav-devider"></li>
+
+              <li class="nav-label">Accueil</li>
+              <li>
+                <a href="{{ path('admin_homepage') }}" aria-expanded="false">
+                  <i class="fa fa-tachometer"></i>
+                  <span class="hide-menu">Dashboard</span></a>
+              </li>
+
+              <li class="nav-label">Gestion du contenu</li>
+              <li>
+                <a href="{{ path('parks_homepage') }}" aria-expanded="false">
+                  <i class="fas fa-tree"></i>
+                  <span class="hide-menu">Parcs</span></a>
+              <li>
+                <a href="{{ path('monuments_homepage') }}" aria-expanded="false">
+                  <i class="fas fa-building"></i>
+                  <span class="hide-menu">Monuments</span></a>
+              <li>
+                <a href="{{ path('events_homepage') }}" aria-expanded="false">
+                  <i class="fas fa-calendar-alt"></i>
+                  <span class="hide-menu">Evènements</span></a>
+              <li>
+                <a href="{{ path('restaurants_homepage') }}" aria-expanded="false">
+                  <i class="fas fa-utensils"></i>
+                  <span class="hide-menu">Restaurants</span></a>
+              </li>
+
+              <li class="nav-label">Gestion des utilisateurs</li>
+              <li>
+                <a href="{{ path('listing_homepage') }}" aria-expanded="false">
+                  <i class="fas fa-list"></i>
+                  <span class="hide-menu">Liste des utilisateurs</span></a>
+              </li>
+              <li>
+                <a href="{{ path('support_homepage') }}" aria-expanded="false">
+                  <i class="fas fa-life-ring"></i>
+                  <span class="hide-menu">Support d'assistance</span></a>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
         </div>
-        <!-- End header header -->
-        <!-- Left Sidebar  -->
-        <div class="left-sidebar">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-devider"></li>
+        <!-- End Sidebar scroll-->
+      </div>
+      <!-- End Left Sidebar -->
+      <!-- Page wrapper -->
+      <div class="page-wrapper">
+        <!-- Bread crumb -->
+        <div class="row page-titles">
+          <div class="col-md-5 align-self-center">
+            <h3 class="text-primary">
+              {% block welcome %}{% endblock %}
+            </h3>
+          </div>
 
-                        <li class="nav-label">Accueil</li>
-                          <li> <a href="{{ path('admin_homepage') }}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
-                        </li>
-
-                        <li class="nav-label">Gestion du contenu</li>
-                          <li> <a href="{{ path('parks_homepage') }}" aria-expanded="false"><i class="fas fa-tree"></i><span class="hide-menu">Parcs</span></a>
-                          <li> <a href="{{ path('monuments_homepage') }}" aria-expanded="false"><i class="fas fa-building"></i><span class="hide-menu">Monuments</span></a>
-                          <li> <a href="{{ path('events_homepage') }}" aria-expanded="false"><i class="fas fa-calendar-alt"></i><span class="hide-menu">Evènements</span></a>
-                          <li> <a href="{{ path('restaurants_homepage') }}" aria-expanded="false"><i class="fas fa-utensils"></i><span class="hide-menu">Restaurants</span></a>
-                        </li>
-
-                        <li class="nav-label">Gestion des utilisateurs</li>
-                          <li> <a href="{{ path('listing_homepage') }}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Liste des utilisateurs</span></a></li>
-                          <li> <a href="{{ path('support_homepage') }}" aria-expanded="false"><i class="fas fa-life-ring"></i><span class="hide-menu">Support d'assistance</span></a>
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Bread crumb -->
+        <!-- Container fluid -->
+        <div class="container-fluid">
+          <!-- Start Page Content -->
+          <div class="row">
+            <div class="col-12">
+              {% block dashboard %}{% endblock %}
             </div>
-            <!-- End Sidebar scroll-->
+          </div>
+          <!-- End PAge Content -->
         </div>
-        <!-- End Left Sidebar  -->
-        <!-- Page wrapper  -->
-        <div class="page-wrapper">
-            <!-- Bread crumb -->
-            <div class="row page-titles">
-                <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">{% block welcome %}{% endblock %}</h3>
-                  </div>
-
-              </div>
-            <!-- End Bread crumb -->
-            <!-- Container fluid  -->
-            <div class="container-fluid">
-                <!-- Start Page Content -->
-                <div class="row">
-                    <div class="col-12">
-                          {% block dashboard %}{% endblock %}
-                    </div>
-                </div>
-                <!-- End PAge Content -->
-            </div>
-            <!-- End Container fluid  -->
-            <!-- footer -->
-            <footer class="footer">heztguiegkjuhguirgh luizyhuiztyauizsghuiEZHTFUIDRESGUIHSUI RTUITHszerhUZTRIUTHiuzrghuiezrohezori gru </a></footer>
-            <!-- End footer -->
-        </div>
-        <!-- End Page wrapper  -->
+        <!-- End Container fluid -->
+        <!-- footer -->
+        <footer class="footer text-center">&copy; Copyright
+          <a href="{{ path('home_homepage') }}">MoveToRouen</a>
+          - 2018/2019
+        </a>
+      </footer>
+      <!-- End footer -->
     </div>
-    <!-- End Wrapper -->
+    <!-- End Page wrapper -->
+  </div>
+  <!-- End Wrapper -->
 
-    <script src="{{ asset('asset/js/lib/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('asset/js/lib/bootstrap/js/popper.min.js') }}"></script>
-    <script src="{{ asset('asset/js/lib/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('asset/js/jquery.slimscroll.js') }}"></script>
-    <script src="{{ asset('asset/js/sidebarmenu.js') }}"></script>
-    <script src="{{ asset('asset/js/lib/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
-    <script src="{{ asset('asset/js/custom.min.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/bootstrap/js/popper.min.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('asset/js/jquery.slimscroll.js') }}"></script>
+  <script src="{{ asset('asset/js/sidebarmenu.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
+  <script src="{{ asset('asset/js/custom.min.js') }}"></script>
 
-    {% block js %}{% endblock %}
-
+  {% block js %}{% endblock %}
 
 </body>
 

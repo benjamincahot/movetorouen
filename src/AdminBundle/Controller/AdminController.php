@@ -22,18 +22,18 @@ class AdminController extends Controller
         return $this->render('AdminBundle:Default:listing.html.twig');
     }
 
-    public function profileAction()
+    public function supportAction()
     {
-        return $this->render('AdminBundle:Default:profile.html.twig');
+        return $this->render('AdminBundle:Default:support.html.twig');
     }
 
     public function settingsAction()
     {
-        return $this->render('AdminBundle:Default:settings.html.twig');
+      return $this->render('AdminBundle:Default:settings.html.twig');
     }
 
-    public function supportAction()
+    public function updateAction()
     {
-        return $this->render('AdminBundle:Default:support.html.twig');
+      return $this->render('AdminBundle:Default:update.html.twig');
     }
 }

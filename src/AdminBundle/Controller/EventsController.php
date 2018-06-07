@@ -2,14 +2,13 @@
 
 namespace AdminBundle\Controller;
 
-use User\UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use HomeBundle\Entity\Events;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use AdminBundle\Form\EventsType;
+use \DateTime;
 
-class EventsAdminController extends Controller
+class EventsController extends Controller
 {
     // Events
     public function eventsformAction()
