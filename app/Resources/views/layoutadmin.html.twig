@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Favicon icon -->
-    <title>{% block title %}MoveToRouen - Dashboard{% endblock %}</title>
+    <title>
+      {% block title %}MoveToRouen - Dashboard{% endblock %}
+    </title>
+    <!-- Style CSS -->
     <link rel="stylesheet" href="{{ asset('asset/css/lib/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/fontawesome5/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/helper.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
-    {% block favicon %}<link rel="icon" type="image/png" href="{{ asset('asset/images/favicon.png') }}" />{% endblock %}
+    <!-- Favicon icon -->
+    {% block favicon %}<link rel="icon" type="image/png" href="{{ asset('asset/images/favicon.png') }}"/>{% endblock %}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
@@ -23,8 +24,9 @@
     {% block css %}{% endblock %}
   </head>
 
+  <!-- Début de page -->
+  <!-- Preloader CSS -->
   <body class="fix-header fix-sidebar">
-    <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
       <svg class="circular" viewbox="25 25 50 50">
         <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
@@ -32,29 +34,18 @@
     </div>
     <!-- Main wrapper -->
     <div id="main-wrapper">
-      <!-- header header -->
       <div class="header">
         <nav class="navbar top-navbar navbar-expand-md navbars">
-          <!-- Logo -->
           <div class="navbar-header">
             <a class="navbar-brand">
-              <!-- Logo icon -->
               <b><img src="{{ asset('asset/images/deway.png') }}" alt="logo" class="dark-logo"/></b>
-              <!--End Logo icon -->
-              <!-- Logo text -->
-
             </a>
           </div>
-          <!-- End Logo -->
-          <div class="navbar-collapse">
-            <!-- toggle and nav items -->
-            <ul class="navbar-nav mr-auto mt-md-0">
-              <!-- vide -->
-            </ul>
-            <!-- User profile and search -->
-            <ul class="navbar-nav my-lg-0">
 
-              <!-- Search -->
+          <!-- Début de la section user (avatar, paramètres et deconnexion) -->
+          <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-md-0"></ul>
+            <ul class="navbar-nav my-lg-0">
               <li class="nav-item hidden-sm-down search-box">
                 <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)">
                   <i class="ti-search"></i>
@@ -66,9 +57,8 @@
                   </a>
                 </form>
               </li>
-              <!-- Profile -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('asset/images/users/1.jpg') }}" alt="avatar de {{ app.user.username }}" class="profile-pic"/></a>
+                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="#" alt=" avatar de {{ app.user.username }}" class="profile-pic"/></a>
                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                   <ul class="dropdown-user">
                     <!-- Redirection vers la page "settings" avec des paramètres de compte -->
@@ -86,27 +76,30 @@
                   </ul>
                 </div>
               </li>
+              <!-- Fin de section -->
+
             </ul>
           </div>
         </nav>
       </div>
-      <!-- End header header -->
-      <!-- Left Sidebar -->
+
+      <!-- Sidebar-->
       <div class="left-sidebar">
-        <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
-          <!-- Sidebar navigation-->
           <nav class="sidebar-nav">
             <ul id="sidebarnav">
               <li class="nav-devider"></li>
 
+              <!-- Section Acceuil-->
               <li class="nav-label">Accueil</li>
               <li>
                 <a href="{{ path('admin_homepage') }}" aria-expanded="false">
                   <i class="fa fa-tachometer"></i>
                   <span class="hide-menu">Dashboard</span></a>
               </li>
+              <!-- Fin de section -->
 
+              <!-- Section Gestion de contenu -->
               <li class="nav-label">Gestion du contenu</li>
               <li>
                 <a href="{{ path('parks_homepage') }}" aria-expanded="false">
@@ -125,7 +118,9 @@
                   <i class="fas fa-utensils"></i>
                   <span class="hide-menu">Restaurants</span></a>
               </li>
+              <!-- Fin de section -->
 
+              <!-- Section Gestion des utilisateurs -->
               <li class="nav-label">Gestion des utilisateurs</li>
               <li>
                 <a href="{{ path('listing_homepage') }}" aria-expanded="false">
@@ -136,48 +131,46 @@
                 <a href="{{ path('support_homepage') }}" aria-expanded="false">
                   <i class="fas fa-life-ring"></i>
                   <span class="hide-menu">Support d'assistance</span></a>
+              </li>
+              <!-- Fin de section -->
+
             </ul>
           </nav>
-          <!-- End Sidebar navigation -->
         </div>
-        <!-- End Sidebar scroll-->
       </div>
-      <!-- End Left Sidebar -->
-      <!-- Page wrapper -->
+      <!-- Fin de la sidebar -->
+
+      <!-- Début des blocks Twig -->
       <div class="page-wrapper">
-        <!-- Bread crumb -->
         <div class="row page-titles">
           <div class="col-md-5 align-self-center">
             <h3 class="text-primary">
               {% block welcome %}{% endblock %}
             </h3>
           </div>
-
         </div>
-        <!-- End Bread crumb -->
-        <!-- Container fluid -->
+
         <div class="container-fluid">
-          <!-- Start Page Content -->
           <div class="row">
             <div class="col-12">
               {% block dashboard %}{% endblock %}
             </div>
           </div>
-          <!-- End PAge Content -->
         </div>
-        <!-- End Container fluid -->
-        <!-- footer -->
+        <!-- Fin de déclaration des blocks Twig -->
+
+        <!-- Début du footer -->
         <footer class="footer text-center">&copy; Copyright
           <a href="{{ path('home_homepage') }}">MoveToRouen</a>
           - 2018/2019
         </a>
       </footer>
-      <!-- End footer -->
-    </div>
-    <!-- End Page wrapper -->
-  </div>
-  <!-- End Wrapper -->
+      <!-- Fin du footer -->
 
+    </div>
+  </div>
+
+  <!-- Script JS -->
   <script src="{{ asset('asset/js/lib/jquery/jquery.min.js') }}"></script>
   <script src="{{ asset('asset/js/lib/bootstrap/js/popper.min.js') }}"></script>
   <script src="{{ asset('asset/js/lib/bootstrap/js/bootstrap.min.js') }}"></script>
@@ -185,9 +178,9 @@
   <script src="{{ asset('asset/js/sidebarmenu.js') }}"></script>
   <script src="{{ asset('asset/js/lib/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
   <script src="{{ asset('asset/js/custom.min.js') }}"></script>
+  <!-- Fin Script JS-->
 
   {% block js %}{% endblock %}
 
 </body>
-
 </html>
