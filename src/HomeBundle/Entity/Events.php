@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Events
  *
- * @ORM\Table(name="events")
+ * @ORM\Table(name="mtr_events")
  * @ORM\Entity(repositoryClass="HomeBundle\Repository\EventsRepository")
  */
 class Events

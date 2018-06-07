@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Category
  *
- * @ORM\Table(name="category")
+ * @ORM\Table(name="mtr_category")
  * @ORM\Entity(repositoryClass="HomeBundle\Repository\CategoryRepository")
  */
 class Category
