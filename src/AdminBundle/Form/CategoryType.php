@@ -1,4 +1,5 @@
 <?php
+
 //CategoryType
 namespace AdminBundle\Form;
 
@@ -14,8 +15,7 @@ class CategoryType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('save', SubmitType::class, array('label' => 'Envoyer'))
-        ;
+            ->add('save', SubmitType::class, array('label' => 'Envoyer'));
     }
 
       public function configureOptions(OptionsResolver $resolver)

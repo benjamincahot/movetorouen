@@ -37,13 +37,13 @@ support_homepage:
 
 
 # Routes des formulaires
-parks_add_new:
-    path:     /parks/new
+category_add_new:
+    path:     /category/new
     defaults: { _controller: AdminBundle:Category:new }
     methods:  [GET]
 
-parks_add_new_action:
-    path:     /parks/newone
+category_add_new_action:
+    path:     /category/newone
     defaults: { _controller: AdminBundle:Category:newform }
     methods:  [POST]
 # Fin des routes des formulaires
