@@ -2,33 +2,19 @@
 
 namespace AdminBundle\Controller;
 
+use User\UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class AdminController extends Controller
 {
+    // Controller principal
     public function dashboardAction()
     {
         return $this->render('AdminBundle:Default:dashboard.html.twig');
-    }
-
-    public function parksAction()
-    {
-        return $this->render('AdminBundle:Default:parks.html.twig');
-    }
-
-    public function eventsAction()
-    {
-        return $this->render('AdminBundle:Default:events.html.twig');
-    }
-
-    public function monumentsAction()
-    {
-        return $this->render('AdminBundle:Default:monuments.html.twig');
-    }
-
-    public function restaurantsAction()
-    {
-        return $this->render('AdminBundle:Default:restaurants.html.twig');
     }
 
     public function listingAction()
@@ -36,13 +22,18 @@ class AdminController extends Controller
         return $this->render('AdminBundle:Default:listing.html.twig');
     }
 
-    public function profileAction()
+    public function supportAction()
     {
-        return $this->render('AdminBundle:Default:profile.html.twig');
+        return $this->render('AdminBundle:Default:support.html.twig');
     }
 
     public function settingsAction()
     {
-        return $this->render('AdminBundle:Default:settings.html.twig');
+      return $this->render('AdminBundle:Default:settings.html.twig');
+    }
+
+    public function updateAction()
+    {
+      return $this->render('AdminBundle:Default:update.html.twig');
     }
 }

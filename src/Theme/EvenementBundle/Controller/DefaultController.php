@@ -3,8 +3,10 @@
 namespace Theme\EvenementBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 use Theme\EvenementBundle\Entity\Evenements;
+use Theme\EvenementBundle\Form\Type\EventsType;
 
 class DefaultController extends Controller
 {
