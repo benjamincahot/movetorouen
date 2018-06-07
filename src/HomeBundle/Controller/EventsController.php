@@ -39,7 +39,7 @@ class EventsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $event = new Event();
+        $event = new Events();
         $form = $this->createForm('HomeBundle\Form\EventsType', $event);
         $form->handleRequest($request);
 
