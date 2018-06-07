@@ -1,16 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>Event creation</h1>
-
-    {{ form_start(form) }}
+    <div class="container">
+        <h1>Event creation</h1>
+        {{ form_start(form) }}
         {{ form_widget(form) }}
- 
-    {{ form_end(form) }}
+        <button type="submit" class="btn btn-success">Submit</button>
+        {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('events_index') }}">Back to the list</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('events_index') }}">Back to the list</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}

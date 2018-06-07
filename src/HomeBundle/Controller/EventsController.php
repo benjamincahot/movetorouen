@@ -46,15 +46,6 @@ class EventsController extends Controller
         $event = new Events();
         $form = $this->createForm('HomeBundle\Form\EventsType', $event);
         $form->handleRequest($request);
-            // ->add('title', TextType::class)
-            // // ->add('description', TextType::class)
-            // // ->add('category', EntityType::Class, array(
-            // //     'class' => 'HomeBundle\Entity\Category',
-            // //     'property_path' =>'name'
-            // // )) 
-            // ->add('add',SubmitType::class, array('label' => 'create event'))
-            // ->getForm();
-
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($event);
