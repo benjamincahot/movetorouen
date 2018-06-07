@@ -5,7 +5,11 @@ namespace HomeBundle\Controller;
 use HomeBundle\Entity\Events;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 /**
  * Event controller.
@@ -24,10 +28,10 @@ class EventsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $events = $em->getRepository('HomeBundle:Events')->findAll();
+        $event = $em->getRepository('HomeBundle:Events')->findAll();
 
         return $this->render('events/index.html.twig', array(
-            'events' => $events,
+            'event' => $event,
         ));
     }
 
@@ -39,9 +43,18 @@ class EventsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $event = new Event();
-        $form = $this->createForm('HomeBundle\Form\EventsType', $event);
+        $event = new Events();
+        dump($event);
+        $form = $this->createForm($event);
         $form->handleRequest($request);
+            // ->add('title', TextType::class)
+            // // ->add('description', TextType::class)
+            // // ->add('category', EntityType::Class, array(
+            // //     'class' => 'HomeBundle\Entity\Category',
+            // //     'property_path' =>'name'
+            // // )) 
+            // ->add('add',SubmitType::class, array('label' => 'create event'))
+            // ->getForm();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
