@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block content %}
     <h1>Events list</h1>
 
     <table>
@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for event in events %}
+        {% for event in event %}
             <tr>
                 <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.id }}</a></td>
                 <td>{{ event.title }}</td>
