@@ -29,7 +29,6 @@ class AppFixtures extends Fixture
       $this->addReference('zezetzetzer', $user2);
       $manager->persist($user2);
 
-
       $user3 = new User;
       $user3->setUsername("Indorium");
       $user3->setEmail ('tiflobo76250@gmail.com');

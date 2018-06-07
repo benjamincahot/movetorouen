@@ -39,7 +39,7 @@
           <div class="navbar-header">
             <a class="navbar-brand">
               <!-- Logo icon -->
-              <b><img src="{{ asset('asset/images/deway.png') }}" alt="logo" class="dark-logo"/></b>
+              <b><img src="{{ asset('info/img/logo.png') }}" alt="logo" class="dark-logo" style="width:75%;"/></b>
               <!--End Logo icon -->
               <!-- Logo text -->
 
@@ -68,7 +68,7 @@
               </li>
               <!-- Profile -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('asset/images/users/1.jpg') }}" alt="user" class="profile-pic"/></a>
+                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('asset/images/users/1.jpg') }}" alt="avatar de {{ app.user.username }}" class="profile-pic"/></a>
                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                   <ul class="dropdown-user">
                     <!-- Redirection vers la page "settings" avec des paramètres de compte -->
