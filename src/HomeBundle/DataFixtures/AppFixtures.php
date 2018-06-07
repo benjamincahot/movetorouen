@@ -3,6 +3,7 @@
 namespace HomeBundle\DataFixtures;
 
 use User\UserBundle\Entity\User;
+use HomeBundle\Entity\Category;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -54,6 +55,23 @@ class AppFixtures extends Fixture
       $user5->setEnabled(true);
       $this->addReference('szretujz', $user5);
       $manager->persist($user5);
+
+      $sport = new Category();
+      $sport->setName("Sport");
+      $manager->persist($sport);
+
+      
+      $evenement = new Category();
+      $evenement->setName("Evénement");
+      $manager->persist($evenement);
+      
+      $parc = new Category();
+      $parc->setName("Parc");
+      $manager->persist($parc);
+      
+      $monument = new Category();
+      $monument->setName("Monument");
+      $manager->persist($monument);
 
       $manager->flush();
     }

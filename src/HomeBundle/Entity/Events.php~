@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Events
  *
- * @ORM\Table(name="events")
+ * @ORM\Table(name="mtr_events")
  * @ORM\Entity(repositoryClass="HomeBundle\Repository\EventsRepository")
  */
 class Events
@@ -228,5 +228,29 @@ class Events
     public function getPlace()
     {
         return $this->place;
+    }
+
+    /**
+     * Set category.
+     *
+     * @param \HomeBundle\Entity\Category|null $category
+     *
+     * @return Events
+     */
+    public function setCategory(\HomeBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category.
+     *
+     * @return \HomeBundle\Entity\Category|null
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }

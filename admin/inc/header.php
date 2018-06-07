@@ -54,7 +54,7 @@ $users = $query->fetch();
                 <div class="navbar-header">
                     <a class="navbar-brand">
                         <!-- Logo icon -->
-                        <b><img src="images/deway.png" alt="de-way" class="dark-logo" /></b>
+                        <b><img src="{{ asset('info/img/logo.png') }}" alt="de-way" class="dark-logo" /></b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
 
