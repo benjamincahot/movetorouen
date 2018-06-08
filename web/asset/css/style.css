@@ -686,7 +686,7 @@ li {
   list-style: none;
 }
 p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   color: #99abb4;
 }
 .h2,
@@ -1938,7 +1938,7 @@ textarea {
 }
 .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
   content: "\e649";
-  font-family: themify;
+  font-family: Oxygen;
   color: #a6b7bf;
   font-size: 11px;
 }
@@ -2278,7 +2278,7 @@ textarea {
   line-height: 22px;
 }
 .card-title p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   margin-bottom: 12px;
 }
 .vtabs {
@@ -2621,7 +2621,7 @@ table.dataTable thead .sorting::after {
   margin: 15px 0;
 }
 .panel-body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .panel-primary {
   border-color: #4680ff;
@@ -3876,16 +3876,16 @@ table.dataTable thead .sorting::after {
   transition: all 0.5s ease 0s;
 }
 .chat-sidebar .user-name {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .chat-sidebar .content {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .chat-sidebar .textarea {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .chat-sidebar .seen {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .chat-sidebar.is-active {
   right: 0;
@@ -4064,7 +4064,7 @@ table.dataTable thead .sorting::after {
   margin-bottom: 15px;
 }
 .testimonial-widget-one .testimonial-author-position {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   position: relative;
   top: -5px;
   margin-top: 5px;
@@ -4803,7 +4803,7 @@ footer p {
   right: 0;
   top: 0;
   color: #455a64;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 12px;
 }
 .comment-action {
@@ -4811,7 +4811,7 @@ footer p {
 }
 .comment-action .badge {
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .comment-action i {
   padding: 0 5px;
@@ -4859,7 +4859,7 @@ footer p {
   border-radius: 0;
   box-shadow: none;
   border-color: #e7e7e7;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .form-control:hover {
   box-shadow: none;
@@ -5200,7 +5200,7 @@ label {
   background: #87949b;
 }
 .mail-list a {
-  font-family: "Roboto", sans-serif;
+  font-family: "Oxygen", sans-serif;
   vertical-align: middle;
   color: #797979;
   padding: 10px 15px;
@@ -5309,7 +5309,7 @@ label {
 }
 .tdl-holder li span {
   margin-left: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   vertical-align: middle;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -5381,7 +5381,7 @@ label {
 }
 .datamap-sales-hover-tooltip {
   background: #444c67;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   padding: 5px 10px;
   color: #ffffff;
   font-weight: 400;
@@ -5398,11 +5398,11 @@ thead tr th:last-child {
 }
 tbody tr th {
   color: #455a64;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-weight: normal;
 }
 tbody tr td {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   color: #99abb4;
 }
 tbody tr td:last-child {
