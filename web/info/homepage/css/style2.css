@@ -4,7 +4,9 @@
 }
 
 .content{
-    margin-top: 10%;
+    width:100%;
+    margin:5% auto;
+    line-height: 0.5;
 }
 
 .bouton{
@@ -12,8 +14,13 @@
 }
 body{
     width: 100%;
-    line-height: 1.6;   
+    line-height: 1.2;   
     font-family: 'Indie Flower', cursive;
-    font-size: large;
+    font-size: x-large;
     background-color: #171c2f;
+}
+footer{
+    max-width: 100%;
+    
+    background-color: #343a40; 
 }
