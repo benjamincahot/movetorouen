@@ -37,9 +37,7 @@ class EventsController extends Controller
         
         $events = $em->getRepository('HomeBundle:Events')->eventFromThisCategory($category_id);
         
-        // $category = $em
-        //     ->getRepository('HomeBundle:Category')
-        //     ->findBy($category_id);
+    
             
         return $this->render('events/index.html.twig', array(
             'events' => $events
