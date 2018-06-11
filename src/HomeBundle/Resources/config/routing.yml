@@ -5,3 +5,4 @@ home_homepage:
 home_contact:
     path:     /contact
     defaults: { _controller: HomeBundle:Default:contact }
+

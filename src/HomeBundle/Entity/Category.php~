@@ -52,10 +52,7 @@ class Category
     private $modifiedAt;
 
 
-    /**
-     * @ORM\OneToMany(targetEntity="Events", mappedBy="Category")
-     */
-    private $events;
+    
 
     public function __construct()
     {
@@ -150,39 +147,4 @@ class Category
         return $this->modifiedAt;
     }
 
-    /**
-     * Add event.
-     *
-     * @param \HomeBundle\Entity\Events $event
-     *
-     * @return Category
-     */
-    public function addEvent(\HomeBundle\Entity\Events $event)
-    {
-        $this->events[] = $event;
-
-        return $this;
-    }
-
-    /**
-     * Remove event.
-     *
-     * @param \HomeBundle\Entity\Events $event
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
-     */
-    public function removeEvent(\HomeBundle\Entity\Events $event)
-    {
-        return $this->events->removeElement($event);
-    }
-
-    /**
-     * Get events.
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getEvents()
-    {
-        return $this->events;
-    }
 }
