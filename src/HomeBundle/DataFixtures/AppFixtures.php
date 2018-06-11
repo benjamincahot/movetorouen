@@ -56,6 +56,15 @@ class AppFixtures extends Fixture
       $this->addReference('szretujz', $user5);
       $manager->persist($user5);
 
+      $user6 = new User;
+      $user6->setUsername("User");
+      $user6->setEmail ('user@unknown.fr');
+      $user6->setPassword('$2y$13$Uscv2IOuYaAR1QQwrL.yzuDj8kiG484wReDOqb9out22k/FMya7.K');
+      $user6->setRoles(array('ROLE_USER'));
+      $user6->setEnabled(true);
+      $this->addReference('zeraztesze', $user6);
+      $manager->persist($user6);
+      
       $sport = new Category();
       $sport->setName("Sport");
       $manager->persist($sport);
