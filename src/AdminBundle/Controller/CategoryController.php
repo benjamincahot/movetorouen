@@ -64,7 +64,7 @@ class CategoryController extends Controller
                $entityManager->persist($cat);
                $entityManager->flush();
 
-              return $this->redirectToRoute('dashboard');
+              return $this->redirectToRoute('admin_homepage');
           }
 
           return $this->render('AdminBundle:Category:new.html.twig', array(

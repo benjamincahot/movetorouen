@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-sm-8 ml-auto mr-auto">
+        <div class="col-sm-8 ml-auto mr-auto text-white">
             <h2>Votre Profil</h2>
                 <table class="table">
                     <tbody>
@@ -16,8 +16,9 @@
                                 <td>{{ app.user.email }}</td>
                             </tr>
                     </tbody>
+                    <td><button class="btn btn-secondary" href="{{ path('fos_user_profile_edit') }}">Editer mon profil</button></td>
                 </table>
-                
+
         </div>
     </div>
 </div>

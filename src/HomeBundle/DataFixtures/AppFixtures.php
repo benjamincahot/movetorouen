@@ -69,15 +69,15 @@ class AppFixtures extends Fixture
       $sport->setName("Sport");
       $manager->persist($sport);
 
-      
+
       $evenement = new Category();
       $evenement->setName("Evénement");
       $manager->persist($evenement);
-      
+
       $parc = new Category();
       $parc->setName("Parc");
       $manager->persist($parc);
-      
+
       $monument = new Category();
       $monument->setName("Monument");
       $manager->persist($monument);
