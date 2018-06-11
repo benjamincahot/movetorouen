@@ -1,4 +1,19 @@
 
 .logo{
-    width: 35%;
+    width: 30%;
+}
+
+.content{
+    margin-top: 10%;
+}
+
+.bouton{
+    font-family: 'Indie Flower', cursive;
+}
+body{
+    width: 100%;
+    line-height: 1.6;   
+    font-family: 'Indie Flower', cursive;
+    font-size: large;
+    background-color: #171c2f;
 }

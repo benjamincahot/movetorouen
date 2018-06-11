@@ -12,7 +12,7 @@
     </head>
     <body style="background-color: #171c2f;">
         {% block header %}
-       <nav class="navbar navbar-light fixed-top navbar-expand-lg default-color scrolling-navbar border border-right-0 border-left-0 border-top-0 border-grey">
+       <nav class="navbar navbar-light top navbar-expand-lg default-color scrolling-navbar border border-right-0 border-left-0 border-top-0 border-grey">
                 <a class="navbar-brand " href="{{ path('home_homepage') }}"><img class="logo" src="{{ asset('info/img/logo.png') }}" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,8 +28,8 @@
                             <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Log out</a>
                         </li>
                         {% else %}
-                        <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm"> </a>
-                        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm"> </a>
+                        <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton"> </a>
+                        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton"> </a>
                         {% endif %}
                     </form>
                 </div>
