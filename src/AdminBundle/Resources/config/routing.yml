@@ -37,13 +37,15 @@ support_homepage:
 
 
 # Routes des formulaires
+
+# Category
 category_add_new:
     path:     /category/new
     defaults: { _controller: AdminBundle:Category:new }
     methods:  [GET]
 
 category_add_new_action:
-    path:     /category/newone
+    path:     /category/new
     defaults: { _controller: AdminBundle:Category:newform }
     methods:  [POST]
 # Fin des routes des formulaires

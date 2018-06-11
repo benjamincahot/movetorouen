@@ -1,6 +1,9 @@
 {% extends "layoutadmin.html.twig" %}
-{% block welcome %}<a style="color:#bf1919">Bienvenue
-  {{ app.user.username }} <i class="fas fa-child"></i></a>
+{% block welcome %}
+  <a style="color:#bf1919">Bienvenue
+    {{ app.user.username }}
+    <i class="fas fa-child"></i>
+  </a>
 {% endblock %}
 {% block dashboard %}
   <div class="container-fluid">
@@ -51,10 +54,7 @@
         </div>
       </div>
     </div>
-
-    <div class="row bg-white m-l-0 m-r-0 box-shadow ">
-      <!-- column -->
-    </div>
+    <div class="container-fluid">
 
     <!-- End Page Content -->
   </div>
