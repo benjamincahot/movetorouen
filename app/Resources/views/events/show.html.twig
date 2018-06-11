@@ -1,38 +1,40 @@
-{% extends 'base.html.twig' %}
+{% extends 'layoutbase.html.twig' %}
 
 {% block content %}
     <h1>Event</h1>
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ event.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ event.title }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ event.description }}</td>
-            </tr>
-            <tr>
-                <th>Price</th>
-                <td>{{ event.price }}</td>
-            </tr>
-            <tr>
-                <th>Startdate</th>
-                <td>{% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Enddate</th>
-                <td>{% if event.endDate %}{{ event.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Place</th>
-                <td>{{ event.place }}</td>
-            </tr>
+            <div class="container">
+                <tr>
+                    <th>Id</th>
+                    <td>{{ event.id }}</td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td>{{ event.title }}</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>{{ event.description }}</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>{{ event.price }}</td>
+                </tr>
+                <tr>
+                    <th>Startdate</th>
+                    <td>{% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>Enddate</th>
+                    <td>{% if event.endDate %}{{ event.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>Place</th>
+                    <td>{{ event.place }}</td>
+                </tr>
+            </div>
         </tbody>
     </table>
 
