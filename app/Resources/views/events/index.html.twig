@@ -18,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-            {% for event in event %}
+            {% for event in events %}
                 <tr>
                     <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.id }}</a></td>
                     <td>{{ event.title }}</td>

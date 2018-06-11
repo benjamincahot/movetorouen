@@ -28,15 +28,15 @@
                     <form class="form-inline my-2 my-lg-0">
                         {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                            <a class="btn btn-outline-success" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
+                            <a class="btn btn-outline-success " href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
                             {% if is_granted('ROLE_ADMIN')%}
-                            <a class="btn btn-outline-success" href="{{ path('admin_homepage') }}">Admin</a>
+                            <a class="btn btn-outline-success " href="{{ path('admin_homepage') }}">Admin</a>
                             {% endif %}
-                            <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Log out</a>
+                            <a class="btn btn-outline-danger " href="{{ path('fos_user_security_logout') }}">Log out</a>
                         </li>
                         {% else %}
-                        <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm"> </a>
-                        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm"> </a>
+                        <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton"> </a>
+                        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   "> </a>
                         {% endif %}
                     </form>
                 </div>
