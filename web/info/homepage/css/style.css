@@ -14,7 +14,7 @@ h2{
     
 }
 .logo{
-    width: 35%;
+    width: 30%;
 }
 .slide1{
     background-image: url('../../img/background.png');
@@ -97,6 +97,9 @@ body{
 
 }
 
-.foot{
-    margin-bottom: 1%;
+footer{
+    max-width: 100%;
+    
+    background-color: #343a40;
+    
 }

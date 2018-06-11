@@ -59,3 +59,9 @@ update_homepage:
     path:     /settings/update
     defaults: { _controller: AdminBundle:Admin:update }
     methods:  [GET]
+
+
+# Routes des pages d'erreurs
+error_homepage:
+    path:     /error
+    defaults: { _controller: AdminBundle:Admin:error }

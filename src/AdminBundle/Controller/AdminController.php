@@ -36,4 +36,9 @@ class AdminController extends Controller
     {
       return $this->render('AdminBundle:Default:update.html.twig');
     }
+
+    public function errorAction()
+    {
+      return $this->render('AdminBundle:Default:error.html.twig');
+    }
 }
