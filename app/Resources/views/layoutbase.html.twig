@@ -29,6 +29,9 @@
                         {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             <a class="btn btn-outline-success" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
+                            {% if is_granted('ROLE_ADMIN')%}
+                            <a class="btn btn-outline-success" href="{{ path('admin_homepage') }}">Admin</a>
+                            {% endif %}
                             <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Log out</a>
                         </li>
                         {% else %}
@@ -47,7 +50,7 @@
           <!-- Footer -->
 <footer class="page-footer font-small stylish-color text-light pt-3 mt-3 fixed-bottom homefooter foot">
   <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MoveToRouen</a>
+    <a href="#"> MoveToRouen</a>
   </div>
 </footer>        
           

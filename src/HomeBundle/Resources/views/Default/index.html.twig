@@ -10,10 +10,10 @@
           <h2 class="card-title text-light box">Envie de prendre l'air ?</h2>
           <h3 class="card-text text-light">Trouvez rapidement votre prochain lieu de détente avec MoveToRouen </h3>
           <div class="">
-            <a href="#" class="{{ path('events_index') }}"><button type="button" class="btn btn-primary btn-lg"><span style="color:white;">Parcs</span></button></a>
-            <a href="{{ path('events_index') }}" class=""><button type="button" class="btn btn-success btn-lg"><div><span style="color:white;">Evènements</span></div></button></a>
-            <a href="{{ path('events_index') }}" class=""><button type="button" class="btn btn-info btn-lg"><div><span style="color:white;">Monuments</span></div></button></a>
-            <a href="{{ path('events_index') }}" class=""><button type="button" class="btn btn-danger btn-lg"><div><span style="color:white;">Sports</span></div></button></a>
+            <a href="{{ path('events_index', { 'category_id': 7 }) }}" class=""><button type="button" class="btn btn-primary btn-lg"><span style="color:white;">Parcs</span></button></a>
+            <a href="{{ path('events_index', { 'category_id': 6 }) }}" class=""><button type="button" class="btn btn-success btn-lg"><div><span style="color:white;">Evènements</span></div></button></a>
+            <a href="{{ path('events_index', { 'category_id': 8 }) }}" class=""><button type="button" class="btn btn-info btn-lg"><div><span style="color:white;">Monuments</span></div></button></a>
+            <a href="{{ path('events_index', { 'category_id': 5 }) }}" class=""><button type="button" class="btn btn-danger btn-lg"><div><span style="color:white;">Sports</span></div></button></a>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
           <h2 class="card-title" >Bouger à Rouen ? oui mais où?</h2>
           <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
           <br>
-          <a href="#" class="btn btn-primary btn-lg  ">Contact</a>
+          <a href="{{ path('home_contact') }}" class="btn btn-primary btn-lg  ">Contact</a>
         </div>
       </div>
     </div>
