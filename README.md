@@ -2,12 +2,13 @@
 
 MoveToRouen est un site web regroupant les parcs, restaurants, monuments et évènements de la ville de Rouen.
 
-## Built With
+## Développé avec
 
-* [Symfony](https://symfony.com/) - Le framework PHP principal du projet
-* [Composer](https://getcomposer.org/) - Gestionnaire de dépendances
+* [Symfony](https://symfony.com/) - Framework PHP
+* [Composer](https://getcomposer.org/) - Gestionnaire de packages
+* [Bootstrap](https://getbootstrap.com/) - Framework CSS
 
-## Authors
+## Auteurs
 
 * **Benjamin Cahot** - *Etudiant* - (https://github.com/benjamincahot)
 * **Florent Bodot** - *Etudiant* - (https://github.com/FlorentBodot)
@@ -16,6 +17,5 @@ MoveToRouen est un site web regroupant les parcs, restaurants, monuments et év�
 
 ## Remerciements
 
-**Antoine Quidel** - *Formateur & Développeur web* - (https://github.com/quidelantoine)
-
-**Campus Saint-Marc / NFactory** - (https://campus-saint-marc.com/)
+* **Antoine Quidel** - *Formateur & Développeur web* - (https://github.com/quidelantoine)
+* **Campus Saint-Marc / NFactory** - (https://campus-saint-marc.com/)
