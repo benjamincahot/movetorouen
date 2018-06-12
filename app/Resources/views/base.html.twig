@@ -5,6 +5,7 @@
         <title>{% block title %}MoveToRouen{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">        {% block stylesheets %}
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
         {% stylesheets 'info/homepage/css/*' filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset('info/homepage/css/style2.css') }}" />
         {% endstylesheets %}
@@ -44,8 +45,8 @@
         {% endblock %}
 
         {% block footer %}
-         <footer class="page-footer font-small text-light bg-dark pt-4 mt-4 fixed-bottom">
-            {# <div class="container text-center text-md-left ">
+          <footer class="page-footer font-small text-light bg-dark pt-4 mt-4">
+            <div class="container text-center text-md-left ">
                 <div class="row">
                     <div class="col-md-4 mx-auto">
                         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
@@ -143,15 +144,8 @@
                     <i class="fa fa-dribbble"> </i>
                 </a>
                 </li>
-            </ul> #}
             <div class="footer-copyright text-center">© 2018 Copyright:
                 <a href="#">MoveToRouen</a>
             </div>
         </footer>   
           
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        {% endblock %}
-
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
