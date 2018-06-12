@@ -14,8 +14,6 @@ MoveToRouen est un site web regroupant les parcs, restaurants, monuments et év�
 * **Florent Demech** - *Etudiant* - (https://github.com/indispo)
 * **Jeremy Dilard** - *Etudiant* - (https://github.com/JeremyDilard)
 
-See also the list of [contributors](https://github.com/benjamincahot/projetsecret/contributors) who participated in this project.
-
 ## Remerciements
 
 * [Antoine Quidel] - *Formateur & Développeur web* - (https://github.com/quidelantoine)
