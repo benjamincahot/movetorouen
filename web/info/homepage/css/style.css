@@ -1,9 +1,16 @@
 h1{
     font-size: 200%;
     font-weight: bold;
+    
 }
 h2{
     font-size: 150%;
+    
+    margin-bottom: 10%;
+}
+
+h3{
+    margin-bottom: 7%;
 }
 
  
@@ -20,9 +27,10 @@ h2{
     background-image: url('../../img/background.png');
     background-position: top;
     background-repeat: no-repeat;
-    text-shadow: 2px 2px #ff0000;
-    padding-bottom: 15%;
-    
+    text-shadow: 2px 2px #171c2f;
+    font-family: 'Happy Monkey', cursive;
+    box-shadow: 0px 0px 5px 5px rgba(23,28,47,1);   
+    padding-bottom: 18%;
 }
 
 
@@ -45,20 +53,20 @@ h5{
     right: 0;
 }
 .box{
-    margin-top:5%;
+    margin-top:3%;
     width: 100%;
-    height: 200px;
+    
     
 }
 
 .bouton{
-     font-family: 'Indie Flower', cursive;
+    font-family: 'Handlee', cursive; 
 }
 body{
     width: 100%;
     line-height: 1.2;   
-    font-family: 'Indie Flower', cursive;
-    font-size: x-large;
+    font-family: 'Handlee', cursive; 
+    font-size: large;
     background-color: #171c2f;
 }
 .side2{
@@ -82,7 +90,10 @@ body{
 
 .bot{
     line-height: 1.2;
-    
+    font-family: 'Handlee', cursive !important;
+}
+.txt{
+    font-family: 'Handlee', cursive !important;
 }
 
 .img-fluid {
@@ -101,7 +112,12 @@ body{
 
 footer{
     max-width: 100%;
-    
+    font-size:80%;
     background-color: #343a40;
-    
+    font-family: 'Handlee', cursive !important;
+}
+
+.slide3{
+    font-size:98%;
+    font-family: 'Handlee', cursive !important;
 }

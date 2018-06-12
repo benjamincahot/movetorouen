@@ -5,7 +5,8 @@
         <title>{% block title %}MoveToRouen{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">        {% block stylesheets %}
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet"> 
         {% stylesheets 'info/homepage/css/*' filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset('info/homepage/css/style2.css') }}" />
         {% endstylesheets %}
@@ -148,4 +149,5 @@
                 <a href="#">MoveToRouen</a>
             </div>
         </footer>   
-        {% endblock %}
+          
+{% endblock %}
