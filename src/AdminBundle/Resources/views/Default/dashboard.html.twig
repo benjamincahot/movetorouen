@@ -9,7 +9,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <div class="card p-30 bg-warning">
+        <div class="card p-30 bg-mtr">
           <div class="media">
             <div class="media-left meida media-middle">
               <span>
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card p-30 bg-info">
+        <div class="card p-30 bg-mtr">
           <div class="media">
             <div class="media-left meida media-middle">
               <span>
@@ -38,10 +38,10 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card p-30 bg-danger">
-          <div class="media">
-            <div class="media-left meida media-middle">
+      <div class="col-md-4 mtr">
+        <div class="card p-30 bg-mtr">
+          <div class="media bg-mtr">
+            <div class="media-left meida media-middle mtr">
               <span>
                 <i class="far fa-life-ring f-s-40"></i>
               </span>
@@ -54,9 +54,27 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="row">
+                    <div class="col-12">
+                        <div class="card bg-mtr">
+                            <div class="card-body">
+                                <div class="weather-widget">
+                                    <div id="weather-one" class="weather-one"><i class="wi wi-yahoo-4"></i><h2></h2><div class="city"></div><div class="currently"></div><div class="celcious"></div></div>
+                                    <button class="btn btn-primary dark btn-lg js-geolocation text-white"> <i class="fa fa-map-marker fa-x" aria-hidden="true"></i> Localisation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
     <!-- End Page Content -->
   </div>
   <!-- End Container fluid -->
+{% endblock %}
+{% block js %}
+  <script src="{{ asset('asset/js/lib/bootstrap/js/popper.min.js') }}"></script>
+  <script src="{{ asset('asset/js/jquery.slimscroll.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/weather/jquery.simpleWeather.min.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/weather/weather-init.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
 {% endblock %}
