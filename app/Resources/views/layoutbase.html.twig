@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="UTF-8" />
-    <title>{% block title %}MoveToRouen{% endblock %}</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
-    {% block stylesheet %}
-        {% stylesheets 'info/homepage/css/*' filter='cssrewrite' %}
-        <link rel="stylesheet" href="{{ asset('info/homepage/css/style.css') }}" />
-        {% endstylesheets %}
-    {% endblock %}
+        <meta charset="UTF-8"/>
+        <title>
+            {% block title %}MoveToRouen{% endblock %}
+        </title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        {% block stylesheet %}
+            {% stylesheets 'info/homepage/css/*' filter = 'cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset('info/homepage/css/style.css') }}"/>
+            {% endstylesheets %}
+        {% endblock %}
 
     </head>
     <body>
@@ -22,148 +24,143 @@
                 </button>
 
                 <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-                    <ul class="navbar-nav mr-auto">
-                     
-
-                    </ul>
+                    <ul class="navbar-nav mr-auto"></ul>
                     <form class="form-inline my-2 my-lg-0">
                         {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             <a class="btn btn-outline-success " href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
                             {% if is_granted('ROLE_ADMIN')%}
-                            <a class="btn btn-outline-success " href="{{ path('admin_homepage') }}">Admin</a>
+                                <a class="btn btn-outline-success " href="{{ path('admin_homepage') }}">Admin</a>
                             {% endif %}
                             <a class="btn btn-outline-danger " href="{{ path('fos_user_security_logout') }}">Log out</a>
                         </li>
-                        {% else %}
-                        <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton"> </a>
-                        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   "> </a>
-                        {% endif %}
-                    </form>
-                </div>
-            </nav>
-        {% endblock %}
+                    {% else %}
+                        <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton">
+                        </a>
+                        <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   ">
+                        </a>
+                    {% endif %}
+                </form>
+            </div>
+        </nav>
+    {% endblock %}
 
     {% block content %}{% endblock %}
-    <footer class="page-footer font-small text-light bg-dark pt-4 mt-4">
-        <div class="container text-center text-md-left ">
-            <div class="row">
-                <div class="col-md-4 mx-auto">
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <hr class="clearfix w-100 d-md-none">
-                <div class="col-md-2 mx-auto">
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-                <hr class="clearfix w-100 d-md-none">
-                <div class="col-md-2 mx-auto">
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-                <hr class="clearfix w-100 d-md-none">
-                <div class="col-md-2 mx-auto">
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
+    {% block footer %}
+        <footer class="page-footer font-small text-light bg-dark pt-4 mt-4">
+            <div class="container text-center text-md-left ">
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+                        <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none">
+                    <div class="col-md-2 mx-auto">
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none">
+                    <div class="col-md-2 mx-auto">
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none">
+                    <div class="col-md-2 mx-auto">
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <hr>
-        <ul class="list-unstyled list-inline text-center py-2">
-            <li class="list-inline-item">
-                <h5 class="mb-1">Register for free</h5>
-            </li>
-            <li class="list-inline-item">
-                <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
-            </li>
-        </ul>
-        <hr>
-        <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-                <a class="btn-floating btn-fb mx-1">
-                    <i class="fa fa-facebook"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="btn-floating btn-tw mx-1">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="btn-floating btn-gplus mx-1">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="btn-floating btn-li mx-1">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="btn-floating btn-dribbble mx-1">
-                    <i class="fa fa-dribbble"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="footer-copyright text-center">© 2018 Copyright:
-            <a href="#">
-                MoveToRouen</a>
-        </div>
-    </footer>
-
+            <hr>
+            <ul class="list-unstyled list-inline text-center py-2">
+                <li class="list-inline-item">
+                    <h5 class="mb-1">Register for free</h5>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-gplus mx-1">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-dribbble mx-1">
+                        <i class="fa fa-dribbble"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer-copyright text-center">© 2018 Copyright:
+                <a href="#">
+                    MoveToRouen</a>
+            </div>
+        </footer>
+    {% endblock %}
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     {% block javascripts %}
 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     {% endblock %}
 
 </body>
