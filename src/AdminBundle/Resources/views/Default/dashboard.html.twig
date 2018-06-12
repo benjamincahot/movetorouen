@@ -55,17 +55,20 @@
       </div>
     </div>
     <div class="row">
-                    <div class="col-12">
-                        <div class="card bg-mtr">
-                            <div class="card-body">
-                                <div class="weather-widget">
-                                    <div id="weather-one" class="weather-one"><i class="wi wi-yahoo-4"></i><h2></h2><div class="city"></div><div class="currently"></div><div class="celcious"></div></div>
-                                    <button class="btn btn-primary dark btn-lg js-geolocation text-white"> <i class="fa fa-map-marker fa-x" aria-hidden="true"></i> Localisation</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      
+      <!-- /# column -->
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card bg-mtr">
+          <div class="card-body">
+            <div class="weather-widget">
+              <div id="weather-one" class="weather-one"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- End Page Content -->
   </div>
@@ -76,5 +79,6 @@
   <script src="{{ asset('asset/js/jquery.slimscroll.js') }}"></script>
   <script src="{{ asset('asset/js/lib/weather/jquery.simpleWeather.min.js') }}"></script>
   <script src="{{ asset('asset/js/lib/weather/weather-init.js') }}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+  <script src="{{ asset('asset/js/lib/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
+  <script src="{{ asset('asset/js/custom.min.js') }}"></script>
 {% endblock %}
