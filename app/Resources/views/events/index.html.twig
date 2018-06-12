@@ -2,8 +2,11 @@
 
 {% block content %}
     <div class="container text-dark content ">
-        <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;">Prochain événement</h1>
-        <div class="card">
+        <h1 class="text-light" style="margin-left:-25%;">
+            Prochain événement 
+            <a href="{{ path('events_new') }}" style="margin-left:8%;"><input type="button" value="Créer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
+        </h1>   
+        <div class="card" style="margin-top: 5%;margin-bottom:5%;">
             <div class="card-body">
                 <div class="row">
                     <table class="table table-striped">
@@ -46,13 +49,7 @@
                 </div>
             </div>
         </div>
-        <ul class="nav justify-content-center grey lighten-4 py-4">
-            <li>
-                <a href="{{ path('events_new') }}"><input type="button" value="Créer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
-                
-            </li>
-        </ul>
-        <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;">Dernier événement</h1>
+        <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;margin-top:3%;">Dernier événement</h1>
         <div class="row text-center" style="width:100%;margin-left:0%;line-height: 1.2;">
             <div class="col-lg-4 col-md-12 mb-lg-1 mb-4 text-light " >
                 <div class="view overlay rounded z-depth-1 ">

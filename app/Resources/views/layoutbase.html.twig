@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="UTF-8" />
-    <title>{% block title %}MoveToRouen{% endblock %}</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
-    {% block stylesheet %}
-        {% stylesheets 'info/homepage/css/*' filter='cssrewrite' %}
-        <link rel="stylesheet" href="{{ asset('info/homepage/css/style.css') }}" />
-        {% endstylesheets %}
-    {% endblock %}
+        <meta charset="UTF-8"/>
+        <title>
+            {% block title %}MoveToRouen{% endblock %}
+        </title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet"> 
+        {% block stylesheet %}
+            {% stylesheets 'info/homepage/css/*' filter = 'cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset('info/homepage/css/style.css') }}"/>
+            {% endstylesheets %}
+        {% endblock %}
 
     </head>
     <body>
@@ -22,27 +25,26 @@
                 </button>
 
                 <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-                    <ul class="navbar-nav mr-auto">
-                     
-
-                    </ul>
+                    <ul class="navbar-nav mr-auto"></ul>
                     <form class="form-inline my-2 my-lg-0">
                         {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             <a class="btn btn-outline-success " href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
                             {% if is_granted('ROLE_ADMIN')%}
-                            <a class="btn btn-outline-success " href="{{ path('admin_homepage') }}">Admin</a>
+                                <a class="btn btn-outline-success " href="{{ path('admin_homepage') }}">Admin</a>
                             {% endif %}
                             <a class="btn btn-outline-danger " href="{{ path('fos_user_security_logout') }}">Log out</a>
                         </li>
-                        {% else %}
-                        <a href="{{ path('fos_user_security_login') }}" ><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton"> </a>
-                        <a href="{{ path('fos_user_registration_register') }}" ><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   "> </a>
-                        {% endif %}
-                    </form>
-                </div>
-            </nav>
-        {% endblock %}
+                    {% else %}
+                        <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton">
+                        </a>
+                        <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   ">
+                        </a>
+                    {% endif %}
+                </form>
+            </div>
+        </nav>
+    {% endblock %}
 
     {% block content %}{% endblock %}
     {% block footer %}
