@@ -1,51 +1,57 @@
 {% extends 'layoutbase.html.twig' %}
 
 {% block content %}
-    <h1>Event</h1>
-
-    <table>
-        <tbody>
-            <div class="container">
-                <tr>
-                    <th>Id</th>
-                    <td>{{ event.id }}</td>
-                </tr>
-                <tr>
-                    <th>Title</th>
-                    <td>{{ event.title }}</td>
-                </tr>
-                <tr>
-                    <th>Description</th>
-                    <td>{{ event.description }}</td>
-                </tr>
-                <tr>
-                    <th>Price</th>
-                    <td>{{ event.price }}</td>
-                </tr>
-                <tr>
-                    <th>Startdate</th>
-                    <td>{% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-                </tr>
-                <tr>
-                    <th>Enddate</th>
-                    <td>{% if event.endDate %}{{ event.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-                </tr>
-                <tr>
-                    <th>Place</th>
-                    <td>{{ event.place }}</td>
-                </tr>
+    <div class="container text-light content ">
+        <h1 style="margin-left:-25%;margin-bottom:5%;">Event</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <table>
+                        <tbody>
+                            <div class="container">
+                                <tr>
+                                    <th>Id</th>
+                                    <td>{{ event.id }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Title</th>
+                                    <td>{{ event.title }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>{{ event.description }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Price</th>
+                                    <td>{{ event.price }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Startdate</th>
+                                    <td>{% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>Enddate</th>
+                                    <td>{% if event.endDate %}{{ event.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>Place</th>
+                                    <td>{{ event.place }}</td>
+                                </tr>
+                            </div>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('events_edit', { 'id': event.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        </div>
+        <ul class ="nav justify-content-center grey lighten-4 py-4">
+            <li>
+                <a href="{{ path('events_edit', { 'id': event.id }) }}"><input type="button" value="Editer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
+            </li>
+            <li>
+                {{ form_start(delete_form) }}
+                    <input type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            </li>
+        </ul>
+    </div>
 {% endblock %}

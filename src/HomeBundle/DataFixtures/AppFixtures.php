@@ -64,7 +64,7 @@ class AppFixtures extends Fixture
       $user6->setEnabled(true);
       $this->addReference('zeraztesze', $user6);
       $manager->persist($user6);
-
+      
       $sport = new Category();
       $sport->setName("Sport");
       $manager->persist($sport);
