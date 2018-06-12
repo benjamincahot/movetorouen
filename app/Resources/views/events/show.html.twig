@@ -44,15 +44,17 @@
                     </table>
                 </div>
             </div>
-            <div class="list-group-item float-right" style="background-color:#171c2f;line-height:2;">
-            
-                <a href="{{ path('events_edit', { 'id': event.id }) }}"><input type="button" value="Editer l'événement" class=" btn btn-success btn-rounded btn-sm bouton"></a>
-                    
-                    {{ form_start(delete_form) }}
-                    <input type="submit" value="Supprimer l'événement" class=" btn btn-danger btn-rounded btn-sm bouton">
-                    {{ form_end(delete_form) }}
+            {% if is_granted('ROLE_ADMIN')%}
+                <div class="list-group-item float-right" style="background-color:#171c2f;line-height:2;">
                 
-            </div>
+                    <a href="{{ path('events_edit', { 'id': event.id }) }}"><input type="button" value="Editer l'événement" class=" btn btn-success btn-rounded btn-sm bouton"></a>
+                        
+                        {{ form_start(delete_form) }}
+                        <input type="submit" value="Supprimer l'événement" class=" btn btn-danger btn-rounded btn-sm bouton">
+                        {{ form_end(delete_form) }}
+                    
+                </div>
+            {% endif %}
         </div>
     </div>
     <div class="container" >
