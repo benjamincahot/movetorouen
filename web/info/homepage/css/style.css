@@ -112,12 +112,16 @@ body{
 
 footer{
     max-width: 100%;
-    font-size:80%;
     background-color: #343a40;
     font-family: 'Handlee', cursive !important;
 }
 
 .slide3{
-    font-size:98%;
+    font-size: 140%;
     font-family: 'Handlee', cursive !important;
+    line-height: 1.5;
+}
+
+.text{
+    margin-top: 5%;
 }

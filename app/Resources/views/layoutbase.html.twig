@@ -2,15 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>
-            {% block title %}MoveToRouen{% endblock %}
-        </title>
+        <title>{% block title %}MoveToRouen{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet"> 
         {% block stylesheet %}
-            {% stylesheets 'info/homepage/css/*' filter = 'cssrewrite' %}
+            {% stylesheets 'info/homepage/css/style.css' filter = 'cssrewrite' %}
             <link rel="stylesheet" href="{{ asset('info/homepage/css/style.css') }}"/>
             {% endstylesheets %}
         {% endblock %}
@@ -50,7 +48,7 @@
 
     {% endblock %}
     {% block footer %}
-        <footer class="page-footer font-small text-light bg-dark pt-4 mt-4">
+        <footer class="page-footer font-large text-light bg-dark pt-4 mt-4">
             <div class="container text-center text-md-left ">
                 <div class="row">
                     <div class="col-md-4 mx-auto">
