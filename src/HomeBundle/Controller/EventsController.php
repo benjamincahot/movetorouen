@@ -40,8 +40,8 @@ class EventsController extends Controller
     
             
         return $this->render('events/index.html.twig', array(
-            'events' => $events
-            // 'category' => $event->getCategory($_GET)
+            'events' => $events,
+            'category_id' => $category->getId()
         ));
     }
 
@@ -105,7 +105,8 @@ class EventsController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('events_edit', array('id' => $event->getId()));
+            return $this->redirectToRoute('events_show', array('id' => $event->getId()));
+
         }
 
         return $this->render('events/edit.html.twig', array(
