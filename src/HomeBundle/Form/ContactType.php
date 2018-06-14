@@ -19,7 +19,7 @@ class ContactType extends AbstractType
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
-    {
+    {       
         $builder->add('name', TextType::class)
                 ->add('email', TextType::class)
                 ->add('sujet', TextType::class)
