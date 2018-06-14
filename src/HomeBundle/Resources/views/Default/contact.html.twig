@@ -3,49 +3,14 @@
 {% block content %}
     <div class="container content text-light text-center">
         <h2>Nous contacter</h2>
-        <p class="card-text text">"Vous avez une question ou une demande à nous exposer ? Vous souhaitez devenir partenaire ou nous faire une suggestion ? Alors c’est très simple, envoyez-nous un mail grâce au forumlaire ci-dessous. Nous tacherons de vous répondre le plus rapidement possible."</p>
-        <div class="row ">
-            <div class="content form">
-                <div class="col-md-8 col-xl-9">
-                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="md-form">
-                                    <label for="name" class="">Votre Nom</label>
-                                    <input type="text" id="name" name="name" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="md-form">
-                                    <label for="email" class="">Votre email</label>
-                                    <input type="text" id="email" name="email" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="md-form">
-                                    <label for="subject" class="">Le sujet</label>
-                                    <input type="text" id="subject" name="subject" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="md-form">
-                                    <label for="message">Votre message</label>
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="center-on-small-only sub">
-                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-                    </div>
-                    <div class="status"></div>
-                </div>
-            </div>
+        <p class="card-text text">"Vous avez une question ou une demande à nous exposer ? Vous souhaitez devenir partenaire ou nous faire une suggestion ? Alors c’est très simple, envoyez-nous un mail grâce au formulaire ci-dessous. Nous tacherons de vous répondre le plus rapidement possible."</p>
+        
 
+        
+        <div class="container form text-left  ">
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+        {{ form_end(form) }}
         </div>
     </div>
 
