@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-{# {{dump(category_id)}} #}
+    {# {{dump(category_id)}} #}
     <div class="container text-dark content ">
         <h1 class="text-light" style="margin-left:-25%;">
-        {# Boucle if permettant de sélectionner le titre en fonction de l'i de la catégorie récupérée#}
+            {# Boucle if permettant de sélectionner le titre en fonction de l'i de la catégorie récupérée#}
             {% if category_id == 1 %}
                 Sport
             {% elseif category_id == 2 %}
@@ -13,14 +13,14 @@
             {% else %}
                 Monuments
             {% endif %}
-          <a href="{{ path('events_new') }}" style="margin-left:8%;"><input type="button" value="Créer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
+                <a href="{{ path('events_new') }}" style="margin-left:8%;"><input type="button" value="Créer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
         </h1>
         <div class="card text-light" style="margin-top: 5%;margin-bottom:5%;background:#171c2f;line-height:1;">
             <div class="card-body " >
                 <div class="row" >
                     <table class="table table-striped">
                         <thead>
-                            <tr>        
+                            <tr>
                                 {# <th>Id</th> #}
                                 <th>Title</th>
                                 <th>Description</th>
@@ -38,7 +38,9 @@
                             {% for event in events %}
                                 <tr>
                                     {# <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.id }}</a></td> #}
-                                    <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.title }}</a></td>
+                                    <td>
+                                        <a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.title }}</a>
+                                    </td>
                                     <td>
                                         {{ event.description }}
                                     </td>
