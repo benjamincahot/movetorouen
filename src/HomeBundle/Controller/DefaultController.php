@@ -32,13 +32,24 @@ class DefaultController extends Controller
                 $em->persist($contact);
                 $em->flush();
                 // envoie mail  
-
-                    
+                $message = (new \Swift_Message('Hello Email'))
+                ->setFrom(['michel@gmail.com' => 'John Doe'])
+                ->setTo('fdemech@gmail.com')
+                ->setBody(
+                    // $this->renderView(
+                    //     '@Home/Default/email/contact.html.twig'
+                    //     //array('name' => $name)
+                    // ),
+                    'hkjhkjhkljhk',
+                    'text/html'
+                );    
+                
+                // redirection 
             }
+
         return $this->render('@Home/Default/contact.html.twig'  , array(
             'form'    => $form->createView(),
             'success' => $success
         ));
-    }
-    
+    }    
 }
