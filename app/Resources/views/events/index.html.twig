@@ -16,28 +16,20 @@
                                 <th>Startdate</th>
                                 <th>Enddate</th>
                                 <th>Place</th>
-                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                         {% for event in events %}
                             <tr>
                                 {# <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.id }}</a></td> #}
-                                <td>{{ event.title }}</td>
-                                <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.description }}</a></td>
+                                <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.title }}</td></a>
+                                <td>{{ event.description }}</td>
                                 <td>{{ event.price }}</td>
                                 <td>{% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                                 <td>{% if event.endDate %}{{ event.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                                 <td>{{ event.place }}</td>
                                 <td>
-                                    <ul>
-                                        <li>
-                                            <a href="{{ path('events_show', { 'id': event.id }) }}">show</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ path('events_edit', { 'id': event.id }) }}">edit</a>
-                                        </li>
-                                    </ul>
+                                   
                                 </td>
                             </tr>
                         {% endfor %}
