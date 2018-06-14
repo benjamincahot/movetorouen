@@ -28,21 +28,20 @@
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Categorie</th>
                 <th>Nom</th>
                 <th>Localisation</th>
                 <th>Prix</th>
                 <th>Action</th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>
-                  <span class="badge badge-success">Sportif</span></td>
-                <td>ColorMeRad 5K 2018</td>
-                <td>Mont-Saint-Aignan</td>
-                <td>12$</td>
+                {% for event in events %}
+                <th scope="row">{{ event.id }}</th>
+                <td>{{ event.title }}</td>
+                <td>{{ event.place }}</td>
+                <td>{{ event.price }}</td>
                 <td>
                   <button class="btn btn-sm btn-dark">
                     <i class="fas fa-eye"></i>
@@ -55,6 +54,7 @@
                     Supprimer</button>
                 </td>
               </tr>
+              {% endfor %}
             </tbody>
           </table>
         </div>

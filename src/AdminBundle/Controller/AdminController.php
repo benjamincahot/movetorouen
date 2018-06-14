@@ -19,7 +19,14 @@ class AdminController extends Controller
 
     public function listingAction()
     {
-        return $this->render('AdminBundle:Default:listing.html.twig');
+      $em = $this->getDoctrine()->getManager();
+      $users = $em->getRepository(User::class)->eventFromThisCategory($id);
+      $countparks = $em->getRepository(User::class)->eventFromThisCategory($id);
+
+      return $this->render('AdminBundle:Default:listing.html.twig', array(
+        'users' => $users
+      ));
+
     }
 
     public function supportAction()
