@@ -1,1 +1,21 @@
 {% extends "layoutadmin.html.twig" %}
+{% block dashboard %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card p-30 bg-dark">
+        <div class="media">
+          <div class="media-left meida media-middle">
+            <span>
+              <i class="fas fa-hands-helping f-s-40 color-white"></i>
+            </span>
+          </div>
+          <div class="media-body media-text-right">
+            <h2 class="text-white">0</h2>
+            <p class="m-b-0 text-white">Nouveau(x) ticket(s) de support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -31,8 +31,8 @@ class Category
      * @Assert\Length(
      *      min = 5,
      *      max = 50,
-     *      minMessage = "Vous devez ajouter une catégorie ayant au minimum {{ limit }} caractères",
-     *      maxMessage = "Vous devez ajouter une catégorie ayant au maximum {{ limit }} caractères"
+     *      minMessage = "Vous devez ajouter une catégorie comportant au minimum {{ limit }} caractères",
+     *      maxMessage = "Vous devez ajouter une catégorie comportant au maximum {{ limit }} caractères"
      * )
      */
     private $name;

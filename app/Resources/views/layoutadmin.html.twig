@@ -22,16 +22,13 @@
     <!--[if lt IE 9]> <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
     {% block css %}{% endblock %}
+    {% block stylesheets %}{% endblock %}
   </head>
 
   <!-- Début de page -->
   <!-- Preloader CSS -->
   <body class="fix-header fix-sidebar">
-    <div class="preloader">
-      <svg class="circular" viewbox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-      </svg>
-    </div>
+    <!-- <div id="preloader"> <div id="loader"></div> </div> -->
     <!-- Main wrapper -->
     <div id="main-wrapper">
       <div class="header">
@@ -94,7 +91,7 @@
               <li>
                 <a href="{{ path('category_add_new') }}" aria-expanded="false">
                   <i class="fa fa-plus"></i>
-                    <span class="hide-menu">Ajouter une catégorie</span></a>
+                  <span class="hide-menu">Ajouter une catégorie</span></a>
               </li>
               <!-- Fin de section -->
 
@@ -175,8 +172,6 @@
   <script src="{{ asset('asset/js/lib/bootstrap/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('asset/js/jquery.slimscroll.js') }}"></script>
   <script src="{{ asset('asset/js/sidebarmenu.js') }}"></script>
-  <script src="{{ asset('asset/js/lib/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
-  <script src="{{ asset('asset/js/custom.min.js') }}"></script>
   <!-- Fin Script JS-->
 
   {% block js %}{% endblock %}

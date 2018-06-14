@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+<<<<<<< HEAD
     <div class="container text-dark content ">
         <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;">Prochain événement</h1>
         <div class="card">
@@ -37,50 +38,111 @@
                     </table>
                 </div>
             </div>
+=======
+  <div class="container text-dark content ">
+    <h1 class="text-light" style="margin-left:-25%;">
+      Prochain événement
+      <a href="{{ path('events_new') }}" style="margin-left:8%;"><input type="button" value="Créer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
+    </h1>
+    <div class="card" style="margin-top: 5%;margin-bottom:5%;">
+      <div class="card-body">
+        <div class="row">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                {# <th>Id</th> #}
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Startdate</th>
+                <th>Enddate</th>
+                <th>Place</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for event in events %}
+                <tr>
+                  {# <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.id }}</a></td> #}
+                  <td>{{ event.title }}</td>
+                  <td>
+                    <a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.description }}</a>
+                  </td>
+                  <td>{{ event.price }}</td>
+                  <td>
+                    {% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if event.endDate %}{{ event.endDate|date('Y-m-d H:i:s') }}
+                    {% endif %}
+                  </td>
+                  <td>{{ event.place }}</td>
+                  <td>
+                    <ul>
+                      <li>
+                        <a href="{{ path('events_show', { 'id': event.id }) }}">show</a>
+                      </li>
+                      <li>
+                        <a href="{{ path('events_edit', { 'id': event.id }) }}">edit</a>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+>>>>>>> 976c4bebc8fd21c48b934be61af5afa17686d7c3
         </div>
-        <ul class="nav justify-content-center grey lighten-4 py-4">
-            <li>
-                <a href="{{ path('events_new') }}"><input type="button" value="Créer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
-                
-            </li>
-        </ul>
-        <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;">Dernier événement</h1>
-        <div class="row text-center" style="width:100%;margin-left:0%;line-height: 1.2;">
-            <div class="col-lg-4 col-md-12 mb-lg-1 mb-4 text-light " >
-                <div class="view overlay rounded z-depth-1 ">
-                    <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid" alt="Sample project image">
-                    <a><div class="mask rgba-white-slight waves-effect waves-light"></div></a>
-                </div>
-                <div class="card-body pb-0">
-                    <h4 class="font-weight-bold my-3">Title of the news</h4>
-                    <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
-                    <a class="btn btn-outline-danger btn-sm waves-effect waves-light"><i class="fa fa-clone left"></i> View project</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-md-0 mb-4 text-light">
-                <div class="view overlay rounded z-depth-1">
-                    <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid" alt="Sample project image">
-                    <a><div class="mask rgba-white-slight waves-effect waves-light"></div></a>
-                </div>
-                <div class="card-body pb-0">
-                    <h4 class="font-weight-bold my-3">Title of the news</h4>
-                    <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
-                    <a class="btn btn-outline-danger btn-sm waves-effect waves-light"><i class="fa fa-clone left"></i> View project</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-light">
-                <div class="view overlay rounded z-depth-1">
-                    <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid" alt="Sample project image">
-                    <a>
-                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                    </a>
-                </div>
-                <div class="card-body pb-0">
-                    <h4 class="font-weight-bold my-3">Title of the news</h4>
-                    <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
-                    <a class="btn btn-outline-danger btn-sm "><i class="fa fa-clone left"></i> View project</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;margin-top:3%;">Dernier événement</h1>
+    <div class="row text-center" style="width:100%;margin-left:0%;line-height: 1.2;">
+      <div class="col-lg-4 col-md-12 mb-lg-1 mb-4 text-light ">
+        <div class="view overlay rounded z-depth-1 ">
+          <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid" alt="Sample project image">
+          <a>
+            <div class="mask rgba-white-slight waves-effect waves-light"></div>
+          </a>
+        </div>
+        <div class="card-body pb-0">
+          <h4 class="font-weight-bold my-3">Title of the news</h4>
+          <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
+          <a class="btn btn-outline-danger btn-sm waves-effect waves-light">
+            <i class="fa fa-clone left"></i>
+            View project</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-md-0 mb-4 text-light">
+        <div class="view overlay rounded z-depth-1">
+          <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid" alt="Sample project image">
+          <a>
+            <div class="mask rgba-white-slight waves-effect waves-light"></div>
+          </a>
+        </div>
+        <div class="card-body pb-0">
+          <h4 class="font-weight-bold my-3">Title of the news</h4>
+          <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
+          <a class="btn btn-outline-danger btn-sm waves-effect waves-light">
+            <i class="fa fa-clone left"></i>
+            View project</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 text-light">
+        <div class="view overlay rounded z-depth-1">
+          <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid" alt="Sample project image">
+          <a>
+            <div class="mask rgba-white-slight waves-effect waves-light"></div>
+          </a>
+        </div>
+        <div class="card-body pb-0">
+          <h4 class="font-weight-bold my-3">Title of the news</h4>
+          <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
+          <a class="btn btn-outline-danger btn-sm ">
+            <i class="fa fa-clone left"></i>
+            View project</a>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

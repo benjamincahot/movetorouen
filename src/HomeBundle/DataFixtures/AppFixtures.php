@@ -57,9 +57,9 @@ class AppFixtures extends Fixture
       $manager->persist($user5);
 
       $user6 = new User;
-      $user6->setUsername("User");
-      $user6->setEmail ('user@unknown.fr');
-      $user6->setPassword('$2y$13$Uscv2IOuYaAR1QQwrL.yzuDj8kiG484wReDOqb9out22k/FMya7.K');
+      $user6->setUsername("BOT");
+      $user6->setEmail ('robot@movetorouen.fr');
+      $user6->setPassword('$2y$13$tSu57X7bVGnDCvpFbm14O.FitUbKZtSuD5zvFnIWCsmT9XU.fVj1q');
       $user6->setRoles(array('ROLE_USER'));
       $user6->setEnabled(true);
       $this->addReference('zeraztesze', $user6);

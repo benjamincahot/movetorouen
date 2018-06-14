@@ -156,23 +156,23 @@ $( function () {
 
 	var data = [
 		{
-			label: "Primary",
+			label: "13-17 ans",
 			data: 1,
 			color: "#8fc9fb"
         },
 		{
-			label: "Success",
+			label: "18-25 ans",
 			data: 3,
 			color: "#007BFF"
         },
 		{
-			label: "Danger",
+			label: "26-35 ans",
 			data: 9,
-			color: "#19A9D5"
+			color: "#19A6D5"
         },
 		{
-			label: "Warning",
-			data: 20,
+			label: "36 ans +",
+			data: 80,
 			color: "#DC3545"
         }
     ];
