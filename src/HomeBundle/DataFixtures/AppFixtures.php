@@ -64,11 +64,10 @@ class AppFixtures extends Fixture
       $user6->setEnabled(true);
       $this->addReference('zeraztesze', $user6);
       $manager->persist($user6);
-      
+
       $sport = new Category();
       $sport->setName("Sport");
       $manager->persist($sport);
-
 
       $evenement = new Category();
       $evenement->setName("Evénement");
@@ -81,6 +80,10 @@ class AppFixtures extends Fixture
       $monument = new Category();
       $monument->setName("Monument");
       $manager->persist($monument);
+
+
+      // // events
+      // ->setcategory($park)
 
       $manager->flush();
     }

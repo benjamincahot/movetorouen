@@ -12,9 +12,9 @@ parks_homepage:
     path:     /parks
     defaults: { _controller: AdminBundle:Category:parks }
 
-restaurants_homepage:
-    path:     /restaurants
-    defaults: { _controller: AdminBundle:Category:restaurants }
+sports_homepage:
+    path:     /sports
+    defaults: { _controller: AdminBundle:Category:sports }
 
 monuments_homepage:
     path:     /monuments

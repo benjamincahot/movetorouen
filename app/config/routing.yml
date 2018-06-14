@@ -15,22 +15,22 @@ user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /_profiler_home
 
-sport:
+Sport:
     resource: "@SportBundle/Resources/config/routing.yml"
     prefix:   /sport
 
-
-parc:
+Parc:
     resource: "@ParcBundle/Resources/config/routing.yml"
     prefix:   /parc
 
-monument:
+Monument:
     resource: "@MonumentBundle/Resources/config/routing.yml"
     prefix:   /monument
 
 Evenement:
     resource: "@EvenementBundle/Resources/config/routing.yml"
     prefix:   /evenement
+
 
 home:
     resource: "@HomeBundle/Resources/config/routing.yml"

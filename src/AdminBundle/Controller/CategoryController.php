@@ -7,28 +7,56 @@ use HomeBundle\Entity\Category;
 use Symfony\Component\HttpFoundation\Request;
 use AdminBundle\Form\CategoryType;
 use \DateTime;
+use HomeBundle\Entity\Events;
 
 class CategoryController extends Controller
 {
-    // Categories
     public function parksAction()
     {
-        return $this->render('AdminBundle:Default:parks.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $category_id = 3;
+        $parks = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+        $countparks = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+
+        return $this->render('AdminBundle:Default:parks.html.twig', array(
+          'parks' => $parks
+        ));
     }
 
     public function eventsAction()
     {
-        return $this->render('AdminBundle:Default:events.html.twig');
+      $em = $this->getDoctrine()->getManager();
+      $category_id = 2;
+      $events = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+      $countevents = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+
+      return $this->render('AdminBundle:Default:events.html.twig', array(
+        'events' => $events
+      ));
     }
 
     public function monumentsAction()
     {
-        return $this->render('AdminBundle:Default:monuments.html.twig');
+      $em = $this->getDoctrine()->getManager();
+      $category_id = 4;
+      $monuments = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+      $countmonuments = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+
+      return $this->render('AdminBundle:Default:monuments.html.twig', array(
+        'monuments' => $monuments
+      ));
     }
 
-    public function restaurantsAction()
+    public function sportsAction()
     {
-        return $this->render('AdminBundle:Default:restaurants.html.twig');
+      $em = $this->getDoctrine()->getManager();
+      $category_id = 1;
+      $sports = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+      $countsports = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+
+      return $this->render('AdminBundle:Default:sports.html.twig', array(
+        'sports' => $sports
+      ));
     }
 
       // route method get
