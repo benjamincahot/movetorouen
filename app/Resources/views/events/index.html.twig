@@ -1,6 +1,44 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+<<<<<<< HEAD
+    <div class="container text-dark content ">
+        <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;">Prochain événement</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                {# <th>Id</th> #}
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Startdate</th>
+                                <th>Enddate</th>
+                                <th>Place</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for event in events %}
+                            <tr>
+                                {# <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.id }}</a></td> #}
+                                <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.title }}</td></a>
+                                <td>{{ event.description }}</td>
+                                <td>{{ event.price }}</td>
+                                <td>{% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                <td>{% if event.endDate %}{{ event.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                <td>{{ event.place }}</td>
+                                <td>
+                                   
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+=======
   <div class="container text-dark content ">
     <h1 class="text-light" style="margin-left:-25%;">
       Prochain événement
@@ -54,6 +92,7 @@
               {% endfor %}
             </tbody>
           </table>
+>>>>>>> 976c4bebc8fd21c48b934be61af5afa17686d7c3
         </div>
       </div>
     </div>
