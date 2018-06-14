@@ -4,7 +4,7 @@
     $.simpleWeather({
       location: location,
       woeid: woeid,
-      unit: 'c',
+      unit: 'f',
       success: function(weather) {
 
         html = '<i class="wi wi-yahoo-' + weather.code + '"></i><h2> ' + weather.temp + '&deg;' + weather.units.temp + '</h2>';
