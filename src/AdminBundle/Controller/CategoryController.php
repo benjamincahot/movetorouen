@@ -16,10 +16,11 @@ class CategoryController extends Controller
         $em = $this->getDoctrine()->getManager();
         $category_id = 3;
         $parks = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
-        $countparks = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+        $countparks = $em->getRepository(Events::class)->countAllEventsForThisCategory($category_id);
 
         return $this->render('AdminBundle:Default:parks.html.twig', array(
-          'parks' => $parks
+          'parks' => $parks,
+          'countparks' =>  $countparks
         ));
     }
 
@@ -28,10 +29,11 @@ class CategoryController extends Controller
       $em = $this->getDoctrine()->getManager();
       $category_id = 2;
       $events = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
-      $countevents = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+      $countevents = $em->getRepository(Events::class)->countAllEventsForThisCategory($category_id);
 
       return $this->render('AdminBundle:Default:events.html.twig', array(
-        'events' => $events
+        'events' => $events,
+        'countevents' =>  $countevents
       ));
     }
 
@@ -40,10 +42,11 @@ class CategoryController extends Controller
       $em = $this->getDoctrine()->getManager();
       $category_id = 4;
       $monuments = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
-      $countmonuments = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+      $countmonuments = $em->getRepository(Events::class)->countAllEventsForThisCategory($category_id);
 
       return $this->render('AdminBundle:Default:monuments.html.twig', array(
-        'monuments' => $monuments
+        'monuments' => $monuments,
+        'countmonuments' =>  $countmonuments
       ));
     }
 
@@ -52,10 +55,11 @@ class CategoryController extends Controller
       $em = $this->getDoctrine()->getManager();
       $category_id = 1;
       $sports = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
-      $countsports = $em->getRepository(Events::class)->eventFromThisCategory($category_id);
+      $countsports = $em->getRepository(Events::class)->countAllEventsForThisCategory($category_id);
 
       return $this->render('AdminBundle:Default:sports.html.twig', array(
-        'sports' => $sports
+        'sports' => $sports,
+        'countsports' =>  $countsports
       ));
     }
 

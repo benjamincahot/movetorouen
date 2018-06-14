@@ -22,4 +22,16 @@ class EventsRepository extends \Doctrine\ORM\EntityRepository
                 return $qb->execute();
     }
 
+
+    public function countAllEventsForThisCategory($category_id)
+    {
+        return $this->createQueryBuilder('e')
+                  ->select('COUNT(e.id)')
+                  ->andWhere('e.category = :cat')
+                  ->setParameter('cat', $category_id)
+                  ->getQuery()
+                  ->getSingleScalarResult();
+
+    }
+
 }

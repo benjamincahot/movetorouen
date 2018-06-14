@@ -20,8 +20,8 @@ class AdminController extends Controller
     public function listingAction()
     {
       $em = $this->getDoctrine()->getManager();
-      $users = $em->getRepository(User::class)->eventFromThisCategory($id);
-      $countparks = $em->getRepository(User::class)->eventFromThisCategory($id);
+      $users = $em->getRepository(User::class)->eventFromThisCategory($category_id);
+      $countusers = $em->getRepository(User::class)->countAllEventsForThisCategory($category_id);
 
       return $this->render('AdminBundle:Default:listing.html.twig', array(
         'users' => $users

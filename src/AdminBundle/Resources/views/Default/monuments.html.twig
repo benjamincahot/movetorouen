@@ -11,7 +11,7 @@
               </span>
             </div>
             <div class="media-body media-text-right">
-              <h2 class="text-white">0</h2>
+              <h2 class="text-white">{{ countmonuments }}</h2>
               <p class="m-b-0 text-white">Total de monument(s) actif</p>
             </div>
           </div>
@@ -29,6 +29,7 @@
               <tr>
                 <th>ID</th>
                 <th>Nom</th>
+                <th>Description</th>
                 <th>Localisation</th>
                 <th>Prix</th>
                 <th>Action</th>
@@ -39,6 +40,7 @@
                 {% for monument in monuments %}
                 <th scope="row">{{ monument.id }}</th>
                 <td>{{ monument.title }}</td>
+                <td>{{ monument.description }}</td>
                 <td>{{ monument.place }}</td>
                 <td>{{ monument.price }}</td>
                 <td>
