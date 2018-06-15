@@ -1,28 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-<div class="container" style="margin-top:10%">
+  <div class="container" style="margin-top:2%">
     <div class="row">
-        <div class="col-sm-8 ml-auto mr-auto text-white">
-            <h2>Votre Profil</h2>
-                <table class="table">
-                    <tbody>
-                            <tr>
-                                <th>Username</th>
-                                <td>{{ app.user.username }}</td>
-                            </tr>
-                            <tr>
-                                <th>Email</th>
-                                <td>{{ app.user.email }}</td>
-                            </tr>
-                    </tbody>
-                </table>
-                <a href="{{ path('fos_user_profile_edit') }}"><input type="button" value="Editer mail/nom" class="btn btn-primary btn-rounded btn-sm bouton"></a>
-                <a href="{{ path('fos_user_change_password') }}"><input type="button" value="Changer de mdp" class="btn btn-primary btn-rounded btn-sm bouton"></a>
+      <div class="col-sm-8 ml-auto mr-auto text-white">
+        <h2>Votre Profil</h2>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Votre avatar</th>
+              <td>( a mettre en relation avec l'avatar)</td>
+            </tr>
+            <tr>
+              <th>Votre pseudo</th>
+              <td>{{ app.user.username }}</td>
+            </tr>
+            <tr>
+              <th>Votre email</th>
+              <td>{{ app.user.email }}</td>
+            </tr>
+          </tbody>
+        </table>
 
-
-                
+        <div class="container">
+          <a href="{{ path('fos_user_profile_edit') }}"><input type="button" value="Modifier mes paramètres" class="btn btn-primary btn-rounded bouton"></a>
+          <a href="{{ path('fos_user_change_password') }}"><input type="button" value="Modifier mon mot de passe" class="btn btn-primary btn-rounded bouton"></a>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 {% endblock %}

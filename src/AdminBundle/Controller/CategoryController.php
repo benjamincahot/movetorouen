@@ -3,11 +3,11 @@
 namespace AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use HomeBundle\Entity\Category;
 use Symfony\Component\HttpFoundation\Request;
 use AdminBundle\Form\CategoryType;
-use \DateTime;
+use HomeBundle\Entity\Category;
 use HomeBundle\Entity\Events;
+use \DateTime;
 
 class CategoryController extends Controller
 {
@@ -69,10 +69,6 @@ class CategoryController extends Controller
         $category = new Category();
 
         $form = $this->createForm(CategoryType::class, $category);
-        // $form = $this->createFormBuilder($category)
-        //     ->add('name', TextType::class)
-        //     ->add('save', SubmitType::class, array('label' => 'Create Task'))
-        //     ->getForm();
 
         return $this->render('AdminBundle:Category:new.html.twig', array(
             'form' => $form->createView(),
@@ -103,15 +99,6 @@ class CategoryController extends Controller
               'form' => $form->createView(),
           ));
 
-
-    }
-
-    public function listingAction()
-    {
-      // requete => all category
-      $entityManager = $this->getDoctrine()->getManager();
-
-      ///findAll();
 
     }
 }
