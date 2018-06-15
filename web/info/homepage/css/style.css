@@ -101,6 +101,10 @@ footer {
   font-family: 'Handlee', cursive !important;
 }
 
+.footer-copyright{
+  font-size:70%;
+}
+
 .slide3 {
   font-size: 140%;
   font-family: 'Handlee', cursive !important;
