@@ -2,28 +2,29 @@
 
 {% block content %}
 
-<div class="container">
-        <div class="row">
-            <div class="col-sm-4 mr-auto ml-auto">
-                <h2>Log in</h2>
-                        {% if error %}
-                            {{ error.messageKey | trans(error.messageData, 'security') }}
-                        {% endif %}
+  <div class="container" style="margin-top:2%">
+    <div class="row">
+      <div class="col-sm-4 mr-auto ml-auto text-white">
+        <h2>Connectez-vous</h2>
+        {% if error %}
+          {{ error.messageKey | trans(error.messageData, 'security') }}
+        {% endif %}
 
-                <form class="login" action="{{ path("fos_user_security_check") }}" method="post">
-                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-                        <input class="form-control" type="text" id="username" name="_username" value="" required="required" placeholder="Username" />
-                        <br>
-                        <input class="form-control" type="password" id="password" name="_password" required="required" placeholder="Password" />
-                        <br>
-                        <label for="remember_me">
-                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" /> Remember me
-                        </label>
-                        <br>
-                        <button type="submit" id="_submit" name="_submit" class="btn btn-success">Login</button>
-                </form>
+        <form class="login" action="{{ path("fos_user_security_check") }}"="fos_user_security_check") }}"" method="post">
+          <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+          <input class="form-control" type="text" id="username" name="_username" value="" required="required" placeholder="Pseudo"/>
+          <br>
+          <input class="form-control" type="password" id="password" name="_password" required="required" placeholder="Mot de passe"/>
+          <br>
+          <label for="remember_me">
+            <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+            Se souvenir de moi
+          </label>
+          <br>
+          <button type="submit" id="_submit" name="_submit" class="btn btn-success">Se connecter</button>
+        </form>
 
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 {% endblock %}

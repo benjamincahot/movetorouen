@@ -29,9 +29,9 @@ class EventsController extends Controller
         $em = $this->getDoctrine()->getManager();
         $category = $em->getRepository('HomeBundle:Category')->find($category_id);
         // 404 
+        // verifier si cat exist   //
         if (!$category) {  throw $this->createNotFoundException( 'No product found for id ' . $category_id );}
 
-        // verifier si cat exist   //
 
         // tous les events qui ont cette cat 
         
@@ -122,8 +122,11 @@ class EventsController extends Controller
      * @Route("/{id}", name="events_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Events $event)
+    public function deleteAction(Request $request, Events $event, $category_id)
     {
+        $category = $em->getRepository('HomeBundle:Category')->find($category_id);
+
+
         $form = $this->createDeleteForm($event);
         $form->handleRequest($request);
 
@@ -133,7 +136,9 @@ class EventsController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('events_index');
+        return $this->redirectToRoute('events_index', array(
+            'category_id' => $category->getId()
+        ));
     }
 
     /**

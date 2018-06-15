@@ -23,7 +23,7 @@
                             <tr>
                                 {# <th>Id</th> #}
                                 <th>Title</th>
-                                <th>Description</th>
+                                {# <th>Description</th> #}
                                 <th>Price</th>
                                 <th>Startdate</th>
                                 <th>Enddate</th>
@@ -41,9 +41,9 @@
                                     <td>
                                         <a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.title }}</a>
                                     </td>
-                                    <td>
+                                    {# <td>
                                         {{ event.description }}
-                                    </td>
+                                    </td> #}
                                     <td>{{ event.price }}</td>
                                     <td>
                                         {% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;margin-top:3%;">Dernier événement</h1>
+        <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;margin-top:3%;">Derniers ajouts</h1>
         <div class="row text-center" style="width:100%;margin-left:0%;line-height: 1.2;">
             <div class="col-lg-4 col-md-12 mb-lg-1 mb-4 text-light ">
                 <div class="view overlay rounded z-depth-1 ">
@@ -88,7 +88,7 @@
                     <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
                     <a class="btn btn-outline-danger btn-sm waves-effect waves-light">
                         <i class="fa fa-clone left"></i>
-                        View project</a>
+                        Voir</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-md-0 mb-4 text-light">
@@ -103,7 +103,7 @@
                     <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
                     <a class="btn btn-outline-danger btn-sm waves-effect waves-light">
                         <i class="fa fa-clone left"></i>
-                        View project</a>
+                        Voir</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 text-light">
@@ -118,7 +118,7 @@
                     <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
                     <a class="btn btn-outline-danger btn-sm ">
                         <i class="fa fa-clone left"></i>
-                        View project</a>
+                        Voir</a>
                 </div>
             </div>
         </div>

@@ -15,7 +15,6 @@
       <link rel="stylesheet" href="{{ asset('info/homepage/css/style.css') }}"/>
       {% endstylesheets %}
     {% endblock %}
-
   </head>
   <body>
     {% block header %}
@@ -34,7 +33,7 @@
               {% if is_granted('ROLE_ADMIN')%}
                 <a class="btn btn-outline-success " href="{{ path('admin_homepage') }}">Admin</a>
               {% endif %}
-              <a class="btn btn-outline-danger " href="{{ path('fos_user_security_logout') }}">Log out</a>
+              <a class="btn btn-outline-danger " href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
             </li>
           {% else %}
             <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton">
@@ -52,6 +51,65 @@
     <footer class="page-footer font-large text-light bg-dark pt-4 mt-4">
       <div class="container text-center text-md-left ">
         <div class="row">
+          <div class="col-md-4 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+            <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#3
+                ">Link 2</a>
+              </li>
+              <li>
+                <a href="#">Link 3</a>
+              </li>
+              <li>
+                <a href="#">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#">Link 2</a>
+              </li>
+              <li>
+                <a href="#">Link 3</a>
+              </li>
+              <li>
+                <a href="#">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Nos liens</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.facebook.com/move.torouen.1" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/movetorouen/?hl=fr" target="_blank">Instagram</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
           
           <hr class="clearfix w-100 d-md-none">
           
