@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     {% block stylesheet %}
       {% stylesheets 'info/homepage/css/style.css' filter = 'cssrewrite' %}
       <link rel="stylesheet" href="{{ asset('info/homepage/css/style.css') }}"/>
@@ -50,103 +51,30 @@
     <footer class="page-footer font-large text-light bg-dark pt-4 mt-4">
       <div class="container text-center text-md-left ">
         <div class="row">
-          <div class="col-md-4 mx-auto">
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-            <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
+          
           <hr class="clearfix w-100 d-md-none">
-          <div class="col-md-2 mx-auto">
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#">Link 1</a>
-              </li>
-              <li>
-                <a href="#">Link 2</a>
-              </li>
-              <li>
-                <a href="#">Link 3</a>
-              </li>
-              <li>
-                <a href="#">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <hr class="clearfix w-100 d-md-none">
-          <div class="col-md-2 mx-auto">
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#">Link 1</a>
-              </li>
-              <li>
-                <a href="#">Link 2</a>
-              </li>
-              <li>
-                <a href="#">Link 3</a>
-              </li>
-              <li>
-                <a href="#">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <hr class="clearfix w-100 d-md-none">
-          <div class="col-md-2 mx-auto">
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-          </div>
+          
         </div>
       </div>
       <hr>
       <ul class="list-unstyled list-inline text-center py-2">
-        <li class="list-inline-item">
-          <h5 class="mb-1">Inscrivez-vous gartuitement !!</h5>
+        <li class="list-inline">
+        <p>Suivez nous sur les réseaux sociaux : </P>
         </li>
         <li class="list-inline-item">
-          <a href="{{ path('fos_user_registration_register') }}" class="btn btn-danger btn-rounded">Inscription</a>
-        </li>
-      </ul>
-      <hr>
-      <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
-          <a class="btn-floating btn-fb mx-1">
-            <i class="fa fa-facebook"></i>
-          </a>
+          <a type="button" class="btn-floating btn-lg btn-fb"><i class="fa fa-facebook"></i></a>
         </li>
         <li class="list-inline-item">
-          <a class="btn-floating btn-tw mx-1">
-            <i class="fa fa-twitter"></i>
-          </a>
+          <a type="button" class="btn-floating btn-lg btn-tw"><i class="fa fa-twitter"></i></a>
         </li>
         <li class="list-inline-item">
-          <a class="btn-floating btn-gplus mx-1">
-            <i class="fa fa-google-plus"></i>
-          </a>
+          <a type="button" class="btn-floating btn-lg btn-gplus"><i class="fa fa-google-plus"></i></a>
         </li>
         <li class="list-inline-item">
-          <a class="btn-floating btn-li mx-1">
-            <i class="fa fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-dribbble mx-1">
-            <i class="fa fa-dribbble"></i>
-          </a>
+          <a type="button" class="btn-floating btn-lg btn-ins"><i class="fa fa-instagram"></i></a>
         </li>
       </ul>
+      
       <div class="footer-copyright text-center">© 2018 Copyright:
         <a href="#">
           MoveToRouen</a>
