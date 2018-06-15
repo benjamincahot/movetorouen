@@ -90,6 +90,7 @@ class EventsController extends Controller
         ));
     }
 
+
     /**
      * Displays a form to edit an existing event entity.
      *
@@ -111,8 +112,7 @@ class EventsController extends Controller
 
         return $this->render('events/edit.html.twig', array(
             'event' => $event,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'edit_form' => $editForm->createView()
         ));
     }
 
