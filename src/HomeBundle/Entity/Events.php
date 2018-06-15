@@ -72,6 +72,12 @@ class Events
     private $category;
 
 
+    /**
+     * @ORM\ManytoOne(targetEntity="User\UserBundle\Entity\User", inversedBy="events")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+
     // ----------------------------------------
     // GETTER/ SETTER
     // ----------------------------------------
@@ -252,5 +258,29 @@ class Events
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * Set user.
+     *
+     * @param \User\UserBundle\Entity\User|null $user
+     *
+     * @return Events
+     */
+    public function setUser(\User\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user.
+     *
+     * @return \User\UserBundle\Entity\User|null
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

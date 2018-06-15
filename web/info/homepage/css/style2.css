@@ -1,4 +1,33 @@
 
 .logo{
-    width: 35%;
+    width: 30%;
+}
+
+.content{
+    width:50%;
+    margin:3% auto;
+    line-height: 0.5;
+}
+.content2{
+    width:50%;
+    margin:3% auto;
+    line-height: 1;
+    background-color: #171c2f;  
+}
+
+.bouton{
+    font-family: 'Handlee', cursive; 
+}
+body{
+    width: 100%;
+    line-height: 2;   
+    font-family: 'Handlee', cursive; 
+    font-size: large;
+    background-color: #171c2f;
+}
+footer{
+    max-width: 100%;
+    font-size:80%;
+    background-color: #343a40;
+    font-family: 'Handlee', cursive !important;
 }

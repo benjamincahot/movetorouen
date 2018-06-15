@@ -1,12 +1,15 @@
 {% extends "layoutadmin.html.twig" %}
-{% block welcome %}<a style="color:#bf1919">Bienvenue
-  {{ app.user.username }} <i class="fas fa-child"></i></a>
+{% block welcome %}
+  <a style="color:#bf1919">Bienvenue
+    {{ app.user.username }}
+    <i class="fas fa-child"></i>
+  </a>
 {% endblock %}
 {% block dashboard %}
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <div class="card p-30 bg-warning">
+        <div class="card p-30 bg-mtr">
           <div class="media">
             <div class="media-left meida media-middle">
               <span>
@@ -21,7 +24,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card p-30 bg-info">
+        <div class="card p-30 bg-mtr">
           <div class="media">
             <div class="media-left meida media-middle">
               <span>
@@ -35,10 +38,10 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card p-30 bg-danger">
-          <div class="media">
-            <div class="media-left meida media-middle">
+      <div class="col-md-4 mtr">
+        <div class="card p-30 bg-mtr">
+          <div class="media bg-mtr">
+            <div class="media-left meida media-middle mtr">
               <span>
                 <i class="far fa-life-ring f-s-40"></i>
               </span>
@@ -51,12 +54,31 @@
         </div>
       </div>
     </div>
+    <div class="row">
 
-    <div class="row bg-white m-l-0 m-r-0 box-shadow ">
-      <!-- column -->
+      <!-- /# column -->
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card bg-mtr">
+          <div class="card-body">
+            <div class="weather-widget">
+              <div id="weather-one" class="weather-one"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- End Page Content -->
   </div>
   <!-- End Container fluid -->
+{% endblock %}
+{% block js %}
+  <script src="{{ asset('asset/js/lib/bootstrap/js/popper.min.js') }}"></script>
+  <script src="{{ asset('asset/js/jquery.slimscroll.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/weather/jquery.simpleWeather.min.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/weather/weather-init.js') }}"></script>
+  <script src="{{ asset('asset/js/lib/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
+  <script src="{{ asset('asset/js/custom.min.js') }}"></script>
 {% endblock %}

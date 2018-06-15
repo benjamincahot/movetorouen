@@ -1,1 +1,65 @@
 {% extends "layoutadmin.html.twig" %}
+{% block dashboard %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card p-30 bg-primary">
+          <div class="media">
+            <div class="media-left meida media-middle">
+              <span>
+                <i class="fas fa-building f-s-40 color-secondary"></i>
+              </span>
+            </div>
+            <div class="media-body media-text-right">
+              <h2 class="text-white">{{ countmonuments }}</h2>
+              <p class="m-b-0 text-white">Total de monument(s) actif</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">
+        <h4>Liste des monuments</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Localisation</th>
+                <th>Prix</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {% for monument in monuments %}
+                <th scope="row">{{ monument.id }}</th>
+                <td>{{ monument.title }}</td>
+                <td>{{ monument.description }}</td>
+                <td>{{ monument.place }}</td>
+                <td>{{ monument.price }}</td>
+                <td>
+                  <button class="btn btn-sm btn-dark">
+                    <i class="fas fa-eye"></i>
+                    Voir</button>
+                  <button class="btn btn-sm btn-warning">
+                    <i class="fas fa-pencil-alt"></i>
+                    Editer</button>
+                  <button class="btn btn-sm btn-danger">
+                    <i class="fas fa-trash"></i>
+                    Supprimer</button>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

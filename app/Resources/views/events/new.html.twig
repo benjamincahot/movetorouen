@@ -1,18 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-<div class="container text-light" style="width:30%;margin-top: 7%;line-height: 0;">
-    <h1 style="margin-left:-25%;margin-bottom:5%;">Créer un événement</h1>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <div class="container text-light content">
+            <h1 style="margin-left:-25%;margin-bottom:5%;">Créer un événement</h1>
 
-
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-    {{ form_end(form) }}
-    <button type="submit" class="btn btn-success">Submit</button>
-</div>
-    <ul>
-        <li>
-            <a href="{{ path('events_index') }}">Back to the list</a>
-        </li>
-    </ul>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button type="submit" class="btn btn-success">Submit</button>
+            {{ form_end(form) }}
+        </div>
+    {% else %}
+        <div class="container text-light content">
+            <p>Vous devez être connecter pour ajouter un événement</p>
+            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   ">
+            </a>
+        </div>
+    {% endif %}
 {% endblock %}

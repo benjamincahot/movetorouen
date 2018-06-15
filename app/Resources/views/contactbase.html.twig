@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>
+      {% block title %}MoveToRouen{% endblock %}
+    </title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Happy+Monkey">
+    {% block stylesheets %}
+      {% stylesheets 'info/homepage/css/stylecontact.css' filter = 'cssrewrite' %}
+      <link rel="stylesheet" href="{{ asset('info/homepage/css/stylecontact.css') }}"/>
+      {% endstylesheets %}
+    {% endblock %}
+  </head>
+  <body>
+    {% block header %}
+      <nav class="navbar navbar-light top navbar-expand-lg default-color scrolling-navbar border border-right-0 border-left-0 border-top-0 border-grey">
+        <a class="navbar-brand " href="{{ path('home_homepage') }}"><img class="logo" src="{{ asset('info/img/logo.png') }}" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto"></ul>
+          <form class="form-inline my-2 my-lg-0">
+            {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+              <a class="btn btn-outline-success" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
+              {% if is_granted('ROLE_ADMIN')%}
+                <a class="btn btn-outline-success" href="{{ path('admin_homepage') }}">Admin</a>
+              {% endif %}
+              <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Log out</a>
+            </li>
+          {% else %}
+            <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton">
+            </a>
+            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton">
+            </a>
+          {% endif %}
+        </form>
+      </div>
+    </nav>
+  {% endblock %}
+
+  {% block content %}{% endblock %}
+
+  {% block footer %}
+    <footer class="page-footer font-small text-light bg-dark pt-4 mt-4 ">
+      <div class="container text-center text-md-left ">
+        <div class="row">
+          <div class="col-md-4 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+            <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer-copyright text-center">© 2018 Copyright:
+        <a href="#">MoveToRouen</a>
+      </div>
+    </footer>
+
+    
+  {% endblock %}

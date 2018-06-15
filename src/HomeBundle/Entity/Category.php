@@ -29,10 +29,10 @@ class Category
      * @ORM\Column(name="name", type="string", length=255)
      * @Assert\NotBlank()
      * @Assert\Length(
-     *      min = 2,
+     *      min = 5,
      *      max = 50,
-     *      minMessage = "Your first name must be at least {{ limit }} characters long",
-     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
+     *      minMessage = "Vous devez ajouter une catégorie comportant au minimum {{ limit }} caractères",
+     *      maxMessage = "Vous devez ajouter une catégorie comportant au maximum {{ limit }} caractères"
      * )
      */
     private $name;
@@ -52,7 +52,7 @@ class Category
     private $modifiedAt;
 
 
-    
+
 
     public function __construct()
     {

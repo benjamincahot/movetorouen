@@ -21,17 +21,27 @@ class EventsController extends Controller
     /**
      * Lists all event entities.
      *
-     * @Route("/", name="events_index")
+     * @Route("/cat/{category_id}", name="events_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction($category_id)
     {
         $em = $this->getDoctrine()->getManager();
+        $category = $em->getRepository('HomeBundle:Category')->find($category_id);
+        // 404 
+        if (!$category) {  throw $this->createNotFoundException( 'No product found for id ' . $category_id );}
 
-        $event = $em->getRepository('HomeBundle:Events')->findAll();
+        // verifier si cat exist   //
 
+        // tous les events qui ont cette cat 
+        
+        $events = $em->getRepository('HomeBundle:Events')->eventFromThisCategory($category_id);
+        
+    
+            
         return $this->render('events/index.html.twig', array(
-            'event' => $event,
+            'events' => $events,
+            'category_id' => $category->getId()
         ));
     }
 
@@ -43,19 +53,23 @@ class EventsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $event = new Events();
-        $form = $this->createForm('HomeBundle\Form\EventsType', $event);
+     
+        $events = new Events();
+        $form = $this->createForm('HomeBundle\Form\EventsType', $events);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($event);
+            
+            $user = $this->getUser();
+            $events->setUser($user);
+            $em->persist($events);
             $em->flush();
 
-            return $this->redirectToRoute('events_show', array('id' => $event->getId()));
+            return $this->redirectToRoute('events_show', array('id' => $events->getId()));
         }
 
         return $this->render('events/new.html.twig', array(
-            'event' => $event,
+            'events' => $events,
             'form' => $form->createView(),
         ));
     }
@@ -76,6 +90,7 @@ class EventsController extends Controller
         ));
     }
 
+
     /**
      * Displays a form to edit an existing event entity.
      *
@@ -91,13 +106,13 @@ class EventsController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('events_edit', array('id' => $event->getId()));
+            return $this->redirectToRoute('events_show', array('id' => $event->getId()));
+
         }
 
         return $this->render('events/edit.html.twig', array(
             'event' => $event,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'edit_form' => $editForm->createView()
         ));
     }
 
