@@ -1,35 +1,114 @@
-.logo {
-  width: 30%;
-}
+/* -----HEADER----- */
 
-.content {
-  width: 50%;
-  margin: 3% auto;
-  line-height: 0.5;
-}
+  .logo {
+    width: 30%;
+  }
 
-.content2 {
-  width: 50%;
-  margin: 3% auto;
-  line-height: 1;
-  background-color: #171c2f;
-}
+/* -----BODY----- */
 
-.bouton {
-  font-family: 'Handlee', cursive;
-}
+  body {
+    width: 100%;
+    line-height: 2;
+    font-family: 'Handlee', cursive;
+    font-size: large;
+    background-color: #171c2f;
+  }
 
-body {
-  width: 100%;
-  line-height: 2;
-  font-family: 'Handlee', cursive;
-  font-size: large;
-  background-color: #171c2f;
-}
+  .content {
+    width: 50%;
+    margin: 3% auto;
+    line-height: 0.5;
+  }
 
-footer {
-  max-width: 100%;
-  font-size: 80%;
-  background-color: #343a40;
-  font-family: 'Handlee', cursive !important;
-}
+  /* show.html.twig */
+  .content2 {
+    width: 50%;
+    margin: 3% auto;
+    line-height: 1;
+    background-color: #171c2f;
+  }
+
+  .showtitle{
+    margin-left:-25%;
+    margin-bottom:2%;
+  }
+
+  .bouton {
+    font-family: 'Handlee', cursive;
+  }
+
+  /* container edit/delete show.html.twig */
+
+    .edit{
+      background-color:#171c2f;
+      line-height:2;
+    }
+
+    .lasteventtitle{
+      margin-left:-6%;
+      margin-bottom:5%;
+      margin-top:3%;
+    }
+
+    .lasteventcontent{
+      width:100%;
+      margin-left:0%;
+      line-height: 1.2;
+    }
+  /* END */
+  /* show.html.twig */
+    .newtitle{
+      margin-left:-25%;
+      margin-bottom:5%;
+    }
+  /* END */
+  /* index.html.twig */
+
+    .indextitle{
+      margin-left:-25%;
+    }
+
+    .eventbtn{
+      margin-left:8%;
+    }
+
+    .eventcard{
+      margin-top: 5%;
+      margin-bottom:5%;
+      background:#171c2f;
+      line-height:1;
+    }
+
+    .lastaddtitle{
+      margin-left:-25%;
+      margin-bottom:5%;
+      margin-top:3%;
+    }
+
+    .lastaddcontent{
+      width:100%;
+      margin-left:0%;
+      line-height: 1.2;
+    }
+  /* END */
+  /* edit.html.twig */
+
+    .edittitle{
+      margin-left:-25%;
+      margin-bottom:5%;
+    }
+  /* END */
+
+/* -----FOOTER----- */
+
+  footer {
+    max-width: 100%;
+    font-size: 80%;
+    background-color: #343a40;
+    font-family: 'Handlee', cursive !important;
+  }
+  .card{
+    background-color: #171c2f;
+  }
+
+ 
