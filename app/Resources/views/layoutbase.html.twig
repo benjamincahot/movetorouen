@@ -47,36 +47,67 @@
   {% endblock %}
 
   {% block content %}{% endblock %}
+
   {% block footer %}
     <footer class="page-footer font-large text-light bg-dark pt-4 mt-4">
-      <div class="container text-center text-md-left ">
-        <div class="row">
-        </div>
+      <div class="container text-center text-md-left  ">
+        <div class="row"></div>
       </div>
-      <ul class="list-unstyled list-inline text-center py-2">
+      <hr>
+      <ul class="list-unstyled list-inline text-center py-2 ">
         <li class="list-inline">
-        <p>Suivez nous sur les réseaux sociaux</P>
+          <p>Suivez nous sur les réseaux sociaux :
+          </p>
+        </li>
+        <li class="list-inline-item ">
+          <a type="button" href="#" class="btn-floating btn-lg btn-fb border2 socialbtn">
+            <i class="fa fa-facebook "></i>
+          </a>
+        </li>
+        <li class="list-inline-item ">
+          <a type="button" href="#" class="btn-floating btn-lg btn-tw border2 socialbtn">
+            <i class="fa fa-twitter "></i>
+          </a>
         </li>
         <li class="list-inline-item">
-          <a type="button" class="btn-floating btn-lg btn-fb"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li class="list-inline-item">
-          <a type="button" class="btn-floating btn-lg btn-tw"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li class="list-inline-item">
-          <a type="button" class="btn-floating btn-lg btn-gplus"><i class="fa fa-google-plus"></i></a>
-        </li>
-        <li class="list-inline-item">
-          <a type="button" class="btn-floating btn-lg btn-ins"><i class="fa fa-instagram"></i></a>
+          <a type="button" href="#" class="btn-floating btn-lg btn-ins border2 socialbtn">
+            <i class="fa fa-instagram "></i>
+          </a>
         </li>
       </ul>
-
-      <div class="footer-copyright text-center" style="padding-top:20px;padding-bottom:30px;">© 2018 Copyright -
-        <a href="#">
-          MoveToRouen</a>
-      </div>
+      <hr>
+      <ul class="list-unstyled list-inline text-center text-light py-2 socialbtn">
+        <li class="list-inline-item">
+          <a href="" class="link">
+            Mentions légales
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="{{ path('home_contact') }}" class="link">
+            Nous contacter
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="" class="link">
+            Politique de confidentialité
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="" class="link">
+            Qui sommes-nous
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <ul class="list-unstyled list-inline text-center py-2 copy">
+        <li>
+          <div class="footer-copyright text-center">© 2018 Copyright:
+            <a href="#">
+              MoveToRouen</a>
+          </div>
+        </li>
+      </ul>
     </footer>
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   {% endblock %}
   {% block javascripts %}

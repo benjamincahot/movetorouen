@@ -2,7 +2,7 @@
 {% block content %}
     {# {{dump(category_id)}} #}
     <div class="container text-dark content ">
-        <h1 class="text-light" style="margin-left:-25%;">
+        <h1 class="text-light indextitle" >
             {# Boucle if permettant de sélectionner le titre en fonction de l'i de la catégorie récupérée#}
             {% if category_id == 1 %}
                 Sport
@@ -13,9 +13,9 @@
             {% else %}
                 Monuments
             {% endif %}
-                <a href="{{ path('events_new') }}" style="margin-left:8%;"><input type="button" value="Créer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
+                <a href="{{ path('events_new') }}" class="eventbtn"><input type="button" value="Créer un événement" class="btn btn-success btn-rounded btn-sm bouton"></a>
         </h1>
-        <div class="card text-light" style="margin-top: 5%;margin-bottom:5%;background:#171c2f;line-height:1;">
+        <div class="card text-light eventcard" >
             <div class="card-body " >
                 <div class="row" >
                     <table class="table table-striped">
@@ -23,7 +23,7 @@
                             <tr>
                                 {# <th>Id</th> #}
                                 <th>Title</th>
-                                <th>Description</th>
+                                {# <th>Description</th> #}
                                 <th>Price</th>
                                 <th>Startdate</th>
                                 <th>Enddate</th>
@@ -41,9 +41,9 @@
                                     <td>
                                         <a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.title }}</a>
                                     </td>
-                                    <td>
+                                    {# <td>
                                         {{ event.description }}
-                                    </td>
+                                    </td> #}
                                     <td>{{ event.price }}</td>
                                     <td>
                                         {% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}
@@ -74,8 +74,8 @@
                 </div>
             </div>
         </div>
-        <h1 class="text-light" style="margin-left:-25%;margin-bottom:5%;margin-top:3%;">Dernier événement</h1>
-        <div class="row text-center" style="width:100%;margin-left:0%;line-height: 1.2;">
+        <h1 class="text-light lastaddtitle" >Derniers ajouts</h1>
+        <div class="row text-center lastaddcontent">
             <div class="col-lg-4 col-md-12 mb-lg-1 mb-4 text-light ">
                 <div class="view overlay rounded z-depth-1 ">
                     <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid" alt="Sample project image">
@@ -88,7 +88,7 @@
                     <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
                     <a class="btn btn-outline-danger btn-sm waves-effect waves-light">
                         <i class="fa fa-clone left"></i>
-                        View project</a>
+                        Voir</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-md-0 mb-4 text-light">
@@ -103,7 +103,7 @@
                     <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
                     <a class="btn btn-outline-danger btn-sm waves-effect waves-light">
                         <i class="fa fa-clone left"></i>
-                        View project</a>
+                        Voir</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 text-light">
@@ -118,7 +118,7 @@
                     <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
                     <a class="btn btn-outline-danger btn-sm ">
                         <i class="fa fa-clone left"></i>
-                        View project</a>
+                        Voir</a>
                 </div>
             </div>
         </div>
