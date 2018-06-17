@@ -40,7 +40,7 @@
           </div>
 
           <!-- Début de la section user (avatar, paramètres et deconnexion) -->
-          <div class="navbar-collapse fixed-top">
+          <div class="navbar-collapse">
             <ul class="navbar-nav mr-auto mt-md-0"></ul>
             <ul class="navbar-nav my-lg-0">
               <li class="nav-item hidden-sm-down search-box">
@@ -48,17 +48,22 @@
                   <i class="ti-search"></i>
                 </a>
                 <form class="app-search">
-                  <input type="text" class="form-control" placeholder="Search here">
+                  <input type="text" class="form-control" placeholder="Rechercher">
                   <a class="srh-btn">
                     <i class="ti-close"></i>
                   </a>
                 </form>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="#" alt=" avatar de {{ app.user.username }}" class="profile-pic"/></a>
+                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="#" alt="avatar de {{ app.user.username }}" class="profile-pic"/></a>
                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                   <ul class="dropdown-user">
                     <!-- Déconnexion et redirection vers la page d'index -->
+                    <li>
+                      <a href="{{ path('home_homepage') }}">
+                        <i class="fa fa-home"></i>
+                        MoveToRouen</a>
+                    </li>
                     <li>
                       <a href="{{ path('fos_user_security_logout') }}">
                         <i class="fa fa-power-off"></i>
@@ -156,7 +161,7 @@
         <!-- Fin de déclaration des blocks Twig -->
 
         <!-- Début du footer -->
-        <footer class="footer text-center">&copy; Copyright
+        <footer class="footer text-center sticky-bottom">&copy; Copyright
           <a href="{{ path('home_homepage') }}" style="color:#bf1919">MoveToRouen</a>
           - 2018/2019
         </a>

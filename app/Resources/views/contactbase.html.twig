@@ -32,7 +32,7 @@
               {% if is_granted('ROLE_ADMIN')%}
                 <a class="btn btn-outline-success" href="{{ path('admin_homepage') }}">Admin</a>
               {% endif %}
-              <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Log out</a>
+              <a class="btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
             </li>
           {% else %}
             <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-primary btn-rounded btn-sm bouton">
@@ -119,5 +119,5 @@
       </div>
     </footer>
 
-    
+
   {% endblock %}
