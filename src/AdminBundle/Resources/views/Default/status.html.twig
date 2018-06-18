@@ -1,74 +1,78 @@
 {% extends "layoutadmin.html.twig" %}
 {% block welcome %}
-    <a style="color:#ffffff">Bienvenue
-        {{ app.user.username }}
-        <i class="fas fa-child"></i>
-    </a>
+  <a style="color:#ffffff">Bienvenue
+    {{ app.user.username }}
+    <i class="fas fa-child"></i>
+  </a>
 {% endblock %}
 {% block dashboard %}
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card p-30 bg-info">
-                    <div class="media">
-                        <div class="media-left meida media-middle">
-                            <span>
-                                <i class="fas fa-pause f-s-40 color-secondary"></i>
-                            </span>
-                        </div>
-                        <div class="media-body media-text-right">
-                            <h2 class="text-white">0</h2>
-                            <p class="m-b-0 text-white">Total d'élément(s) en attente</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card p-30 bg-info">
+          <div class="media">
+            <div class="media-left meida media-middle">
+              <span>
+                <i class="fas fa-pause f-s-40 color-secondary"></i>
+              </span>
             </div>
+            <div class="media-body media-text-right">
+              <h2 class="text-white">
+                {% if countstatus == 0 %}
+                {% else %}
+                {% endif %}
+              </h2>
+              <p class="m-b-0 text-white">
+                {% if countstatus == 0 %}
+                {% else %}Rien a modérer
+                {% endif %}
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-            <div class="card-title">
-                <h4>Liste des éléments en attente</h4>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nom</th>
-                                <th>Description</th>
-                                <th>Localisation</th>
-                                <th>Prix</th>
-                                <th>Auteur</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a class="btn btn-sm btn-success" href="#">
-                                        <i class="fas fa-pencil-alt"></i>
-                                        Valider
-                                    </a>
-                                    <a class="btn btn-sm btn-danger" href="#">
-                                        <i class="fas fa-trash"></i>
-                                        Rejeter
-                                    </a>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+<div class="card">
+  <div class="card-title">
+    <h4>Liste des éléments en attente</h4>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Localisation</th>
+            <th>Prix</th>
+            <th>Auteur</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% for event in events %}
+              <th scope="row">{{ event.id }}</th>
+              <td>{{ event.title}}</td>
+              <td>{{ event.description}}</td>
+              <td>{{ event.place}}</td>
+              <td>{{ event.price}}</td>
+              <td>{{ event.user}}</td>
+              <td>
+                <a class="btn btn-sm btn-success" href="{{ path('accept_homepage', {'id': event.id}) }}">
+                  <i class="fas fa-pencil-alt"></i>
+                  Valider
+                </a>
+                <a class="btn btn-sm btn-danger" href="{{ path('reject_homepage', {'id': event.id}) }}">
+                  <i class="fas fa-trash"></i>
+                  Rejeter
+                </a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 {% endblock %}

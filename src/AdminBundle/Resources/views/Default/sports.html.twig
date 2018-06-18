@@ -38,6 +38,7 @@
                 <th>Description</th>
                 <th>Localisation</th>
                 <th>Prix</th>
+                <th>Auteur</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -49,15 +50,16 @@
                   <td>{{ sport.description }}</td>
                   <td>{{ sport.place }}</td>
                   <td>{{ sport.price }}</td>
+                  <td>{{ sport.user }}</td>
                   <td>
                     <a class="btn btn-sm btn-primary" href="">
-                      <i class="fas fa-eye"></i>
+                      <i class="fas fa-eye"></i> Voir
                     </a>
                     <a class="btn btn-sm btn-warning" href="{{ path('edit_event_admin', { 'id': sport.id}) }}">
-                      <i class="fas fa-pencil-alt"></i>
+                      <i class="fas fa-pencil-alt"></i> Editer
                     </a>
                     <a class="btn btn-sm btn-danger" href="">
-                      <i class="fas fa-trash"></i>
+                      <i class="fas fa-trash"></i> Supprimer
                     </a>
                   </td>
                 </tr>

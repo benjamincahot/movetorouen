@@ -22,8 +22,6 @@ class EventsRepository extends \Doctrine\ORM\EntityRepository
                 return $qb->execute();
     }
 
-
-
     public function countAllEventsForThisCategory($category_id)
     {
         return $this->createQueryBuilder('e')
@@ -46,11 +44,11 @@ class EventsRepository extends \Doctrine\ORM\EntityRepository
                   ->getSingleScalarResult();
 
                 //   ->setParameter('cat', $category_id)
-                
+
 
     }
 
-    // Admin 
+    // Admin
 
     public function eventFromThisCategoryAdmin($category_id)
     {
