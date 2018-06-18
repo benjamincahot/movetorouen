@@ -1,9 +1,9 @@
 {% extends "layoutbase.html.twig" %}
-{% block dashboard %}
-  <h1 class="text-uppercase text-center">403</h1>
-  <h3 class="text-center">Vous n'avez pas les droits suffisant pour acceder a cette page.</h3>
-  <p class="text-muted m-t-30 m-b-30 text-center">Veuillez réessayer plus tard.</p>
-  <a class="btn btn-waves-effect waves-light m-b-40 center text-white" style="background-color:#bf1919; margin-left:45%;" href="{{ path('home_homepage')}}">Revenir a l'accueil</a></br>
-  <img style="width:30%; height:60%; ;"src="https://media1.tenor.com/images/f86c3a13ddb998631efa393d1c289567/tenor.gif?itemid=9505807"></img>
+{% block content %}
+  <h1 class="text-uppercase text-center text-white">Erreur 403</h1>
+  <h3 class="text-center text-white">Cette page est interdite d'accès !</h3>
+  <p class="m-t-30 m-b-30 text-center text-white">Veuillez retourner à l'accueil.</p>
+  <a class="btn btn-waves-effect waves-light m-b-40 center text-white error403" href="{{ path('home_homepage')}}">Revenir à l'accueil</a></br>
+  <img style="width:30%; height:60%;"src="https://media1.tenor.com/images/78624d6afe99de52c50f6d09cd4335ab/tenor.gif?itemid=8087443"></img>
 
 {% endblock %}

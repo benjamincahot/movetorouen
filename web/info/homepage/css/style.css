@@ -114,3 +114,9 @@ footer {
 .text {
   margin-top: 5%;
 }
+
+
+.error403 .error404 .error500{
+  background-color:#171c2f; 
+  margin-left: 46%;
+}
