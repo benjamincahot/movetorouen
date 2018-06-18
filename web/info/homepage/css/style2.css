@@ -4,6 +4,10 @@
     width: 30%;
   }
 
+  .bouton {
+    font-family: 'Handlee', cursive;
+  }
+
 /* -----BODY----- */
 
   body {
