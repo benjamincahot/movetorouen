@@ -4,7 +4,7 @@
     width: 30%;
   }
 
-  .bouton {
+  .bouton2 {
     font-family: 'Handlee', cursive;
   }
 /* CONTENT */
@@ -63,6 +63,18 @@
 .content9{
   margin-bottom:14%;
   margin-top:14%
+}
+
+.content10{
+  margin-top:22%;
+  margin-bottom:11%;
+  font-size:130%;
+}
+.bouton2 {
+  font-family: 'Handlee', cursive;
+  margin-left:45%;
+  margin-bottom:7%;
+  
 }
 
   .btncntct{
