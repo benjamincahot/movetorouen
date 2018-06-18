@@ -18,13 +18,18 @@ class AdminController extends Controller
       return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
 
+    public function statusAction()
+    {
+      return $this->render('AdminBundle:Default:status.html.twig');
+    }
+
     public function listingAction()
     {
       $em = $this->getDoctrine()->getManager();
       $users = $em->getRepository(User::class)->findAll();
       $countusers = count($users);
 
-      
+
       return $this->render('AdminBundle:Default:listing.html.twig', array(
         'users' => $users,
         'countusers' =>  $countusers

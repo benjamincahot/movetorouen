@@ -117,5 +117,32 @@ class CategoryController extends Controller
       ));
     }
 
+    public function editformAction(Request $request,$id)
+    {
+      $em = $this->getDoctrine()->getManager();
+      $event = $em->getRepository(Events::class)->find($id);
+      if (!$event) {
+         throw $this->createNotFoundException('The event does not exist');
+      }
+      $form = $this->createForm(EventsType::class, $event);
+      $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $cat = $form->getData();
+
+              $entityManager = $this->getDoctrine()->getManager();
+              $entityManager->persist($event);
+              $entityManager->flush();
+
+            return $this->redirectToRoute('admin_homepage');
+          }
+
+        return $this->render('AdminBundle:Default:edit.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
+
+
+
 
 }

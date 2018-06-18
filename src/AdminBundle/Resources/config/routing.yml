@@ -31,6 +31,10 @@ listing_homepage:
 support_homepage:
     path:     /support
     defaults: { _controller: AdminBundle:Admin:support }
+
+status_homepage:
+    path:     /status
+    defaults: { _controller: AdminBundle:Admin:status }
 # Fin des routes consultable
 
 
