@@ -22,7 +22,7 @@ class EventsRepository extends \Doctrine\ORM\EntityRepository
                 return $qb->execute();
     }
 
-    public function eventFromThisCategoryAdmin($category_id)
+    public function eventFromThisCategory($category_id)
     {
         $qb = $this->createQueryBuilder('e')
                     ->andWhere('e.category = :cat')
