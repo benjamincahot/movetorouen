@@ -2,7 +2,11 @@
 
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
     {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+    <div >
+    <ul class="list-unstyled list-inline text-center py-2">
+                <li class="list-inline-item">
+        <input class="btn btn-success"  type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+        </li>
+    </ul>
     </div>
 {{ form_end(form) }}

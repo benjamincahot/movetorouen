@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>
-      {% block title %}MoveToRouen - Dashboard{% endblock %}
+      {% block title %}Dashboard - MTR{% endblock %}
     </title>
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ asset('asset/css/lib/bootstrap/bootstrap.min.css') }}">
@@ -28,7 +28,6 @@
   <!-- Début de page -->
   <!-- Preloader CSS -->
   <body class="fix-header fix-sidebar">
-    <!-- <div id="preloader"> <div id="loader"></div> </div> -->
     <!-- Main wrapper -->
     <div id="main-wrapper">
       <div class="header">
@@ -38,27 +37,20 @@
               <b><img src="{{ asset('asset/images/logo2.png') }}" alt="logo" class="dark-logo" style="width:75%;"/></b>
             </a>
           </div>
-
           <!-- Début de la section user (avatar, paramètres et deconnexion) -->
-          <div class="navbar-collapse fixed-top">
+          <div class="navbar-collapse">
             <ul class="navbar-nav mr-auto mt-md-0"></ul>
             <ul class="navbar-nav my-lg-0">
-              <li class="nav-item hidden-sm-down search-box">
-                <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)">
-                  <i class="ti-search"></i>
-                </a>
-                <form class="app-search">
-                  <input type="text" class="form-control" placeholder="Search here">
-                  <a class="srh-btn">
-                    <i class="ti-close"></i>
-                  </a>
-                </form>
-              </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="#" alt=" avatar de {{ app.user.username }}" class="profile-pic"/></a>
+                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('asset/images/tk78.png') }}" alt="avatar de {{ app.user.username }}" class="profile-pic"/></a>
                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                   <ul class="dropdown-user">
                     <!-- Déconnexion et redirection vers la page d'index -->
+                    <li>
+                      <a href="{{ path('home_homepage') }}">
+                        <i class="fa fa-home"></i>
+                        MoveToRouen</a>
+                    </li>
                     <li>
                       <a href="{{ path('fos_user_security_logout') }}">
                         <i class="fa fa-power-off"></i>
@@ -68,7 +60,6 @@
                 </div>
               </li>
               <!-- Fin de section -->
-
             </ul>
           </div>
         </nav>
@@ -156,13 +147,11 @@
         <!-- Fin de déclaration des blocks Twig -->
 
         <!-- Début du footer -->
-        <footer class="footer text-center">&copy; Copyright
-          <a href="{{ path('home_homepage') }}" style="color:#bf1919">MoveToRouen</a>
-          - 2018/2019
-        </a>
-      </footer>
+        <footer class="footer text-center fixed-bottom">&copy; Copyright
+          <a href="{{ path('home_homepage') }}" style="color:#bf1919">MoveToRouen</a> - 2018/2019
+          </a>
+        </footer>
       <!-- Fin du footer -->
-
     </div>
   </div>
 

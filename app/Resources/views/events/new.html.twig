@@ -3,7 +3,7 @@
 {% block content %}
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
         <div class="container text-light content">
-            <h1 style="margin-left:-25%;margin-bottom:5%;">Créer un événement</h1>
+            <h1 class="newtitle">Créer un événement</h1>
 
             {{ form_start(form) }}
             {{ form_widget(form) }}
