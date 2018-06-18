@@ -7,6 +7,9 @@
     width: 100%;
     background-color: #171c2f;
   }
+  .bouton {
+    font-family: 'Handlee', cursive;
+  }
 
 
 /* -----BODY----- */
@@ -153,9 +156,7 @@
     width: 100%;
   }
 
-  .bouton {
-    font-family: 'Handlee', cursive;
-  }
+ 
 
   .link{
     color:white;
