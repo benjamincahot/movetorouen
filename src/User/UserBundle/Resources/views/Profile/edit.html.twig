@@ -1,7 +1,10 @@
 {% extends "contactbase.html.twig" %}
 
 {% block content %}
-    <div class="container">
-        {% include "@FOSUser/Profile/edit_content.html.twig" %}
+    <div class="container content text-light text-center">
+        <h2 >Edition du profil</h2>
+        <div class="container content2 form text-left">
+            {% include "@FOSUser/Profile/edit_content.html.twig" %}
+        </div>
     </div>
 {% endblock content %}
