@@ -39,8 +39,11 @@ class EventsType extends AbstractType
                     'label' => 'Fin de l\'événement :'
                 ))
                 ->add('place', TextType::class, array(
-                    'label' => 'Adresse :'
-                ))
+                    'label' => 'Adresse :',
+                    'attr' => array(
+                      'rows' => '80',
+                      'cols' => '980'
+                    )))
                 ->add('category', EntityType::class, array(
                     'class' => 'HomeBundle\Entity\Category',
                     'label' => 'Categorie',
