@@ -28,14 +28,14 @@ class EventsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $category = $em->getRepository('HomeBundle:Category')->find($category_id);
-        // 404 
+        // 404
         // verifier si cat exist   //
         if (!$category) {  throw $this->createNotFoundException( 'No product found for id ' . $category_id );}
 
-        // tous les events qui ont cette cat 
-        
+        // tous les events qui ont cette cat
+
         $events = $em->getRepository('HomeBundle:Events')->eventFromThisCategory($category_id);
-        
+
         return $this->render('events/index.html.twig', array(
             'events' => $events,
             'category_id' => $category->getId()
@@ -50,28 +50,28 @@ class EventsController extends Controller
      */
     public function newAction(Request $request)
     {
-     
+
         $events = new Events();
         $form = $this->createForm('HomeBundle\Form\EventsType', $events);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            
+
             $user = $this->getUser();
             $events->setUser($user);
             $events->setStatus(0);
             $em->persist($events);
             $em->flush();
 
-            // message flash 
+            // message flash
             $this->addFlash(
                 'notice',
                 'Votre demande va être traitée'
             );
 
-            // redirection page profil 
+            // redirection page profil
             return $this->redirectToRoute('home_homepage');
-            
+
         }
 
         return $this->render('events/new.html.twig', array(

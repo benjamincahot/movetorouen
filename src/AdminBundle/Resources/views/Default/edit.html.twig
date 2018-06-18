@@ -6,14 +6,23 @@
   </a>
 {% endblock %}
 {% block dashboard %}
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card p-30 bg-pink">
+<div class="col-md-12">
+  <div class="card p-30 bg-pink">
+    <div class="media">
+      <div class="media-left meida media-middle">
+        <span>
+          <i class="fas fa-wrench f-s-40 color-secondary"></i>
+        </span>
+      </div>
+      <div class="media-body media-text-right">
 
-        </div>
+        <p class="m-b-0 text-white">Mise a jour d'un élément</p>
       </div>
     </div>
   </div>
-    {{form(form)}}
+</div>
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<button class="btn btn-success" type="submit">Envoyer</button>
+{{ form_end(form) }}
 {% endblock %}

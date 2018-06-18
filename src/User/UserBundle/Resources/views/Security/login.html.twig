@@ -1,11 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'contactbase.html.twig' %}
 
 {% block content %}
 
-  <div class="container" style="margin-top:5%">
+  <div class="container " >
     <div class="row">
       <div class="col-sm-4 mr-auto ml-auto text-white">
-        <h2>Connectez-vous</h2>
+        <h2 class="text-center text-light  content8">Connectez-vous</h2>
         {% if error %}
           {{ error.messageKey | trans(error.messageData, 'security') }}
         {% endif %}
@@ -21,7 +21,11 @@
             Se souvenir de moi
           </label>
           <br>
+<<<<<<< HEAD
           <button type="submit" id="_submit" name="_submit" class="btn btn-success btncntct">Se connecter</button>
+=======
+          <button type="submit" id="_submit" name="_submit" class="btn btn-success content8">Se connecter</button>
+>>>>>>> 7d0136d82a6893de78b352530ef6575a6c81e1de
         </form>
 
       </div>
