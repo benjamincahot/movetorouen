@@ -37,9 +37,9 @@ class Events
     private $description;
 
     /**
-     * @var float
+     * @var text
      *
-     * @ORM\Column(name="price", type="float")
+     * @ORM\Column(name="price", type="text")
      */
     private $price;
 
