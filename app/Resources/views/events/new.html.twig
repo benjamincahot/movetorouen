@@ -11,13 +11,9 @@
             {{ form_end(form) }}
         </div>
     {% else %}
-        <div class="container text-light content">
-            <p class="text-center textevent">Vous devez être connecter ou inscris pour ajouter un événement</p>
-            <ul class="list-unstyled list-inline text-center py-2">
-                    <li class="list-inline-item">
-                        <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton btnaddevent">
-                    </li>
-                </ul>
+        <div class="container text-light text-center content9">
+            <p>Vous devez être connecter ou inscris pour ajouter un événement</p>
+            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   ">
             </a>
         </div>
     {% endif %}
