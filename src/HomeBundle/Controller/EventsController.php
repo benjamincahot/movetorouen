@@ -32,13 +32,10 @@ class EventsController extends Controller
         // verifier si cat exist   //
         if (!$category) {  throw $this->createNotFoundException( 'No product found for id ' . $category_id );}
 
-
         // tous les events qui ont cette cat 
         
         $events = $em->getRepository('HomeBundle:Events')->eventFromThisCategory($category_id);
         
-    
-            
         return $this->render('events/index.html.twig', array(
             'events' => $events,
             'category_id' => $category->getId()
@@ -122,19 +119,21 @@ class EventsController extends Controller
      * @Route("/{id}", name="events_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Events $event, $category_id)
+    public function deleteAction(Request $request, Events $event, $id)
     {
-        $category = $em->getRepository('HomeBundle:Category')->find($category_id);
+        $em = $this->getDoctrine()->getManager();
+        $category = $em->getRepository('HomeBundle:Category')->findBy(['id'=>$id]);
 
+        $events = $em->getRepository('HomeBundle:Events')->deleteEventsForThisCategory($id);
 
-        $form = $this->createDeleteForm($event);
-        $form->handleRequest($request);
+        // $form = $this->createDeleteForm($event);
+        // $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($event);
-            $em->flush();
-        }
+        // if ($form->isSubmitted() && $form->isValid()) {
+        //     $em = $this->getDoctrine()->getManager();
+        //     $em->remove($event);
+        //     $em->flush();
+        // }
 
         return $this->redirectToRoute('events_index', array(
             'category_id' => $category->getId()

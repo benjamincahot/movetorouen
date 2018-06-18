@@ -64,6 +64,12 @@ class Events
      */
     private $place;
 
+    /**
+     * @var bool
+     * 
+     * @ORM\Column(name="status", type="boolean")
+     */
+    private $status = true;
 
     /**
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="events")
@@ -282,5 +288,29 @@ class Events
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set status.
+     *
+     * @param bool $status
+     *
+     * @return Events
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status.
+     *
+     * @return bool
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }
