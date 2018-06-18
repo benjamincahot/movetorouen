@@ -19,11 +19,16 @@
   </head>
   <body>
     {% block header %}
-      <nav class="navbar navbar-light fixed-top navbar-expand-lg default-color scrolling-navbar border border-right-0 border-left-0 border-top-0 border-grey">
-        <a class="navbar-brand " href="{{ path('home_homepage') }}"><img class="logo" src="{{ asset('info/img/logo.png') }}" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <nav class="navbar navbar-light fixed-top navbar-expand-lg default-color scrolling-navbar border border-right-0 border-left-0 border-top-0 border-grey">
+                <a class="navbar-brand " href="{{ path('home_homepage') }}"><img class="logo" src="{{ asset('info/img/logo.png') }}" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% for message in app.flashes('notice') %}
+                    <div class="flash-notice text-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
 
         <div class="collapse navbar-collapse " id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto"></ul>
@@ -39,7 +44,7 @@
           {% else %}
             <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-outline-primary text-white btn-rounded mr-sm-2 bouton">
             </a>
-            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-outline-success text-white btn-rounded bouton   ">
+            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-outline-success text-white btn-rounded bouton">
             </a>
           {% endif %}
         </form>
@@ -47,7 +52,7 @@
     </nav>
   {% endblock %}
 
-  {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
   {% block footer %}
     <footer class="page-footer font-large text-light bg-dark pt-4 mt-4">
