@@ -20,11 +20,14 @@
   h1 {
     font-size: 200%;
     font-weight: bold;
+    visibility: hidden;
   }
 
   h2 {
     font-size: 150%;
     margin-bottom: 10%;
+    
+
   }
 
   h3 {
@@ -33,6 +36,10 @@
 
   h5 {
     color: #171c2f;
+  }
+  
+  .btnhome {
+    margin-top: 6%;
   }
 
 
