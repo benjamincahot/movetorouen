@@ -26,7 +26,7 @@
     </div>
     <div class="card">
       <div class="card-title">
-        <h4>Liste des monuments</h4>
+        <h4>Liste des parcs</h4>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -38,6 +38,7 @@
                 <th>Description</th>
                 <th>Localisation</th>
                 <th>Prix</th>
+                <th>Auteur</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -49,6 +50,7 @@
                 <td>{{ park.description }}</td>
                 <td>{{ park.place }}</td>
                 <td>{{ park.price }}</td>
+                <td>{{ park.user }}</td>
                 <td>
                   <a class="btn btn-sm btn-primary" href="">
                     <i class="fas fa-eye"></i> Voir

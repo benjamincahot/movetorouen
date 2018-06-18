@@ -35,6 +35,14 @@ support_homepage:
 status_homepage:
     path:     /status
     defaults: { _controller: AdminBundle:Admin:status }
+
+accept_homepage:
+    path:     /accept/{id}
+    defaults: { _controller: AdminBundle:Admin:accept }
+
+reject_homepage:
+    path:     /reject/{id}
+    defaults: { _controller: AdminBundle:Admin:reject }
 # Fin des routes consultable
 
 

@@ -95,7 +95,7 @@ class AppFixtures extends Fixture
       $event->setDescription('Le square Verdrel est un square dans le centre-ville de Rouen, entre la rue Jeanne-d\'Arc, le musée des beaux-arts et le musée de la céramique. Superficie de 9000m².');
       $event->setStartDate(new DateTime('2014/06/04'));
       $event->setEndDate(new DateTime('2015/07/05'));
-      $event->setPrice('0');
+      $event->setPrice('Gratuit');
       $event->setStatus(true);
       $event->setUser($user2);
       $event->setPlace('14 Rue du Bailliage, 76000 Rouen');
@@ -108,7 +108,7 @@ class AppFixtures extends Fixture
       $event2->setStartDate(new DateTime('2014/06/04'));
       $event2->setEndDate(new DateTime('2015/07/05'));
       $event2->setUser($user2);
-      $event2->setPrice('0');
+      $event2->setPrice('Gratuit');
       $event2->setStatus(true);
       $event2->setPlace('Place Saint-Vivien, 76000 Rouen');
       $manager->persist($event2);
@@ -120,7 +120,7 @@ class AppFixtures extends Fixture
       $event3->setStartDate(new DateTime('2014/06/04'));
       $event3->setEndDate(new DateTime('2015/07/05'));
       $event3->setUser($user2);
-      $event3->setPrice('0');
+      $event3->setPrice('Gratuit');
       $event3->setPlace('Quai Saint-Sever, 76100 Rouen');
       $event3->setStatus(true);
       $manager->persist($event3);
@@ -132,7 +132,7 @@ class AppFixtures extends Fixture
       $event4->setStartDate(new DateTime('2014/06/04'));
       $event4->setEndDate(new DateTime('2015/07/05'));
       $event4->setUser($user2);
-      $event4->setPrice('0');
+      $event4->setPrice('Gratuit');
       $event4->setPlace('17 Rue Henri II Plantagenêt, 76100 Rouen');
       $event4->setStatus(true);
       $manager->persist($event4);
@@ -144,7 +144,7 @@ class AppFixtures extends Fixture
       $event5->setStartDate(new DateTime('2014/06/04'));
       $event5->setEndDate(new DateTime('2015/07/05'));
       $event5->setUser($user2);
-      $event5->setPrice('0');
+      $event5->setPrice('Gratuit');
       $event5->setPlace('Rue Roger-Bésus, 76100 Rouen');
       $event5->setStatus(true);
       $manager->persist($event5);
@@ -181,7 +181,7 @@ class AppFixtures extends Fixture
       $event8->setStartDate(new DateTime('2014/06/04'));
       $event8->setEndDate(new DateTime('2015/07/05'));
       $event8->setUser($user2);
-      $event8->setPrice('undefined');
+      $event8->setPrice('Voir sur place');
       $event8->setPlace('49 Rue Saint-Julien, 76100 Rouen');
       $manager->persist($event8);
 
@@ -192,7 +192,7 @@ class AppFixtures extends Fixture
       $event9->setStartDate(new DateTime('2014/06/04'));
       $event9->setEndDate(new DateTime('2015/07/05'));
       $event9->setUser($user2);
-      $event9->setPrice('undefined');
+      $event9->setPrice('Voir sur place');
       $event9->setPlace('49 Rue Saint-Julien, 76100 Rouen');
       $event9->setStatus(true);
       $manager->persist($event9);
@@ -229,7 +229,7 @@ class AppFixtures extends Fixture
       $event12->setStartDate(new DateTime('2014/06/04'));
       $event12->setEndDate(new DateTime('2015/07/05'));
       $event12->setUser($user2);
-      $event12->setPrice('0');
+      $event12->setPrice('Gratuit');
       $event12->setPlace('11 Quai de Paris, 76000 Rouen');
       $event12->setStatus(true);
       $manager->persist($event12);
@@ -241,7 +241,7 @@ class AppFixtures extends Fixture
       $event13->setStartDate(new DateTime('2014/06/04'));
       $event13->setEndDate(new DateTime('2015/07/05'));
       $event13->setUser($user2);
-      $event13->setPrice('0');
+      $event13->setPrice('Gratuit');
       $event13->setPlace('24 Rue de Joyeuse, 76000 Rouen');
       $event13->setStatus(true);
       $manager->persist($event13);
@@ -253,7 +253,7 @@ class AppFixtures extends Fixture
       $event14->setStartDate(new DateTime('2014/06/04'));
       $event14->setEndDate(new DateTime('2015/07/05'));
       $event14->setUser($user2);
-      $event14->setPrice('0');
+      $event14->setPrice('Gratuit');
       $event14->setPlace('105 Boulevard de l\'Yser, 76000 Rouen');
       $event14->setStatus(true);
       $manager->persist($event14);
@@ -265,7 +265,7 @@ class AppFixtures extends Fixture
       $event15->setStartDate(new DateTime('2014/06/04'));
       $event15->setEndDate(new DateTime('2015/07/05'));
       $event15->setUser($user2);
-      $event15->setPrice('5');
+      $event15->setPrice('5€');
       $event15->setPlace('Rue Bouvreuil, 76000 Rouen ');
       $event15->setStatus(true);
       $manager->persist($event15);
@@ -278,7 +278,7 @@ class AppFixtures extends Fixture
       $event16->setStartDate(new DateTime('2019/06/06'));
       $event16->setEndDate(new DateTime('2019/06/16'));
       $event16->setUser($user2);
-      $event16->setPrice('0');
+      $event16->setPrice('Gratuit');
       $event16->setPlace('23, Boulevard Emile Duchemin, 76000 Rouen ');
       $event16->setStatus(true);
       $manager->persist($event16);
@@ -291,7 +291,7 @@ class AppFixtures extends Fixture
       $event17->setStartDate(new DateTime('2018/06/21'));
       $event17->setEndDate(new DateTime('2018/06/21'));
       $event17->setUser($user2);
-      $event17->setPrice('0');
+      $event17->setPrice('Gratuit');
       $event17->setPlace('76000 Rouen');
       $event17->setStatus(true);
       $manager->persist($event17);
@@ -304,7 +304,7 @@ class AppFixtures extends Fixture
       $event18->setStartDate(new DateTime('2018/06/15'));
       $event18->setEndDate(new DateTime('2018/09/22'));
       $event18->setUser($user2);
-      $event18->setPrice('0');
+      $event18->setPrice('Gratuit');
       $event18->setPlace('Parvis de la Cathédrale, 76000 Rouen ');
       $event18->setStatus(true);
       $manager->persist($event18);
