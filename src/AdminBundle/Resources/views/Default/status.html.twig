@@ -17,8 +17,13 @@
               </span>
             </div>
             <div class="media-body media-text-right">
-              <h2 class="text-white">0</h2>
-              <p class="m-b-0 text-white">Total d'élément(s) en attente</p>
+              <h2 class="text-white">{% if countstatus == 0 %}
+               {% else %}{{ countstatus }}
+               {% endif %}</h2>
+              <p class="m-b-0 text-white">{% if countstatus == 0 %}
+               Rien à moderer
+               {% else %}Total d'élément(s) en attente
+               {% endif %}</p>
             </div>
           </div>
         </div>
@@ -44,23 +49,25 @@
             </thead>
             <tbody>
               <tr>
-
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                {% for event in events %}
+                  <th scope="row">{{ event.id }}</th>
+                  <td>{{ event.title}}</td>
+                  <td>{{ event.description}}</td>
+                  <td>{{ event.place}}</td>
+                  <td>{{ event.price}}</td>
+                  <td>{{ event.user}}</td>
                   <td>
-                    <a class="btn btn-sm btn-success" href="#">
-                      <i class="fas fa-pencil-alt"></i> Valider
+                    <a class="btn btn-sm btn-success" href="{{ path('accept_homepage', {'id': event.id}) }}">
+                      <i class="fas fa-pencil-alt"></i>
+                      Valider
                     </a>
-                    <a class="btn btn-sm btn-danger" href="#">
-                      <i class="fas fa-trash"></i> Rejeter
+                    <a class="btn btn-sm btn-danger" href="{{ path('reject_homepage', {'id': event.id}) }}">
+                      <i class="fas fa-trash"></i>
+                      Rejeter
                     </a>
                   </td>
                 </tr>
-
+              {% endfor %}
             </tbody>
           </table>
         </div>

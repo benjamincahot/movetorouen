@@ -33,11 +33,10 @@ class EventsRepository extends \Doctrine\ORM\EntityRepository
                 return $qb->execute();
     }
 
-    public function eventModoFromThisCategory($category_id)
+    public function eventModoFromThisCategory()
     {
         $qb = $this->createQueryBuilder('e')
-                    ->andWhere('e.category = :cat', 'e.status = 0')
-                    ->setParameter('cat', $category_id)
+                    ->andWhere('e.status = 0')
                     ->orderBy('e.startDate', 'DESC')
                     ->getQuery();
 
@@ -67,7 +66,7 @@ class EventsRepository extends \Doctrine\ORM\EntityRepository
                   ->getSingleScalarResult();
 
                 //   ->setParameter('cat', $category_id)
-                
+
 
     }
 }

@@ -18,9 +18,47 @@ class AdminController extends Controller
       return $this->render('AdminBundle:Default:dashboard.html.twig');
     }
 
+    public function acceptAction($id)
+    {
+          $em = $this->getDoctrine()->getManager();
+          $event = $em->getRepository('HomeBundle:Events')->find($id);
+          if (!$event) {
+             throw $this->createNotFoundException('The event does not exist');
+          }
+
+            $event->setStatus(1);
+            $em->persist($event);
+            $em->flush();
+
+          return $this->redirectToRoute('admin_homepage');
+
+    }
+
+    public function rejectAction($id)
+    {
+      $em = $this->getDoctrine()->getManager();
+      $event = $em->getRepository('HomeBundle:Events')->find($id);
+      if (!$event) {
+         throw $this->createNotFoundException('The event does not exist');
+      }
+
+        $event->setStatus(2);
+        $em->persist($event);
+        $em->flush();
+
+      return $this->redirectToRoute('admin_homepage');
+    }
+
     public function statusAction()
     {
-      return $this->render('AdminBundle:Default:status.html.twig');
+      $em = $this->getDoctrine()->getManager();
+      $events = $em->getRepository('HomeBundle:Events')->eventModoFromThisCategory();
+      $countstatus = count($events);
+
+      return $this->render('AdminBundle:Default:status.html.twig', array(
+        'events' => $events,
+        'countstatus' => $countstatus
+      ));
     }
 
     public function listingAction()
