@@ -25,13 +25,7 @@
   }
 
   /* show.html.twig */
-  .content2 {
-    width: 50%;
-    margin: 3% auto;
-    line-height: 1;
-    background-color: #171c2f;
-  }
-
+  
   .showtitle{
     margin-left:-25%;
     margin-bottom:2%;
@@ -40,6 +34,18 @@
   .bouton {
     font-family: 'Handlee', cursive;
   }
+
+  .content2 {
+    width: 50%;
+    margin: 3% auto;
+    line-height: 1;
+    background-color: #171c2f;
+  }
+
+  .content3{
+    line-height: 2;
+  }
+
 
   /* container edit/delete show.html.twig */
 
