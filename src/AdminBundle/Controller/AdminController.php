@@ -53,11 +53,8 @@ class AdminController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
       $events = $em->getRepository('HomeBundle:Events')->eventModoFromThisCategory();
-      $countstatus = count($events);
-
       return $this->render('AdminBundle:Default:status.html.twig', array(
-        'events' => $events,
-        'countstatus' => $countstatus
+        'events' => $events
       ));
     }
 

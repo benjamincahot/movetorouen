@@ -101,6 +101,25 @@
       line-height: 1.2;
     }
   /* END */
+  /* login.html.twig */
+    .btncntct{
+      margin-bottom: 56%;
+    }
+  /* END */
+  /* register.html.twig */
+    .btnscrptn{
+    margin-bottom: 26%;
+  }
+  /* END */
+  /* new.html.twig */
+  .btnaddevent{
+    margin-bottom: 45%;
+  }
+
+  .textevent{
+    text-align: center;
+  }
+  /* END */
   /* edit.html.twig */
 
     .edittitle{

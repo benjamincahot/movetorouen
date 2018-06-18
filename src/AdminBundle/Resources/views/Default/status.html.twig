@@ -1,9 +1,9 @@
 {% extends "layoutadmin.html.twig" %}
 {% block welcome %}
-  <a style="color:#ffffff">Bienvenue
-    {{ app.user.username }}
-    <i class="fas fa-child"></i>
-  </a>
+    <a style="color:#ffffff">Bienvenue
+        {{ app.user.username }}
+        <i class="fas fa-child"></i>
+    </a>
 {% endblock %}
 {% block dashboard %}
   <div class="container-fluid">
@@ -25,7 +25,6 @@
                {% else %}Total d'élément(s) en attente
                {% endif %}</p>
             </div>
-          </div>
         </div>
       </div>
     </div>
@@ -71,7 +70,5 @@
             </tbody>
           </table>
         </div>
-      </div>
     </div>
-  </div>
 {% endblock %}
