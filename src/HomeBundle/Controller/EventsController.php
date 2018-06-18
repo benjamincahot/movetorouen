@@ -59,10 +59,19 @@ class EventsController extends Controller
             
             $user = $this->getUser();
             $events->setUser($user);
+            $events->setStatus(0);
             $em->persist($events);
             $em->flush();
 
-            return $this->redirectToRoute('events_show', array('id' => $events->getId()));
+            // message flash 
+            $this->addFlash(
+                'notice',
+                'Votre demande va être traitée'
+            );
+
+            // redirection page profil 
+            return $this->redirectToRoute('home_homepage');
+            
         }
 
         return $this->render('events/new.html.twig', array(
