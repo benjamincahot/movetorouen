@@ -12,8 +12,8 @@
         </div>
     {% else %}
         <div class="container text-light content">
-            <p>Vous devez être connecter ou inscris pour ajouter un événement</p>
-            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   ">
+            <p class="textevent">Vous devez être connecter ou inscris pour ajouter un événement</p>
+            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton btnaddevent">
             </a>
         </div>
     {% endif %}
