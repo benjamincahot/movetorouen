@@ -25,13 +25,23 @@
 
   h2 {
     font-size: 150%;
-    margin-bottom: 10%;
-    
-
+    margin-top: 16%; 
+    margin-bottom: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(23, 28, 47, 0.5);
+    border-radius: 25px;
+    max-width: 500px;
   }
 
   h3 {
-    margin-bottom: 7%;
+    margin-bottom: 9%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(23, 28, 47, 0.5);
+    border-radius: 25px;
+    max-width: 1000px;
   }
 
   h5 {
@@ -54,17 +64,11 @@
     font-size:150%;
   }
 
-  span{
+  span {
     color: white;
   }
 
-  .title {
-    margin-left: 36%;
-    margin-bottom: 18%;
-  }
-
-
-  .slide2{
+  .slide2 {
     padding-bottom:5%;
   }
 
@@ -76,7 +80,7 @@
     margin-bottom: 0%;
   }
 
-  .s2{
+  .s2 {
     margin-top:3%;
     margin-bottom:5%;
   }
@@ -86,11 +90,11 @@
     font-family: 'Handlee', cursive !important;
   }
 
-  .cardtitle{
+  .cardtitle {
     margin-left:-25%;
   }
 
-  .cardcontent{
+  .cardcontent {
     margin-left:-23%;
   }
 
@@ -130,7 +134,7 @@
     margin-top: 5%;
   }
 
-  .border2{
+  .border2 {
     border-radius: 50%;
     border: 2px solid #888;
   }
@@ -144,12 +148,15 @@
     margin-bottom: -10%;
   }
 
-  .footer-copyright{
+  .footer-copyright {
     font-size:70%;
   }
 
-  .title-card {
-    right: 0;
+  .card-title {
+    font-size: 150%;
+  }
+  .card-text {
+    padding-top: 10%;
   }
 
   .box {
@@ -161,16 +168,16 @@
     font-family: 'Handlee', cursive;
   }
 
-  .link{
+  .link {
     color:white;
     text-decoration: none;
   }
   
-  .socialbtn{
+  .socialbtn {
     color:white;
   }
   
-  .copy{
+  .copy {
     margin-bottom: 0;
   }
 
