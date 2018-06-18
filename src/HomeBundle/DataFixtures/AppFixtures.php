@@ -97,6 +97,7 @@ class AppFixtures extends Fixture
       $event->setStartDate(new DateTime('2014/06/04'));
       $event->setEndDate(new DateTime('2015/07/05'));
       $event->setPrice('0');
+      $event->setStatus(true);
       $event->setUser($user2);
       $event->setPlace('14 Rue du Bailliage, 76000 Rouen');
       $manager->persist($event);
@@ -109,6 +110,7 @@ class AppFixtures extends Fixture
       $event2->setEndDate(new DateTime('2015/07/05'));
       $event2->setUser($user2);
       $event2->setPrice('0');
+      $event2->setStatus(true);
       $event2->setPlace('Place Saint-Vivien, 76000 Rouen');
       $manager->persist($event2);
 
@@ -121,6 +123,7 @@ class AppFixtures extends Fixture
       $event3->setUser($user2);
       $event3->setPrice('0');
       $event3->setPlace('Quai Saint-Sever, 76100 Rouen');
+      $event3->setStatus(true);
       $manager->persist($event3);
 
       $event4 = new Events();
@@ -132,6 +135,7 @@ class AppFixtures extends Fixture
       $event4->setUser($user2);
       $event4->setPrice('0');
       $event4->setPlace('17 Rue Henri II Plantagenêt, 76100 Rouen');
+      $event4->setStatus(true);
       $manager->persist($event4);
 
       $event5 = new Events();
@@ -143,6 +147,7 @@ class AppFixtures extends Fixture
       $event5->setUser($user2);
       $event5->setPrice('0');
       $event5->setPlace('Rue Roger-Bésus, 76100 Rouen');
+      $event5->setStatus(true);
       $manager->persist($event5);
 
       // Sports
@@ -155,6 +160,7 @@ class AppFixtures extends Fixture
       $event6->setUser($user2);
       $event6->setPrice('39€ par mois');
       $event6->setPlace('10 Place Saint-Marc, 76000 Rouen');
+      $event6->setStatus(true);
       $manager->persist($event6);
 
       $event7 = new Events();
@@ -166,6 +172,7 @@ class AppFixtures extends Fixture
       $event7->setUser($user2);
       $event7->setPrice('28,99€ par mois ou 19,99€ par an');
       $event7->setPlace('69-75 Rue Saint-Sever, 76100 Rouen');
+      $event7->setStatus(true);
       $manager->persist($event7);
 
       $event8 = new Events();
@@ -188,6 +195,7 @@ class AppFixtures extends Fixture
       $event9->setUser($user2);
       $event9->setPrice('undefined');
       $event9->setPlace('49 Rue Saint-Julien, 76100 Rouen');
+      $event9->setStatus(true);
       $manager->persist($event9);
 
       $event10 = new Events();
@@ -199,6 +207,7 @@ class AppFixtures extends Fixture
       $event10->setUser($user2);
       $event10->setPrice('undefined');
       $event10->setPlace('7C Rue Jeanne d\'Arc, 76000 Rouen');
+      $event10->setStatus(true);
       $manager->persist($event10);
 
       // Monuments
@@ -211,6 +220,7 @@ class AppFixtures extends Fixture
       $event11->setUser($user2);
       $event11->setPrice('7€-3,50€');
       $event11->setPlace('Rue du Gros Horloge, 76000 Rouen');
+      $event11->setStatus(true);
       $manager->persist($event11);
 
       $event12 = new Events();
@@ -222,6 +232,7 @@ class AppFixtures extends Fixture
       $event12->setUser($user2);
       $event12->setPrice('0');
       $event12->setPlace('11 Quai de Paris, 76000 Rouen');
+      $event12->setStatus(true);
       $manager->persist($event12);
 
       $event13 = new Events();
@@ -233,6 +244,7 @@ class AppFixtures extends Fixture
       $event13->setUser($user2);
       $event13->setPrice('0');
       $event13->setPlace('24 Rue de Joyeuse, 76000 Rouen');
+      $event13->setStatus(true);
       $manager->persist($event13);
 
       $event14 = new Events();
@@ -244,6 +256,7 @@ class AppFixtures extends Fixture
       $event14->setUser($user2);
       $event14->setPrice('0');
       $event14->setPlace('105 Boulevard de l\'Yser, 76000 Rouen');
+      $event14->setStatus(true);
       $manager->persist($event14);
 
       $event15 = new Events();
@@ -255,6 +268,7 @@ class AppFixtures extends Fixture
       $event15->setUser($user2);
       $event15->setPrice('5');
       $event15->setPlace('Rue Bouvreuil, 76000 Rouen ');
+      $event15->setStatus(true);
       $manager->persist($event15);
 
       // Evènements
