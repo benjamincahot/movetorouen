@@ -58,4 +58,10 @@ class DefaultController extends Controller
         return $this->render('@Home/Default/politique.html.twig');
     }
     
+    public function mentionAction()
+    {
+        return $this->render('@Home/Default/mention.html.twig');
+    }
 }
+
+

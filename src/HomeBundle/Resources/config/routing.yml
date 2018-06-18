@@ -6,7 +6,11 @@ home_contact:
     path:     /contact
     defaults: { _controller: HomeBundle:Default:contact }
 
+home_politique:
+    path:     /politique
+    defaults: { _controller: HomeBundle:Default:politique }
+
 home_mention:
     path:     /mention
-    defaults: { _controller: HomeBundle:Default:politique }
+    defaults: { _controller: HomeBundle:Default:mention }
 
