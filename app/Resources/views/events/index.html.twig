@@ -46,11 +46,11 @@
                                     </td> #}
                                     <td>{{ event.price }}</td>
                                     <td>
-                                        {% if event.startDate %}{{ event.startDate|date('Y-m-d H:i:s') }}
+                                        {% if event.startDate %}{{ event.startDate|date('H:i:s Y-m-d') }}
                                         {% endif %}
                                     </td>
                                     <td>
-                                        {% if event.endDate %}{{ event.endDate|date('Y-m-d H:i:s') }}
+                                        {% if event.endDate %}{{ event.endDate|date('H:i:s Y-m-d') }}
                                         {% endif %}
                                     </td>
                                     <td>{{ event.place }}</td>

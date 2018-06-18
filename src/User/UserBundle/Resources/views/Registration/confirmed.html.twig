@@ -1,0 +1,17 @@
+{% extends 'contactbase.html.twig' %}
+
+
+
+{% block content %}
+    <div class="container" style="margin-top:5%">
+        {# <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+        {% if targetUrl %}
+            <p>
+                <a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a>
+            </p>
+        {% endif %} #}
+        <p>Félicitations {{ user.username }}, vous êtes inscris.<br>Vous pouvez maintenant accéder à votre page profil et ajouter des informations sur le site afin de contribuer à son développement</p>
+        <a class="btn btn-outline-primary text-white mr-sm-2 bouton" href="{{ path('home_homepage') }}">Accueil</a>
+
+    </div>
+{% endblock content %}
