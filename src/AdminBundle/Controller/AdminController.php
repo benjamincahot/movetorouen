@@ -20,7 +20,11 @@ class AdminController extends Controller
 
     public function statusAction()
     {
-      return $this->render('AdminBundle:Default:status.html.twig');
+      $em = $this->getDoctrine()->getManager();
+      $events = $em->getRepository('HomeBundle:Events')->eventModoFromThisCategory();
+      return $this->render('AdminBundle:Default:status.html.twig', array(
+        'events' => $events
+      ));
     }
 
     public function listingAction()
