@@ -37,9 +37,9 @@
               <a class="btn btn-outline-danger mr-sm-2 bouton" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
             </li>
           {% else %}
-            <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-outline-dark text-white btn-rounded mr-sm-2 bouton">
+            <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-outline-primary text-white btn-rounded mr-sm-2 bouton">
             </a>
-            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-outline-dark text-white btn-rounded bouton   ">
+            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-outline-success text-white btn-rounded bouton">
             </a>
           {% endif %}
         </form>
