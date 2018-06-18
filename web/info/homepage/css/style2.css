@@ -114,4 +114,13 @@
   .copy{
     margin-bottom: 0;
   }
+
+  .socialbtn{
+    color:white;
+  }
+  
+  .border2{
+    border-radius: 50%;
+    border: 2px solid #888;
+  }
  
