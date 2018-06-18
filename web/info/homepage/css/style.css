@@ -112,6 +112,8 @@
     padding-top: 1%;
   }
 
+  
+
   .honnorimg {
     width: 90%
   }
@@ -135,6 +137,12 @@
 
   .text {
     margin-top: 5%;
+  }
+
+
+  .hr1{
+    background-color:#dc3545;
+    margin-top:80px;
   }
 
 
@@ -163,7 +171,9 @@
     width: 100%;
   }
 
- 
+  .askcontact {
+    padding-bottom: 5%;
+  }
 
   .link {
     color:white;
