@@ -4,9 +4,13 @@ namespace AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use AdminBundle\Form\CategoryType;
+
 use HomeBundle\Entity\Category;
 use HomeBundle\Entity\Events;
+
+use AdminBundle\Form\CategoryType;
+use HomeBundle\Form\EventsType;
+
 use \DateTime;
 
 class CategoryController extends Controller
@@ -63,42 +67,55 @@ class CategoryController extends Controller
       ));
     }
 
-      // route method get
+    // Formulaire GET pour les catégories
     public function newAction()
     {
-        $category = new Category();
+      $category = new Category();
+      $form = $this->createForm(CategoryType::class, $category);
+      return $this->render('AdminBundle:Category:new.html.twig', array(
+          'form' => $form->createView(),
+      ));
+    }
 
-        $form = $this->createForm(CategoryType::class, $category);
+    // Formulaire POST pour les catégories
+    public function newformAction(Request $request)
+    {
+      $category = new Category();
+      $form = $this->createForm(CategoryType::class, $category);
+      $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $cat = $form->getData();
+
+            $cat->setCreatedAt(new DateTime());
+              $entityManager = $this->getDoctrine()->getManager();
+              $entityManager->persist($cat);
+              $entityManager->flush();
+
+            return $this->redirectToRoute('admin_homepage');
+          }
 
         return $this->render('AdminBundle:Category:new.html.twig', array(
             'form' => $form->createView(),
         ));
-    }
 
-      // POST
-    public function newformAction(Request $request)
+
+    }
+    // Formulaire GET pour editer les elements
+    public function editAction($id)
     {
-      $category = new Category();
+      $em = $this->getDoctrine()->getManager();
+      $event = $em->getRepository(Events::class)->find($id);
+      if (!$event) {
+         throw $this->createNotFoundException('The event does not exist');
+      }
 
-      $form = $this->createForm(CategoryType::class, $category);
+        $form = $this->createForm(EventsType::class, $event);
 
-      $form->handleRequest($request);
-
-          if ($form->isSubmitted() && $form->isValid()) {
-              $cat = $form->getData();
-
-              $cat->setCreatedAt(new DateTime());
-               $entityManager = $this->getDoctrine()->getManager();
-               $entityManager->persist($cat);
-               $entityManager->flush();
-
-              return $this->redirectToRoute('admin_homepage');
-          }
-
-          return $this->render('AdminBundle:Category:new.html.twig', array(
-              'form' => $form->createView(),
-          ));
-
-
+      return $this->render('AdminBundle:Default:edit.html.twig', array(
+          'form' => $form->createView()
+      ));
     }
+
+
 }

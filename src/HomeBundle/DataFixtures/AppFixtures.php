@@ -67,7 +67,7 @@ class AppFixtures extends Fixture
       $user6->setEmail ('robot@movetorouen.fr');
       $user6->setPassword('$2y$13$tSu57X7bVGnDCvpFbm14O.FitUbKZtSuD5zvFnIWCsmT9XU.fVj1q');
       $user6->setRoles(array('ROLE_USER'));
-      $user6->setEnabled(true);
+      $user6->setEnabled(false);
       $this->addReference('zeraztesze', $user6);
       $manager->persist($user6);
 
@@ -86,7 +86,6 @@ class AppFixtures extends Fixture
       $monument = new Category();
       $monument->setName("Monument");
       $manager->persist($monument);
-
 
 
       // Parcs
@@ -272,7 +271,56 @@ class AppFixtures extends Fixture
       $manager->persist($event15);
 
       // Evènements
+      $event16 = new Events();
+      $event16->setCategory($evenement);
+      $event16->setTitle('Armada 2018');
+      $event16->setDescription('Créée en 1989, l’association fêtera également ses 30 ans en 2019. Sa mission est d’animer et d’organiser des rassemblements de voiliers ou de bâtiments de guerre sur les quais de Rouen, visitables gratuitement par le grand public. Avec à son actif 6 éditions réussies, une équipe de 50 bénévoles prépare déjà la 7e édition de l’Armada, du 6 au 16 juin 2019. Cette équipe est constituée sous forme de commissions : commercial, sécurité générale, officiers de liaison civile, accueil, finance, assurance, juridique, technique, communication, animations….sous la responsabilité directe de son Président. Une organisation hors du commun pour cet événement hors du commun, l’Armada rassemble plus de 300 bénévoles au temps fort de la manifestation. Ils donnent, lors de chaque édition, le meilleur d’eux-mêmes pour offrir au public 10 jours exceptionnels.');
+      $event16->setStartDate(new DateTime('2019/06/06'));
+      $event16->setEndDate(new DateTime('2019/06/16'));
+      $event16->setUser($user2);
+      $event16->setPrice('0');
+      $event16->setPlace('23, Boulevard Emile Duchemin, 76000 Rouen ');
+      $event16->setStatus(true);
+      $manager->persist($event16);
+      $manager->flush();
 
+      $event17 = new Events();
+      $event17->setCategory($evenement);
+      $event17->setTitle('Fête de la musique 2018');
+      $event17->setDescription('Pour cette édition 2018, la grande nouveauté est la présence, place Saint-Marc, d\'une grande scène avec un plateau 100% normand programmé par la Région Normandie avec l\'aide du Kalif et le soutien la Ville de Rouen');
+      $event17->setStartDate(new DateTime('2018/06/21'));
+      $event17->setEndDate(new DateTime('2018/06/21'));
+      $event17->setUser($user2);
+      $event17->setPrice('0');
+      $event17->setPlace('76000 Rouen');
+      $event17->setStatus(true);
+      $manager->persist($event17);
+      $manager->flush();
+
+      $event18 = new Events();
+      $event18->setCategory($evenement);
+      $event18->setTitle('Les nuits de la cathédrale');
+      $event18->setDescription('Ça y est, il est venu le temps des cathédrales… les projection monumentales Cathédrale de lumière font leur retour sur Notre-Dame du 15 juin au 22 septembre 2018 pour des nuits illuminées.');
+      $event18->setStartDate(new DateTime('2018/06/15'));
+      $event18->setEndDate(new DateTime('2018/09/22'));
+      $event18->setUser($user2);
+      $event18->setPrice('0');
+      $event18->setPlace('Parvis de la Cathédrale, 76000 Rouen ');
+      $event18->setStatus(true);
+      $manager->persist($event18);
+      $manager->flush();
+
+      $event19 = new Events();
+      $event19->setCategory($evenement);
+      $event19->setTitle('FIFA World Cup 2018 Russia');
+      $event19->setDescription('La Coupe du monde de football de 2018 est la 21ᵉ édition de la Coupe du monde de football, compétition organisée par la FIFA et qui réunit les trente-deux meilleures sélections nationales. Elle se déroule en Russie du 14 juin au 15 juillet 2018.');
+      $event19->setStartDate(new DateTime('2018/06/14'));
+      $event19->setEndDate(new DateTime('2018/07/15'));
+      $event19->setUser($user2);
+      $event19->setPrice('~');
+      $event19->setPlace('Russie');
+      $event19->setStatus(true);
+      $manager->persist($event19);
       $manager->flush();
     }
 }

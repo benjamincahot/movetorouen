@@ -1,4 +1,10 @@
 {% extends "layoutadmin.html.twig" %}
+{% block welcome %}
+  <a style="color:#ffffff">Bienvenue
+    {{ app.user.username }}
+    <i class="fas fa-child"></i>
+  </a>
+{% endblock %}
 {% block dashboard %}
   <div class="container-fluid">
     <div class="row">
@@ -39,23 +45,23 @@
             <tbody>
               <tr>
                 {% for event in events %}
-                <th scope="row">{{ event.id }}</th>
-                <td>{{ event.title }}</td>
-                <td>{{ event.description }}</td>
-                <td>{{ event.place }}</td>
-                <td>{{ event.price }}</td>
-                <td>
-                  <input type"button" href="" class="btn btn-sm btn-dark">
-                    <i class="fas fa-eye"></i>
-                    Voir</button>
-                  <button class="btn btn-sm btn-warning">
-                    <i class="fas fa-pencil-alt"></i>
-                    Editer</button>
-                  <button class="btn btn-sm btn-danger">
-                    <i class="fas fa-trash"></i>
-                    Supprimer</button>
-                </td>
-              </tr>
+                  <th scope="row">{{ event.id }}</th>
+                  <td>{{ event.title }}</td>
+                  <td>{{ event.description }}</td>
+                  <td>{{ event.place }}</td>
+                  <td>{{ event.price }}</td>
+                  <td>
+                    <a class="btn btn-sm btn-primary" href="">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a class="btn btn-sm btn-warning" href="{{ path('edit_event_admin', { 'id': event.id}) }}">
+                      <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    <a class="btn btn-sm btn-danger" href="">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  </td>
+                </tr>
               {% endfor %}
             </tbody>
           </table>

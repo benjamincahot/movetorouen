@@ -1,0 +1,19 @@
+{% extends "layoutadmin.html.twig" %}
+{% block welcome %}
+  <a style="color:#ffffff">Bienvenue
+    {{ app.user.username }}
+    <i class="fas fa-child"></i>
+  </a>
+{% endblock %}
+{% block dashboard %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card p-30 bg-pink">
+
+        </div>
+      </div>
+    </div>
+  </div>
+    {{form(form)}}
+{% endblock %}
