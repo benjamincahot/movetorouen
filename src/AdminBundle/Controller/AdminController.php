@@ -2,7 +2,7 @@
 
 namespace AdminBundle\Controller;
 
-use User\UserBundle\Entity;
+use User\UserBundle\Entity\User;
 use User\UserBundle\Repository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -20,22 +20,19 @@ class AdminController extends Controller
 
     public function listingAction()
     {
+      $em = $this->getDoctrine()->getManager();
+      $users = $em->getRepository(User::class)->findAll();
+      $countusers = count($users);
 
-      return $this->render('AdminBundle:Default:listing.html.twig');
+      
+      return $this->render('AdminBundle:Default:listing.html.twig', array(
+        'users' => $users,
+        'countusers' =>  $countusers
+      ));
     }
 
     public function supportAction()
     {
       return $this->render('AdminBundle:Default:support.html.twig');
-    }
-
-    public function updateAction()
-    {
-      return $this->render('AdminBundle:Default:update.html.twig');
-    }
-
-    public function errorAction()
-    {
-      return $this->render('AdminBundle:Default:error.html.twig');
     }
 }

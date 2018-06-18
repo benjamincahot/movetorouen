@@ -1,4 +1,10 @@
 {% extends "layoutadmin.html.twig" %}
+{% block welcome %}
+  <a style="color:#ffffff">Bienvenue
+    {{ app.user.username }}
+    <i class="fas fa-child"></i>
+  </a>
+{% endblock %}
 {% block dashboard %}
   <div class="container-fluid">
     <div class="row">
@@ -11,7 +17,7 @@
               </span>
             </div>
             <div class="media-body media-text-right">
-              <h2 class="text-white">0</h2>
+              <h2 class="text-white">{{ countusers }}</h2>
               <p class="m-b-0 text-white">Nombre d'inscrit(s) sur MoveToRouen</p>
             </div>
           </div>
@@ -20,7 +26,7 @@
     </div>
     <div class="card">
       <div class="card-title">
-        <h4>Liste des sports</h4>
+        <h4>Liste des utilisateurs</h4>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -30,30 +36,25 @@
                 <th>ID</th>
                 <th>Username</th>
                 <th>Email</th>
-                <th>Rôle</th>
+                <th>Status du compte</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>#</td>
+                {% for user in users %}
+                <th scope="row">{{ user.id }}</th>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{% if user.enabled == 1 %}Actif{% else %}Banni{% endif %}</td>
                 <td>
-                  <button class="btn btn-sm btn-dark">
-                    <i class="fas fa-eye"></i>
-                    Voir</button>
                   <button class="btn btn-sm btn-warning">
-                    <i class="fas fa-pencil-alt"></i>
-                    Editer</button>
+                    <i class="fas fa-pencil-alt"></i></button>
                   <button class="btn btn-sm btn-danger">
-                    <i class="fas fa-trash"></i>
-                    Supprimer</button>
+                    <i class="fas fa-trash"></i></button>
                 </td>
               </tr>
+              {% endfor %}
             </tbody>
           </table>
         </div>

@@ -1,4 +1,10 @@
 {% extends "layoutadmin.html.twig" %}
+{% block welcome %}
+  <a style="color:#ffffff">Bienvenue
+    {{ app.user.username }}
+    <i class="fas fa-child"></i>
+  </a>
+{% endblock %}
 {% block dashboard %}
   <div class="container-fluid">
     <div class="row">
@@ -44,15 +50,15 @@
                 <td>{{ monument.place }}</td>
                 <td>{{ monument.price }}</td>
                 <td>
-                  <button class="btn btn-sm btn-dark">
+                  <a class="btn btn-sm btn-primary" href="">
                     <i class="fas fa-eye"></i>
-                    Voir</button>
-                  <button class="btn btn-sm btn-warning">
+                  </a>
+                  <a class="btn btn-sm btn-warning" href="{{ path('edit_event_admin', { 'id': monument.id}) }}">
                     <i class="fas fa-pencil-alt"></i>
-                    Editer</button>
-                  <button class="btn btn-sm btn-danger">
+                  </a>
+                  <a class="btn btn-sm btn-danger" href="">
                     <i class="fas fa-trash"></i>
-                    Supprimer</button>
+                  </a>
                 </td>
               </tr>
               {% endfor %}
