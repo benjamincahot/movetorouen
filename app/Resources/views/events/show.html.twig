@@ -47,49 +47,49 @@
         </div>
     </div>
     <div class="container">
-        <h1 class="text-light lasteventtitle">Dernier événement</h1>
+        <h1 class="text-light lasteventtitle">Derniers ajouts</h1>
         <div class="row text-center lasteventcontent">
             <div class="col-lg-4 col-md-12 mb-lg-1 mb-4 text-light ">
                 <div class="view overlay rounded z-depth-1 ">
-                    <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid" alt="Sample project image">
+                    <img src="{{ asset('info/img/hdvrouen.jpg') }}" class="img-fluid" alt="hdvrouen image">
                     <a>
-                        <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                        <div class="mask rgba-white-slight text-light"></div>
                     </a>
                 </div>
                 <div class="card-body pb-0">
-                    <h4 class="font-weight-bold my-3">Title of the news</h4>
-                    <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
-                    <a class="btn btn-outline-danger btn-sm waves-effect waves-light">
+                    <h4 class="font-weight-bold my-3">Jardin de l’Hôtel-de-Ville</h4>
+                    <p class="grey-text">Lieu de détente, à mi-chemin entre le parc urbain et la prairie, ce jardin est également un passage piétonnier qui relie le centre-ville aux quartiers Saint-Nicaise et Saint-Vivien.</p>
+                    <a href="{{ path('events_show', { 'id': 2 }) }}" class="btn btn-outline-danger btn-sm text-light">
                         <i class="fa fa-clone left"></i>
                         View project</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-md-0 mb-4 text-light">
                 <div class="view overlay rounded z-depth-1">
-                    <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid" alt="Sample project image">
+                    <img src="{{ asset('info/img/prairiess.jpg') }}" class="img-fluid" alt="prairiess image">
                     <a>
-                        <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                        <div class="mask rgba-white-slight text-light"></div>
                     </a>
                 </div>
                 <div class="card-body pb-0">
-                    <h4 class="font-weight-bold my-3">Title of the news</h4>
-                    <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
-                    <a class="btn btn-outline-danger btn-sm waves-effect waves-light">
+                    <h4 class="font-weight-bold my-3">Prairie Saint Sever</h4>
+                    <p class="grey-text">Une prairie en plein cœur de ville, une grande promenade fluviale sur plus de 3km entre allées de cheminement piéton en béton ou en pavés, espaces de jeux pour enfants.</p>
+                    <a href="{{ path('events_show', { 'id': 3 }) }}" class="btn btn-outline-danger btn-sm text-light">
                         <i class="fa fa-clone left"></i>
                         View project</a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 text-light">
-                <div class="view overlay rounded z-depth-1">
-                    <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid" alt="Sample project image">
+            <div class="col-lg-4 col-md-6 text-light" >
+                <div class="view overlay rounded z-depth-1" style="margin-top:-1%;">
+                    <img src="{{ asset('info/img/gramont.jpg') }}" class="img-fluid" alt="gramont image">
                     <a>
-                        <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                        <div class="mask rgba-white-slight text-light"></div>
                     </a>
                 </div>
                 <div class="card-body pb-0">
-                    <h4 class="font-weight-bold my-3">Title of the news</h4>
-                    <p class="grey-text">Temporibus autem quibusdam aut officiis et voluptates repudiandae.</p>
-                    <a class="btn btn-outline-danger btn-sm ">
+                    <h4 class="font-weight-bold my-3">Parc Grammont</h4>
+                    <p class="grey-text">Le parc Grammont est un parc urbain situé à Rouen dans le quartier Grammont, sur l'emplacement des anciens abattoirs de la ville, sa création s'inscrit dans le cadre du grand projet de ville de Rouen. </p>
+                    <a href="{{ path('events_show', { 'id': 4 }) }}" class="btn btn-outline-danger btn-sm text-light">
                         <i class="fa fa-clone left"></i>
                         View project</a>
                 </div>

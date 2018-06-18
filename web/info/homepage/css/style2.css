@@ -96,9 +96,10 @@
     }
 
     .lastaddcontent{
-      width:100%;
-      margin-left:0%;
+      width:130%;
+      margin-left:-15%;
       line-height: 1.2;
+      
     }
   /* END */
   /* login.html.twig */
