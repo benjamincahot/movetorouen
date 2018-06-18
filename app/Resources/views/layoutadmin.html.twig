@@ -38,17 +38,17 @@
             </a>
           </div>
           <!-- Début de la section user (avatar, paramètres et deconnexion) -->
-          <div class="navbar-collapse">
+          <div class="navbar-collapse fixed">
             <ul class="navbar-nav mr-auto mt-md-0"></ul>
             <ul class="navbar-nav my-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('asset/images/tk78.png') }}" alt="avatar de {{ app.user.username }}" class="profile-pic"/></a>
+                <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('asset/images/random.png') }}" alt="avatar de {{ app.user.username }}" class="profile-pic"/></a>
                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                   <ul class="dropdown-user">
                     <!-- Déconnexion et redirection vers la page d'index -->
                     <li>
                       <a href="{{ path('home_homepage') }}">
-                        <i class="fa fa-home"></i>
+                        <i class="fa fa-home  "></i>
                         MoveToRouen</a>
                     </li>
                     <li>

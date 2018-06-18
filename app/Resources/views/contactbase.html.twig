@@ -7,7 +7,7 @@
     </title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Happy+Monkey">
     {% block stylesheets %}
@@ -29,7 +29,7 @@
           <form class="form-inline my-2 my-lg-0">
             {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-              <a class="btn btn-outline-success" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
+              <a class="btn btn-outline-primary" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
               {% if is_granted('ROLE_ADMIN')%}
                 <a class="btn btn-outline-success" href="{{ path('admin_homepage') }}">Admin</a>
               {% endif %}
@@ -50,28 +50,25 @@
 
   {% block footer %}
     <footer class="page-footer font-large text-light bg-dark pt-4 mt-4">
-            <div class="container text-center text-md-left  ">
-                <div class="row"></div>
-            </div>
-            <hr>
+            
             <ul class="list-unstyled list-inline text-center py-2 ">
                 <li class="list-inline">
                     <p>Suivez nous sur les réseaux sociaux :
                     </p>
                 </li>
                 <li class="list-inline-item ">
-                    <a type="button" class="btn-floating btn-lg btn-fb border2">
-                        <i class="fa fa-facebook "></i>
+                    <a type="button" class="btn-floating btn-lg btn-fb border2 socialbtn">
+                        <i class="fab fa-facebook "></i>
                     </a>
                 </li>
                 <li class="list-inline-item ">
-                    <a type="button" class="btn-floating btn-lg btn-tw border2">
-                        <i class="fa fa-twitter "></i>
+                    <a type="button" class="btn-floating btn-lg btn-tw border2 socialbtn">
+                        <i class="fab fa-twitter "></i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a type="button" class="btn-floating btn-lg btn-ins border2">
-                        <i class="fa fa-instagram "></i>
+                    <a type="button" class="btn-floating btn-lg btn-ins border2 socialbtn">
+                        <i class="fab fa-instagram "></i>
                     </a>
                 </li>
             </ul>

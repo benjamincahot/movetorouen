@@ -41,17 +41,17 @@ class EventsType extends AbstractType
                 ->add('place', TextType::class, array(
                     'label' => 'Adresse :'
                 ))
-
                 ->add('category', EntityType::class, array(
                     'class' => 'HomeBundle\Entity\Category',
+                    'label' => 'Categorie',
                     'choice_label' => 'name',
                     'multiple' => false,
-                    'expanded' => false, 
+                    'expanded' => false,
                 ))
                 ->add('status', HiddenType::class, array(
                     'data' => 'abcdef'
                 ));
-                
+
     }/**
      * {@inheritdoc}
      */

@@ -48,6 +48,17 @@ category_add_new_action:
     path:     /category/new
     defaults: { _controller: AdminBundle:Category:newform }
     methods:  [POST]
+
+# Edition des elements (Sports, Events, Monuments, Parks)
+edit_event_admin:
+    path:     /events/edit/{id}
+    defaults: { _controller: AdminBundle:Category:edit }
+    methods:  [GET]
+
+edit_event_admin_action:
+    path:     /events/edit/{id}
+    defaults: { _controller: AdminBundle:Category:editform }
+    methods:  [POST]
 # Fin des routes des formulaires
 
 
