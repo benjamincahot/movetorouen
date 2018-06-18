@@ -34,16 +34,16 @@
           <form class="form-inline my-2 my-lg-0">
             {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-              <a class="btn btn-outline-primary text-white mr-sm-2 bouton" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
+              <a class="btn btn-outline-primary  mr-sm-2 bouton" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
               {% if is_granted('ROLE_ADMIN') %}
-                <a class="btn btn-outline-success text-white mr-sm-2 bouton" href="{{ path('admin_homepage') }}">Dashboard</a>
+                <a class="btn btn-outline-success  mr-sm-2 bouton" href="{{ path('admin_homepage') }}">Dashboard</a>
               {% endif %}
-              <a class="btn btn-outline-danger text-white mr-sm-2 bouton" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+              <a class="btn btn-outline-danger  mr-sm-2 bouton" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
             </li>
           {% else %}
-            <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-outline-primary text-white btn-rounded mr-sm-2 bouton">
+            <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-outline-primary  btn-rounded mr-sm-2 bouton">
             </a>
-            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-outline-success text-white btn-rounded bouton">
+            <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-outline-success  btn-rounded bouton">
             </a>
           {% endif %}
         </form>
@@ -80,7 +80,7 @@
       <hr>
       <ul class="list-unstyled list-inline text-center text-light py-2 socialbtn">
         <li class="list-inline-item">
-          <a href="" class="link">
+          <a href="{{ path('home_politique') }}" class="link">
             Mentions légales
           </a>
         </li>
@@ -90,7 +90,7 @@
           </a>
         </li>
         <li class="list-inline-item">
-          <a href="" class="link">
+          <a href="{{ path('home_politique') }}" class="link">
             Politique de confidentialité
           </a>
         </li>

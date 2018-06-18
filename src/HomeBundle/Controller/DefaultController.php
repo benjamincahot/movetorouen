@@ -51,5 +51,11 @@ class DefaultController extends Controller
             'form'    => $form->createView(),
             'success' => $success
         ));
-    }    
+    }
+
+    public function politiqueAction()
+    {
+        return $this->render('@Home/Default/politique.html.twig');
+    }
+    
 }
