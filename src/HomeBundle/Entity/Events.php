@@ -67,9 +67,9 @@ class Events
     /**
      * @var bool
      * 
-     * @ORM\Column(name="status", type="boolean")
+     * @ORM\Column(name="status", type="integer")
      */
-    private $status = true;
+    private $status = 0;
 
     /**
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="events")
