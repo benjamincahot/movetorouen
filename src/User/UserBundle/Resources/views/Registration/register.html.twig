@@ -7,9 +7,9 @@
                 <h2>Inscrivez-vous</h2>
 
                 {% if not form.vars.valid %}
-                <div class="alert alert-danger">
-                    Le formulaire contient des erreurs.
-                </div>
+                    <div class="alert alert-danger">
+                        Le formulaire contient des erreurs.
+                    </div>
                 {% endif %}
 
                 {{ form_start(form)}}
@@ -47,8 +47,12 @@
                 }) }}
                 <br>
 
-                <button type="submit" name"button" class="btn btn-block btn-success">Je m'inscris</button>
-                 {{ form_end(form) }}
+                <ul class="list-unstyled list-inline text-center py-2">
+                    <li class="list-inline-item">
+                        <button class="btn btn-success" type="submit">Envoyer</button>
+                    </li>
+                </ul>
+                {{ form_end(form) }}
 
             </div>
         </div>
