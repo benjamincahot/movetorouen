@@ -38,6 +38,7 @@ class AdminController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
       $event = $em->getRepository('HomeBundle:Events')->find($id);
+
       if (!$event) {
          throw $this->createNotFoundException('The event does not exist');
       }
@@ -53,8 +54,11 @@ class AdminController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
       $events = $em->getRepository('HomeBundle:Events')->eventModoFromThisCategory();
+      $countstatus = count($events);
+
       return $this->render('AdminBundle:Default:status.html.twig', array(
-        'events' => $events
+        'events' => $events,
+        'countstatus' => $countstatus
       ));
     }
 
