@@ -29,7 +29,7 @@ class Contact
      *
      * @ORM\Column(name="name", type="string", length=255)
      * @Assert\Length(
-     *      min = 50,
+     *      min = 3,
      *      max = 50,
      *      minMessage = "Votre nom doit contenir  {{ limit }} lettres minimum",
      *      maxMessage = "Votre nom doit contenir {{ limit }} lettres"

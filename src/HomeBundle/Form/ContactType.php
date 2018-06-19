@@ -37,8 +37,4 @@ class ContactType extends AbstractType
             //'mapped' => false
         ));
     }
-
-    
-
-
 }
