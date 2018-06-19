@@ -13,7 +13,9 @@
     {% block stylesheet %}
       {% stylesheets 'info/homepage/css/style.css' filter = 'cssrewrite' %}
       <link rel="stylesheet" href="{{ asset('info/homepage/css/style.css') }}"/>
-      {% endstylesheets %}
+    {% endstylesheets %}
+    {# Favicon #}
+    {% block favicon %}<link rel="icon" type="image/png" href="{{ asset('info/img/faviconlogo.png') }}"/>{% endblock %}
     {% endblock %}
   </head>
   <body>
