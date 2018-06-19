@@ -1,6 +1,7 @@
 {% extends 'contactbase.html.twig' %}
 
 {% block content %}
+{# Si la personne est connecter elle accède au formulaire d'ajout #}
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
         <div class="container text-light content5">
             <h1 class="newtitle">Créer un événement</h1>
@@ -11,6 +12,7 @@
             {{ form_end(form) }}
         </div>
     {% else %}
+    {# Sinon message pour lui de demander de s'incrire ou se connecter #}
         <div class="container text-light text-center content9">
             <p>Vous devez être connecter ou inscris pour ajouter un événement</p>
             <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-success btn-rounded btn-sm bouton   ">

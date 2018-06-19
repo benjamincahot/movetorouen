@@ -37,7 +37,7 @@ class AppFixtures extends Fixture
 
       $user3 = new User;
       $user3->setUsername("Indorium");
-      $user3->setEmail ('tiflobo76250@gmail.com');
+      $user3->setEmail ('tiflobo76550@gmail.com');
       $user3->setPassword('$2y$13$fcJbB7e6sgyZeOTe8B0gu.WAdujEYhTf25N9Q7CNDJvbqy8R63DOq');
       $user3->setRoles(array('ROLE_ADMIN'));
       $user3->setEnabled(true);

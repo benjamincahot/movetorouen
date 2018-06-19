@@ -1,6 +1,20 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends 'contactbase.html.twig' %}
 
-{% block fos_user_content %}
+{% block content %}
+    <div class="container content4 text-light text-center">
+        <h1>Demande de nouveau mot de passe</h1>
+        <div class="content9">
+            <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+                <div>
+                    <label for="username">{{ 'Veuillez remseigner votre Nom ou votre Email'|trans }}</label>
+                    <br>
+                    <input type="text" id="username" name="username" required="required"/>
+                </div>
+                <div class="content4" style="margin-bottom:12%;">
+                    <input type="submit" value="{{ 'submit'|trans }}"/>
+                </div>
+            </form>
+        </div>
+    </div>
 
-{% include "@FOSUser/Resetting/request_content.html.twig" %}
-{% endblock fos_user_content %}
+{% endblock content %}

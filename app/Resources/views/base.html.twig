@@ -32,6 +32,7 @@
           <ul class="navbar-nav mr-auto"></ul>
           <form class="form-inline my-2 my-lg-0">
             {# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> #}
+            {# Si la personne est connecter elle accède à ces boutons #}
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
               <a class="btn btn-outline-primary  mr-sm-2 bouton" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
               {% if is_granted('ROLE_ADMIN') %}
@@ -40,6 +41,7 @@
               <a class="btn btn-outline-danger  mr-sm-2 bouton" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
             </li>
           {% else %}
+          {# Sinon connexion/inscription #}
             <a href="{{ path('fos_user_security_login') }}"><input type="button" value="Connexion" class="btn btn-outline-primary  btn-rounded mr-sm-2 bouton">
             </a>
             <a href="{{ path('fos_user_registration_register') }}"><input type="button" value="Inscription" class="btn btn-outline-success  mr-sm-2 btn-rounded bouton   ">
@@ -53,6 +55,7 @@
   {% block content %}{% endblock %}
 
   {% block footer %}
+  {# Footer avec liens sociaux #}
     <footer class="page-footer font-large text-light bg-dark pt-4 mt-4">
 
       <ul class="list-unstyled list-inline text-center py-2">
