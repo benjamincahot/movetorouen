@@ -2,6 +2,8 @@
 
 namespace AdminBundle\Controller;
 
+use HomeBundle\Entity\Events;
+use HomeBundle\Form\EventsType;
 use User\UserBundle\Entity\User;
 use User\UserBundle\Repository;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,7 +17,18 @@ class AdminController extends Controller
     // Controller principal
     public function dashboardAction()
     {
-      return $this->render('AdminBundle:Default:dashboard.html.twig');
+      $em = $this->getDoctrine()->getManager();
+      $users = $em->getRepository(User::class)->findAll();
+      $total = $em->getRepository(Events::class)->findAll();
+      $countusers = count($users);
+      $count = count($total);
+
+
+      return $this->render('AdminBundle:Default:dashboard.html.twig', array(
+        'users' => $users,
+        'countusers' =>  $countusers,
+        'count' => $count
+      ));
     }
 
     public function acceptAction($id)
@@ -30,7 +43,7 @@ class AdminController extends Controller
             $em->persist($event);
             $em->flush();
 
-          return $this->redirectToRoute('admin_homepage');
+          return $this->redirectToRoute('status_homepage');
 
     }
 

@@ -1,149 +1,163 @@
 {% extends 'layoutbase.html.twig' %}
 {% block content %}
 
-    {# homepage slide 1 #}
+  {# homepage slide 1 #}
 
-    <div id="">
-        <div class="section slide1 ">
-            <div class="container ">
-                <h1 class="title text-light">MoveToRouen</h1>
-                <div class="text-center ">
-                    <div class="">
-                        <h2 class="title text-light">Envie de prendre l'air ?</h2>
-                        <h3 class="text-light">Trouvez rapidement votre prochain lieu de détente avec MoveToRouen</h3>
+  <div id="">
+    <div class="section slide1 ">
+      <div class="container ">
+        <h1 class="title text-light">MoveToRouen</h1>
+        <div class="text-center ">
+          <div class="">
+            <h2 class="title text-light">Envie de prendre l'air ?</h2>
+            <h3 class="text-light">Trouvez rapidement votre prochain lieu de détente avec MoveToRouen</h3>
 
-                        {# Boutons #}
-                        <div>
-                            <a href="{{ path('events_index', { 'category_id': 3 }) }}" class="">
-                                <button type="button" class="btn btn-primary text-white btn-lg btnhome">
-                                    <span>Parcs</span></button>
-                            </a>
-                            <a href="{{ path('events_index', { 'category_id': 2 }) }}" class="">
-                                <button type="button" class="btn btn-success text-white btn-lg btnhome">
-                                    <div>
-                                        <span>Evénements</span></div>
-                                </button>
-                            </a>
-                            <a href="{{ path('events_index', { 'category_id': 4 }) }}" class="">
-                                <button type="button" class="btn btn-danger text-white btn-lg btnhome">
-                                    <div>
-                                        <span>Monuments</span></div>
-                                </button>
-                            </a>
-                            <a href="{{ path('events_index', { 'category_id': 1 }) }}" class="">
-                                <button type="button" class="btn btn-info text-white btn-lg btnhome">
-                                    <div>
-                                        <span>Sports</span></div>
-                                </button>
-                            </a>
-                        </div>
-
-                        {# Fin Boutons #}
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {# fin slide 1 #}
-
-        {# homepage slide 2 #}
-
-        <div class="section slide2">
-            <div class="container" style="margin-top:3%;margin-bottom:5%;">
-                <div class="row side2">
-                    <div class="col-lg-5 col-xl-7 mb-5 top">
-                        <div class="view overlay z-depth-1-half honnorimg">
-                            <img src="{{ asset('info/img/verdrel.jpg') }}" class="img-fluid rounded" alt="First sample image">
-                            <a>
-                                <div class="mask"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-xl-4 ml-xl-4 mb-4 text-light">
-                        <h4 class="mb-3 font-weight-bold dark-grey-text text-center">
-                            <strong> Square Verdrel </strong>
-                        </h4>
-                        <p class="grey-text">Le square Verdrel est un square dans le centre-ville de Rouen, entre la rue Jeanne-d'Arc, le musée des beaux-arts et le musée de la céramique. Superficie de 9000m². </p>
-                        <a href="{{ path('events_show', { 'id': 1 }) }}" class="btn btn-outline-danger btn-block text-light">
-                            <i class="fa fa-clone left"></i>
-                            Voir plus</a>
-                    </div>
-                </div>
-                <div class="row text-center txt">
-                    <div class="col-lg-4 col-md-6 text-light">
-                        <div class="view overlay rounded z-depth-1 ">
-                            <img src="{{ asset('info/img/hdvrouen.jpg') }}" class="img-fluid rounded" alt="hdvrouen image" style="width:85%;">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body pb-0">
-                            <h4 class="font-weight-bold my-3">Jardin de l’Hôtel-de-Ville </h4>
-                            <p class="grey-text">Lieu de détente, à mi-chemin entre le parc urbain et la prairie, ce jardin est également un passage piétonnier qui relie le centre-ville aux quartiers Saint-Nicaise et Saint-Vivien.</p>
-                            <a href="{{ path('events_show', { 'id': 2 }) }}" class="btn btn-outline-danger btn-sm text-light ">
-                                <i class="fa fa-clone left"></i>
-                                Voir plus</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 text-light">
-                        <div class="view overlay rounded z-depth-1">
-                            <img src="{{ asset('info/img/prairiess.jpg') }}" class="img-fluid rounded" alt="prairiess image">
-                            <a>
-                                <div class="mask rgba-white-slight "></div>
-                            </a>
-                        </div>
-                        <div class="card-body pb-0">
-                            <h4 class="font-weight-bold my-3">Prairie Saint Sever </h4>
-                            <p class="grey-text">Une prairie en plein cœur de ville, une grande promenade fluviale sur plus de 3km entre allées de cheminement piéton en béton ou en pavés, espaces de jeux pour enfants. </p>
-                            <a href="{{ path('events_show', { 'id': 3 }) }}" class="btn btn-outline-danger btn-sm text-light">
-                                <i class="fa fa-clone left"></i>
-                                Voir plus</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 text-light">
-                        <div class="view overlay rounded z-depth-1">
-                            <img src="{{ asset('info/img/gramont.jpg') }}" class="img-fluid rounded" alt="gramont image">
-                            <a>
-                                <div class="mask rgba-white-slight "></div>
-                            </a>
-                        </div>
-                        <div class="card-body pb-0" >
-                            <h4 class="font-weight-bold my-3">Parc Grammont </h4>
-                            <p class="grey-text">Le parc Grammont est un parc urbain situé à Rouen dans le quartier Grammont, sa création s'inscrit dans le cadre du grand projet de ville de Rouen. </p>
-                            <a href="{{ path('events_show', { 'id': 4 }) }}" class="btn btn-outline-danger btn-sm text-light">
-                                <i class="fa fa-clone left"></i>
-                                Voir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hr1">
-            </div>
-        </div>
-
-        {# fin slide2  #}
-
-        {# homepage slide 3 #}
-
-        <div class="section slide3">
-            <div class="container text-light" style="padding-bottom:70px;">
-                <div class="card-center text-center mw-80">
-                    <div class="card-body">
-                        <h4 class="card-title">Nous contacter</h4>
-                        <p class="card-text text lead askcontact">Vous avez une question ou une demande à nous exposer ? Vous souhaitez devenir partenaire ou nous faire une suggestion ?
-                            <br>Contactez-nous grâce au bouton ci-dessous. Nous veillerons à vous répondre le plus rapidement possible.</p>
-                        <br>
-                        <a href="{{ path('home_contact') }}" class="btn btn-outline-danger text-white">
-                            <i class="far fa-envelope"></i>
-                            Contactez-nous</a>
-                    </div>
-                </div>
+            {# Boutons #}
+            <div>
+              <a href="{{ path('events_index', { 'category_id': 3 }) }}" class="">
+                <button type="button" class="btn btn-primary text-white btn-lg btnhome">
+                  <span>Parcs</span></button>
+              </a>
+              <a href="{{ path('events_index', { 'category_id': 2 }) }}" class="">
+                <button type="button" class="btn btn-success text-white btn-lg btnhome">
+                  <div>
+                    <span>Evénements</span></div>
+                </button>
+              </a>
+              <a href="{{ path('events_index', { 'category_id': 4 }) }}" class="">
+                <button type="button" class="btn btn-danger text-white btn-lg btnhome">
+                  <div>
+                    <span>Monuments</span></div>
+                </button>
+              </a>
+              <a href="{{ path('events_index', { 'category_id': 1 }) }}" class="">
+                <button type="button" class="btn btn-info text-white btn-lg btnhome">
+                  <div>
+                    <span>Sports</span></div>
+                </button>
+              </a>
             </div>
 
-            {# fin slide 3 #}
+            {# Fin Boutons #}
 
+          </div>
         </div>
+      </div>
+    </div>
 
-    {% endblock %}
+    {# fin slide 1 #}
 
-    {% block javascripts %}{% endblock %}
+    {# homepage slide 2 #}
+
+    <div class="section slide2">
+      <div class="container" style="margin-top:3%;margin-bottom:5%;">
+        <div class="row side2">
+          <div class="col-lg-5 col-xl-7 mb-5 top">
+            <div class="view overlay z-depth-1-half honnorimg">
+              <img src="{{ asset('info/img/verdrel.jpg') }}" class="img-fluid rounded" alt="First sample image">
+              <a>
+                <div class="mask"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-7 col-xl-4 ml-xl-4 mb-4 text-light">
+            <h4 class="mb-3 font-weight-bold dark-grey-text text-center">
+              <strong>
+                Square Verdrel
+              </strong>
+            </h4>
+            <p class="grey-text">Le square Verdrel est un square dans le centre-ville de Rouen, entre la rue Jeanne-d'Arc, le musée des beaux-arts et le musée de la céramique. Superficie de 9000m².
+            </p>
+            <a href="{{ path('events_show', { 'id': 1 }) }}" class="btn btn-outline-danger btn-block text-light">
+              <i class="fa fa-clone left"></i>
+              Voir plus</a>
+          </div>
+        </div>
+        <div class="row text-center txt">
+          <div class="col-lg-4 col-md-6 text-light">
+            <div class="view overlay rounded z-depth-1 ">
+              <img src="{{ asset('info/img/hdvrouen.jpg') }}" class="img-fluid rounded" alt="hdvrouen image" style="width:85%;">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body pb-0">
+              <h4 class="font-weight-bold my-3">Jardin de l’Hôtel-de-Ville
+              </h4>
+              <p class="grey-text">Lieu de détente, à mi-chemin entre le parc urbain et la prairie, ce jardin est également un passage piétonnier qui relie le centre-ville aux quartiers Saint-Nicaise et Saint-Vivien.</p>
+              <a href="{{ path('events_show', { 'id': 2 }) }}" class="btn btn-outline-danger btn-sm text-light ">
+                <i class="fa fa-clone left"></i>
+                Voir plus</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-light">
+            <div class="view overlay rounded z-depth-1">
+              <img src="{{ asset('info/img/prairiess.jpg') }}" class="img-fluid rounded" alt="prairiess image">
+              <a>
+                <div class="mask rgba-white-slight "></div>
+              </a>
+            </div>
+            <div class="card-body pb-0">
+              <h4 class="font-weight-bold my-3">Prairie Saint Sever
+              </h4>
+              <p class="grey-text">Une prairie en plein cœur de ville, une grande promenade fluviale sur plus de 3km entre allées de cheminement piéton en béton ou en pavés, espaces de jeux pour enfants.
+              </p>
+              <a href="{{ path('events_show', { 'id': 3 }) }}" class="btn btn-outline-danger btn-sm text-light">
+                <i class="fa fa-clone left"></i>
+                Voir plus</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-light">
+            <div class="view overlay rounded z-depth-1">
+              <img src="{{ asset('info/img/gramont.jpg') }}" class="img-fluid rounded" alt="gramont image">
+              <a>
+                <div class="mask rgba-white-slight "></div>
+              </a>
+            </div>
+            <div class="card-body pb-0">
+              <h4 class="font-weight-bold my-3">Parc Grammont
+              </h4>
+              <p class="grey-text">Le parc Grammont est un parc urbain situé à Rouen dans le quartier Grammont, sa création s'inscrit dans le cadre du grand projet de ville de Rouen.
+              </p>
+              <a href="{{ path('events_show', { 'id': 4 }) }}" class="btn btn-outline-danger btn-sm text-light">
+                <i class="fa fa-clone left"></i>
+                Voir plus</a>
+            </div>
+          </div>
+        </div>
+        <hr class="hr1">
+      </div>
+    </div>
+
+    {# fin slide2  #}
+
+    {# homepage slide 3 #}
+
+    <div class="section slide3">
+      <div class="container text-light" style="padding-bottom:70px;">
+        <div class="card-center text-center mw-80">
+          <div class="card-body">
+            <h4 class="card-title">Nous contacter</h4>
+            <p class="card-text text lead askcontact">Vous avez une question ou une demande à nous exposer ? Vous souhaitez devenir partenaire ou nous faire une suggestion ?
+              <br>Contactez-nous grâce au bouton ci-dessous. Nous veillerons à vous répondre le plus rapidement possible.</p>
+            <br>
+            <a href="{{ path('home_contact') }}" class="btn btn-outline-danger text-white">
+              <i class="far fa-envelope"></i>
+              Contactez-nous</a>
+          </div>
+        </div>
+      </div>
+
+      {# fin slide 3 #}
+
+    </div>
+
+  {% endblock %}
+
+  {% block javascripts %}
+    <script>
+      drift.on('ready', function(api, payload) {
+        // interact with the api here
+      })
+    </script>
+  {% endblock %}

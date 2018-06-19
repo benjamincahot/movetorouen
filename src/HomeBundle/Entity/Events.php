@@ -84,6 +84,7 @@ class Events
      */
     private $user;
 
+   
     // ----------------------------------------
     // GETTER/ SETTER
     // ----------------------------------------
@@ -313,4 +314,5 @@ class Events
     {
         return $this->status;
     }
+
 }
