@@ -15,7 +15,15 @@ class AdminController extends Controller
     // Controller principal
     public function dashboardAction()
     {
-      return $this->render('AdminBundle:Default:dashboard.html.twig');
+
+      $em = $this->getDoctrine()->getManager();
+      $events = $em->getRepository('HomeBundle:Events')->eventModoFromThisCategory();
+      $countstatus = count($events);
+
+      return $this->render('AdminBundle:Default:dashboard.html.twig', array(
+        'events' => $events,
+        'countstatus' => $countstatus
+      ));
     }
 
     public function acceptAction($id)
@@ -30,7 +38,7 @@ class AdminController extends Controller
             $em->persist($event);
             $em->flush();
 
-          return $this->redirectToRoute('admin_homepage');
+          return $this->redirectToRoute('status_homepage');
 
     }
 

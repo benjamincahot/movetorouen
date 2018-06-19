@@ -17,7 +17,7 @@
               </span>
             </div>
             <div class="media-body media-text-right">
-              <h2 class="text-white">
+              {# <h2 class="text-white">
                 {% if countstatus == 0 %}
                 {% else %}
                 {% endif %}
@@ -26,7 +26,10 @@
                 {% if countstatus == 0 %}
                 {% else %}Rien a modérer
                 {% endif %}
-              </p>
+              </p> #}
+              
+              <h2 class="text-white">{{ countstatus }}</h2>
+              <p class="m-b-0 text-white">Total de modération(s) active(s)</p>
             </div>
           </div>
         </div>

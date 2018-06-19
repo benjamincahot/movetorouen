@@ -37,22 +37,55 @@
                         <tbody>
                             {% for event in events %}
                                 <tr>
-                                    {# <td><a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.id }}</a></td> #}
                                     <td>
                                         <a href="{{ path('events_show', { 'id': event.id }) }}">{{ event.title }}</a>
                                     </td>
-                                    {# <td>
-                                        {{ event.description }}
-                                    </td> #}
                                     <td>{{ event.price }}</td>
-                                    <td>
-                                        {% if event.startDate %}{{ event.startDate|date('H:i:s Y-m-d') }}
-                                        {% endif %}
-                                    </td>
-                                    <td>
-                                        {% if event.endDate %}{{ event.endDate|date('H:i:s Y-m-d') }}
-                                        {% endif %}
-                                    </td>
+                                    {% if category_id == 1 %} 
+                                    {# Sport #}
+                                        <td>
+                                            {% if event.startDate %}{{ event.startDate|date('H:i:s') }}
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if event.endDate %}{{ event.endDate|date('H:i:s') }}
+                                            {% endif %}
+                                        </td>
+                                    {% elseif category_id == 2 %}
+                                    {# Evénements #}
+                                        <td>
+                                            {% if event.startDate %}
+                                            {{ event.startDate|date('H:i:s Y-m-d') }}
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if event.endDate %}{{ event.endDate|date('H:i:s Y-m-d') }}
+                                            {% endif %}
+                                        </td>
+                                    {% elseif category_id == 3 %}
+                                        {# Parcs #}
+                                         <td>
+                                            {% if event.startDate == '00:00:00' %}
+                                            <p> Accès libre </p>
+                                            {% else %}
+                                            {{ event.startDate|date('H:i:s') }}
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if event.endDate %}{{ event.endDate|date('H:i:s') }}
+                                            {% endif %}
+                                        </td>
+                                    {% else %}
+                                    {# Monument #}
+                                         <td>
+                                            {% if event.startDate %}{{ event.startDate|date('H:i:s') }}
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if event.endDate %}{{ event.endDate|date('H:i:s') }}
+                                            {% endif %}
+                                        </td>
+                                    {% endif %}
                                     <td>{{ event.place }}</td>
                                     <td>
                                         {% if is_granted('ROLE_ADMIN')%}
