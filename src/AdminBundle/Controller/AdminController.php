@@ -43,7 +43,7 @@ class AdminController extends Controller
             $em->persist($event);
             $em->flush();
 
-          return $this->redirectToRoute('admin_homepage');
+          return $this->redirectToRoute('status_homepage');
 
     }
 

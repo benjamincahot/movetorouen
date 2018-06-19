@@ -8,7 +8,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -29,7 +28,7 @@ class EventsType extends AbstractType
                 ->add('description', TextAreaType::class, array(
                     'label' => 'Description :'
                 ))
-                ->add('price', NumberType::class, array(
+                ->add('price', TextType::class, array(
                     'label' => 'Tarif (en €) :'
                 ))
                 ->add('startDate', DateTimeType::class, array(
