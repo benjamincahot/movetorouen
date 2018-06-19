@@ -7,7 +7,7 @@
     </title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Happy+Monkey">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -51,57 +51,108 @@
 
   {% block footer %}
     <footer class="page-footer font-large text-light bg-dark pt-4 mt-4">
-            
-            <ul class="list-unstyled list-inline text-center py-2">
-                <li class="list-inline">
-                    <p>Suivez nous sur les réseaux sociaux :
-                    </p>
-                </li>
-                <li class="list-inline-item ">
-                    <a href="https://www.facebook.com/move.torouen.1"type="button" class="text-light btn-floating btn-lg btn-fb border2 ">
-                        <i class="fab fa-facebook "></i>
-                    </a>
-                </li>
-                <li class="list-inline-item ">
-                    <a href="https://twitter.com/rouen_to"type="button" class="text-light btn-floating btn-lg btn-tw border2 ">
-                        <i class="fab fa-twitter "></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.instagram.com/movetorouen/"type="button" class="text-light btn-floating btn-lg btn-ins border2 ">
-                        <i class="fab fa-instagram "></i>
-                    </a>
-                </li>
-            </ul>
-            <hr>
-            <ul class="list-unstyled list-inline text-center text-light py-2" style="color:white;">
-                <li class="list-inline-item">
-                    <a href="{{ path('home_mention') }}" class="text-light">
-                        Mentions légales
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="{{ path('home_contact') }}" class="text-light">
-                        Nous contacter
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="{{ path('home_politique') }}" class="text-light">
-                        Politique de confidentialité
-                    </a>
-                </li>
-            </ul>
-            <hr>
-            <ul class="list-unstyled list-inline text-center py-2 copy">
-                <li>
-                    <div class="footer-copyright text-center">© 2018 Copyright:
-                            <a href="#" class="text-light">
-                                MoveToRouen</a>
-                            - Tous les droits sont reservés. La reproduction de ce site est interdite.
-                    </div>
-                </li>
-            </ul>
+
+      <ul class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline">
+          <p>Suivez nous sur les réseaux sociaux :
+          </p>
+        </li>
+        <li class="list-inline-item ">
+          <a href="https://www.facebook.com/move.torouen.1" type="button" class="text-light btn-floating btn-lg btn-fb border2 ">
+            <i class="fab fa-facebook "></i>
+          </a>
+        </li>
+        <li class="list-inline-item ">
+          <a href="https://twitter.com/rouen_to" type="button" class="text-light btn-floating btn-lg btn-tw border2 ">
+            <i class="fab fa-twitter "></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com/movetorouen/" type="button" class="text-light btn-floating btn-lg btn-ins border2 ">
+            <i class="fab fa-instagram "></i>
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <ul class="list-unstyled list-inline text-center text-light py-2" style="color:white;">
+        <li class="list-inline-item">
+          <a href="{{ path('home_mention') }}" class="text-light">
+            Mentions légales
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="{{ path('home_contact') }}" class="text-light">
+            Nous contacter
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="{{ path('home_politique') }}" class="text-light">
+            Politique de confidentialité
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <ul class="list-unstyled list-inline text-center py-2 copy">
+        <li>
+          <div class="footer-copyright text-center">© 2018 Copyright:
+            <a href="#" class="text-light">
+              MoveToRouen</a>
+            - Tous les droits sont reservés. La reproduction de ce site est interdite.
+          </div>
+        </li>
+      </ul>
     </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Start of Async Drift Code -->
+    <script>
+      "use strict";
+
+      !function() {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+          if (t.invoked)
+            return void(window.console && console.error && console.error("Drift snippet included twice."));
+          t.invoked = !0,
+          t.methods = [
+            "identify",
+            "config",
+            "track",
+            "reset",
+            "debug",
+            "show",
+            "ping",
+            "page",
+            "hide",
+            "off",
+            "on"
+          ],
+          t.factory = function(e) {
+            return function() {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e),
+              t.push(n),
+              t;
+            };
+          },
+          t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+          }),
+          t.load = function(t) {
+            var e = 3e5,
+              n = Math.ceil(new Date() / e) * e,
+              o = document.createElement("script");
+            o.type = "text/javascript",
+            o.async = !0,
+            o.crossorigin = "anonymous",
+            o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+        }
+      }();
+      drift.SNIPPET_VERSION = '0.3.1';
+      drift.load('rknk82n6y66u');
+    </script>
+    <!-- End of Async Drift Code -->
   {% endblock %}

@@ -274,7 +274,7 @@ class AppFixtures extends Fixture
       $event16 = new Events();
       $event16->setCategory($evenement);
       $event16->setTitle('Armada 2018');
-      $event16->setDescription('Créée en 1989, l’association fêtera également ses 30 ans en 2019. Sa mission est d’animer et d’organiser des rassemblements de voiliers ou de bâtiments de guerre sur les quais de Rouen, visitables gratuitement par le grand public. Avec à son actif 6 éditions réussies, une équipe de 50 bénévoles prépare déjà la 7e édition de l’Armada, du 6 au 16 juin 2019. Cette équipe est constituée sous forme de commissions : commercial, sécurité générale, officiers de liaison civile, accueil, finance, assurance, juridique, technique, communication, animations….sous la responsabilité directe de son Président. Une organisation hors du commun pour cet événement hors du commun, l’Armada rassemble plus de 300 bénévoles au temps fort de la manifestation. Ils donnent, lors de chaque édition, le meilleur d’eux-mêmes pour offrir au public 10 jours exceptionnels.');
+      $event16->setDescription('Créée en 1989, l’association fêtera également ses 30 ans en 2019. Sa mission est d’animer et d’organiser des rassemblements de voiliers ou de bâtiments de guerre sur les quais de Rouen, visitables gratuitement par le grand public.');
       $event16->setStartDate(new DateTime('2019/06/06 08:00:00'));
       $event16->setEndDate(new DateTime('2019/06/16 17:00:00'));
       $event16->setUser($user4);
