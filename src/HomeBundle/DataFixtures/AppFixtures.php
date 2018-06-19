@@ -97,7 +97,7 @@ class AppFixtures extends Fixture
       $event->setEndDate(new DateTime('2015/07/05'));
       $event->setPrice('Gratuit');
       $event->setStatus(true);
-      $event->setUser($user2);
+      $event->setUser($user);
       $event->setPlace('14 Rue du Bailliage, 76000 Rouen');
       $manager->persist($event);
 
@@ -119,7 +119,7 @@ class AppFixtures extends Fixture
       $event3->setDescription('Une prairie en plein cœur de ville, une grande promenade fluviale sur plus de 3km entre allées de cheminement piéton en béton ou en pavés, espaces de jeux pour enfants, massifs ornés de fleurs ou terrain de pétanque. Superficie : 1,5 hectare.');
       $event3->setStartDate(new DateTime('2014/06/04'));
       $event3->setEndDate(new DateTime('2015/07/05'));
-      $event3->setUser($user2);
+      $event3->setUser($user3);
       $event3->setPrice('Gratuit');
       $event3->setPlace('Quai Saint-Sever, 76100 Rouen');
       $event3->setStatus(true);
@@ -143,7 +143,7 @@ class AppFixtures extends Fixture
       $event5->setDescription('Beau jardin de colline avec une jolie fontaine. Bon endroit pour se détendre au soleil pendant un moment.');
       $event5->setStartDate(new DateTime('2014/06/04'));
       $event5->setEndDate(new DateTime('2015/07/05'));
-      $event5->setUser($user2);
+      $event5->setUser($user);
       $event5->setPrice('Gratuit');
       $event5->setPlace('Rue Roger-Bésus, 76100 Rouen');
       $event5->setStatus(true);
@@ -156,7 +156,7 @@ class AppFixtures extends Fixture
       $event6->setDescription('Sur 1 200 m2, de nombreuses activités: musculation, cardio- training, fitness,... et un espace détente à volonté dans toutes nos formules : Sauna, hammam, jacuzzi.');
       $event6->setStartDate(new DateTime('2014/06/04'));
       $event6->setEndDate(new DateTime('2015/07/05'));
-      $event6->setUser($user2);
+      $event6->setUser($user3);
       $event6->setPrice('39€ par mois');
       $event6->setPlace('10 Place Saint-Marc, 76000 Rouen');
       $event6->setStatus(true);
@@ -168,7 +168,7 @@ class AppFixtures extends Fixture
       $event7->setDescription('Club est équipé d\'une large gamme d\'appareils de fitness et propose de nombreux cours collectifs. Quel que soit votre âge, votre niveau de pratique et votre objectif forme, nous disposons de la solution d\'entraînement qui répond à vos besoins spécifiques.');
       $event7->setStartDate(new DateTime('2014/06/04'));
       $event7->setEndDate(new DateTime('2015/07/05'));
-      $event7->setUser($user2);
+      $event7->setUser($user4);
       $event7->setPrice('28,99€ par mois ou 19,99€ par an');
       $event7->setPlace('69-75 Rue Saint-Sever, 76100 Rouen');
       $event7->setStatus(true);
@@ -180,7 +180,7 @@ class AppFixtures extends Fixture
       $event8->setDescription('Club entièrement refait à neuf compte un studio pour les cours collectifs, un studio TRX, un studio cycling, un studio functional training et un plateau de musculation.');
       $event8->setStartDate(new DateTime('2014/06/04'));
       $event8->setEndDate(new DateTime('2015/07/05'));
-      $event8->setUser($user2);
+      $event8->setUser($user);
       $event8->setPrice('Voir sur place');
       $event8->setPlace('49 Rue Saint-Julien, 76100 Rouen');
       $manager->persist($event8);
@@ -191,7 +191,7 @@ class AppFixtures extends Fixture
       $event9->setDescription('Club entièrement refait à neuf compte un studio pour les cours collectifs, un studio TRX, un studio cycling, un studio functional training et un plateau de musculation.');
       $event9->setStartDate(new DateTime('2014/06/04'));
       $event9->setEndDate(new DateTime('2015/07/05'));
-      $event9->setUser($user2);
+      $event9->setUser($user5);
       $event9->setPrice('Voir sur place');
       $event9->setPlace('49 Rue Saint-Julien, 76100 Rouen');
       $event9->setStatus(true);
@@ -203,7 +203,7 @@ class AppFixtures extends Fixture
       $event10->setDescription('undefined');
       $event10->setStartDate(new DateTime('2014/06/04'));
       $event10->setEndDate(new DateTime('2015/07/05'));
-      $event10->setUser($user2);
+      $event10->setUser($user4);
       $event10->setPrice('undefined');
       $event10->setPlace('7C Rue Jeanne d\'Arc, 76000 Rouen');
       $event10->setStatus(true);
@@ -216,7 +216,7 @@ class AppFixtures extends Fixture
       $event11->setDescription('Horloge astronomique historique du XIVe siècle située sur une arche Renaissance avec des sculptures ouvragées.');
       $event11->setStartDate(new DateTime('2014/06/04'));
       $event11->setEndDate(new DateTime('2015/07/05'));
-      $event11->setUser($user2);
+      $event11->setUser($user6);
       $event11->setPrice('7€-3,50€');
       $event11->setPlace('Rue du Gros Horloge, 76000 Rouen');
       $event11->setStatus(true);
@@ -228,7 +228,7 @@ class AppFixtures extends Fixture
       $event12->setDescription('La porte, la fontaine et les vestiges de l\'ancienne église des Augustins sont classés au titre des monuments historique en 1958.');
       $event12->setStartDate(new DateTime('2014/06/04'));
       $event12->setEndDate(new DateTime('2015/07/05'));
-      $event12->setUser($user2);
+      $event12->setUser($user3);
       $event12->setPrice('Gratuit');
       $event12->setPlace('11 Quai de Paris, 76000 Rouen');
       $event12->setStatus(true);
@@ -240,7 +240,7 @@ class AppFixtures extends Fixture
       $event13->setDescription('Les façades et les toitures des bâtiments conventuels, ainsi que le cloître et la chapelle sont inscrits au titre des monuments historiques en 1976.');
       $event13->setStartDate(new DateTime('2014/06/04'));
       $event13->setEndDate(new DateTime('2015/07/05'));
-      $event13->setUser($user2);
+      $event13->setUser($user4);
       $event13->setPrice('Gratuit');
       $event13->setPlace('24 Rue de Joyeuse, 76000 Rouen');
       $event13->setStatus(true);
@@ -252,7 +252,7 @@ class AppFixtures extends Fixture
       $event14->setDescription('Fontaine construite à la fin du XIXe siècle, possède un réservoir souterrain qui sert toujours aujourd\'hui à alimenter la ville en eau potable. A la suite de sa construction, la ville lance un concours pour orner la fontaine.');
       $event14->setStartDate(new DateTime('2014/06/04'));
       $event14->setEndDate(new DateTime('2015/07/05'));
-      $event14->setUser($user2);
+      $event14->setUser($user5);
       $event14->setPrice('Gratuit');
       $event14->setPlace('105 Boulevard de l\'Yser, 76000 Rouen');
       $event14->setStatus(true);
@@ -264,7 +264,7 @@ class AppFixtures extends Fixture
       $event15->setDescription('Unique tour restante du château datant du début du XIIIe siècle où Jeanne d\'Arc fut emprisonnée.');
       $event15->setStartDate(new DateTime('2014/06/04'));
       $event15->setEndDate(new DateTime('2015/07/05'));
-      $event15->setUser($user2);
+      $event15->setUser($user4);
       $event15->setPrice('5€');
       $event15->setPlace('Rue Bouvreuil, 76000 Rouen ');
       $event15->setStatus(true);
@@ -274,10 +274,10 @@ class AppFixtures extends Fixture
       $event16 = new Events();
       $event16->setCategory($evenement);
       $event16->setTitle('Armada 2018');
-      $event16->setDescription('Créée en 1989, l’association fêtera également ses 30 ans en 2019. Sa mission est d’animer et d’organiser des rassemblements de voiliers ou de bâtiments de guerre sur les quais de Rouen, visitables gratuitement par le grand public. Avec à son actif 6 éditions réussies, une équipe de 50 bénévoles prépare déjà la 7e édition de l’Armada, du 6 au 16 juin 2019. Cette équipe est constituée sous forme de commissions : commercial, sécurité générale, officiers de liaison civile, accueil, finance, assurance, juridique, technique, communication, animations….sous la responsabilité directe de son Président. Une organisation hors du commun pour cet événement hors du commun, l’Armada rassemble plus de 300 bénévoles au temps fort de la manifestation. Ils donnent, lors de chaque édition, le meilleur d’eux-mêmes pour offrir au public 10 jours exceptionnels.');
+      $event16->setDescription('Créée en 1989, l’association fêtera également ses 30 ans en 2019. Sa mission est d’animer et d’organiser des rassemblements de voiliers ou de bâtiments de guerre sur les quais de Rouen, visitables gratuitement par le grand public.');
       $event16->setStartDate(new DateTime('2019/06/06'));
       $event16->setEndDate(new DateTime('2019/06/16'));
-      $event16->setUser($user2);
+      $event16->setUser($user);
       $event16->setPrice('Gratuit');
       $event16->setPlace('23, Boulevard Emile Duchemin, 76000 Rouen ');
       $event16->setStatus(true);
@@ -290,7 +290,7 @@ class AppFixtures extends Fixture
       $event17->setDescription('Pour cette édition 2018, la grande nouveauté est la présence, place Saint-Marc, d\'une grande scène avec un plateau 100% normand programmé par la Région Normandie avec l\'aide du Kalif et le soutien la Ville de Rouen');
       $event17->setStartDate(new DateTime('2018/06/21'));
       $event17->setEndDate(new DateTime('2018/06/21'));
-      $event17->setUser($user2);
+      $event17->setUser($user6);
       $event17->setPrice('Gratuit');
       $event17->setPlace('76000 Rouen');
       $event17->setStatus(true);
@@ -303,7 +303,7 @@ class AppFixtures extends Fixture
       $event18->setDescription('Ça y est, il est venu le temps des cathédrales… les projection monumentales Cathédrale de lumière font leur retour sur Notre-Dame du 15 juin au 22 septembre 2018 pour des nuits illuminées.');
       $event18->setStartDate(new DateTime('2018/06/15'));
       $event18->setEndDate(new DateTime('2018/09/22'));
-      $event18->setUser($user2);
+      $event18->setUser($user5);
       $event18->setPrice('Gratuit');
       $event18->setPlace('Parvis de la Cathédrale, 76000 Rouen ');
       $event18->setStatus(true);
@@ -316,7 +316,7 @@ class AppFixtures extends Fixture
       $event19->setDescription('La Coupe du monde de football de 2018 est la 21ᵉ édition de la Coupe du monde de football, compétition organisée par la FIFA et qui réunit les trente-deux meilleures sélections nationales. Elle se déroule en Russie du 14 juin au 15 juillet 2018.');
       $event19->setStartDate(new DateTime('2018/06/14'));
       $event19->setEndDate(new DateTime('2018/07/15'));
-      $event19->setUser($user2);
+      $event19->setUser($user3);
       $event19->setPrice('~');
       $event19->setPlace('Russie');
       $event19->setStatus(true);

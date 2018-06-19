@@ -53,7 +53,7 @@
                   <td>{{ event.price }}</td>
                   <td>{{ event.user }}</td>
                   <td>
-                    <a class="btn btn-sm btn-primary" href="">
+                    <a class="btn btn-sm btn-primary" href="{{ path('events_show', { 'id': event.id }) }}">
                       <i class="fas fa-eye"></i> Voir
                     </a>
                     <a class="btn btn-sm btn-warning" href="{{ path('edit_event_admin', { 'id': event.id}) }}">

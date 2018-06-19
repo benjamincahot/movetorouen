@@ -52,7 +52,7 @@
                 <td>{{ park.price }}</td>
                 <td>{{ park.user }}</td>
                 <td>
-                  <a class="btn btn-sm btn-primary" href="">
+                  <a class="btn btn-sm btn-primary" href="{{ path('events_show', { 'id': park.id }) }}">
                     <i class="fas fa-eye"></i> Voir
                   </a>
                   <a class="btn btn-sm btn-warning" href="{{ path('edit_event_admin', { 'id': park.id}) }}">
